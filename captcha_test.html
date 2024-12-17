@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Captcha Test</title>
+</head>
+<body>
+  <h1>Simple Numeric Captcha</h1>
+  <form id="captchaForm">
+    <p>Solve: <span id="captcha"></span></p>
+    <input type="text" id="captchaInput" placeholder="Enter captcha" />
+    <button type="submit">Submit</button>
+  </form>
+
+  <script>
+    // Generate a simple numeric captcha
+    const captcha = Math.floor(Math.random() * 9000) + 1000; // 4-digit number
+    document.getElementById('captcha').innerText = captcha;
+
+    // Simple form submission handler
+    document.getElementById('captchaForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      const input = document.getElementById('captchaInput').value;
+      if (parseInt(input) === captcha) {
+        alert('Captcha solved correctly!');
+      } else {
+        alert('Wrong captcha. Try again!');
+      }
+    });
+  </script>
+</body>
+</html>
