@@ -1,4 +1,3 @@
-import Tesseract from 'tesseract.js';
 
 class UtilityFunctions {
 
@@ -16,28 +15,19 @@ class UtilityFunctions {
 
 
     // Perform login action
-    async login(emailSelector, emailValue, passwordSelector, passwordValue, captchaSelector, captchaImageSelector, loginButtonSelector) {
+    async login(emailSelector, emailValue, passwordSelector, passwordValue, captchaSelector, captchaImageSelector, loginButtonSelector, specName) {
         // Enter email and password
         cy.get(emailSelector).click({ force: true }).type(emailValue);
         cy.get(passwordSelector).click({ force: true }).type(passwordValue);
 
         // Capture captcha image and process it with Tesseract.js
-        cy.get(captchaImageSelector).screenshot('captcha');
+        cy.get(captchaImageSelector).screenshot('captcha-screenshot');
         cy.wait(6000);
-
-        cy.readFile('./cypress/screenshots/captcha.png', 'base64').then((base64Image) => {
-            return Tesseract.recognize(
-                `data:image/png;base64,${base64Image}`,
-                'eng',
-                { workerBlobURL: false }
-            ).then(({ data: { text } }) => {
-                const captchaText = text.trim();
-                cy.log(`Captcha Solved: ${captchaText}`);
-                // Enter the extracted captcha text
-                cy.get(captchaSelector).type(captchaText);
-            });
+        cy.task('readCaptcha', `./cypress/screenshots/${specName}/captcha-screenshot.png`).then((captchaText) => {
+            console.log('Recognized Captcha Text:', captchaText);
+            cy.get(captchaSelector)
+                .type(captchaText, { force: true })
         });
-
 
         // Click the login button
         cy.get(loginButtonSelector).click();

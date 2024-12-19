@@ -1,15 +1,7 @@
 {
-  "name": "captch-test",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "ISC",
   "devDependencies": {
-    "cypress": "^13.16.0"
+    "cypress": "^13.17.0",
+    "cypress-xpath": "^2.0.1"
   },
   "dependencies": {
     "tesseract.js": "^5.1.1"
