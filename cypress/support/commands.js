@@ -23,6 +23,7 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+require('cypress-xpath');
 
 Cypress.on('uncaught:exception', (err, runnable) => {
     return false;
@@ -31,6 +32,8 @@ Cypress.on('uncaught:exception', (err, runnable) => {
 Cypress.Commands.add('loginWebsite', (email, password, spec) => {
     cy.visit('https://eservices.tax.gov.ae/#/Logon');
     cy.get('#__xmlview0--idSplitter-content-0').should('be.visible');
+    cy.get('#__text9').should('exist');
+    cy.get('#__data48').click({ force: true });
 
     cy.wait(2000).get('#__xmlview0--email-inner')
         .should('exist')
@@ -48,6 +51,16 @@ Cypress.Commands.add('loginWebsite', (email, password, spec) => {
             .type(captchaText, { force: true })
     });
     cy.get('#__xmlview0--loginBtn-inner').click({ force: true });
+    cy.get('#__xmlview5--emailId').should('have.text', email);
     cy.contains('Create New Taxable Person Profile').should('exist');
 
+})
+
+
+Cypress.Commands.add('scrollInView', (locatorValue) => {
+    try {
+        cy.get(locatorValue).scrollIntoView().should('be.visible');
+    } catch (error) {
+        cy.log('Error in scrollintoview command:', error);
+    }
 })

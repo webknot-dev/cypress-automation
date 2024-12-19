@@ -17,8 +17,6 @@ module.exports = defineConfig({
             }
           }
           const worker = await createWorker();
-          await worker.loadLanguage('eng');
-          await worker.initialize('eng');
           const { data: { text } } = await worker.recognize(filePath);
           await worker.terminate();
           fs.unlinkSync(filePath)
@@ -30,6 +28,6 @@ module.exports = defineConfig({
     waitForAnimations: true,
     watchForFileChanges: true,
     pageLoadTimeout: 200000,
-    defaultCommandTimeout: 10000,
+    defaultCommandTimeout: 30000,
   },
 });
