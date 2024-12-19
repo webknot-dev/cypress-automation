@@ -1,5 +1,44 @@
 {
-  "name": "Using fixtures to represent data",
-  "email": "hello@cypress.io",
-  "body": "Fixtures are a great way to mock data for responses to routes"
+  "AuthDetails": {
+    "email": "gaurav.chugani@ae.andersen.com",
+    "password": "Praveen@2022"
+  },
+  "LocatorsPath": {
+    "refresh_captcha_id": "#__icon1",
+    "captcha_element_id": "#captcha-pad-logon",
+    "emailInputField_id": "#__xmlview0--email-inner",
+    "passwordInputField_id": "#__xmlview0--PasswordInput-inner",
+    "captchaInputField_id": "[placeholder='Enter security code']",
+    "loginButton_id": "#__xmlview0--loginBtn-inner",
+    "loginProfile_xpath": "//*[@id='__xmlview5--emailId']",
+    "taxableProfileButton_xpath": "//*[@id='__button55-__xmlview4--taxablePersonContainer-0']",
+    "exciseTax_xpath": "//*[@id='__item142-__item143-__xmlview10--sideNavigationList-1-1']",
+    "ramda_dropDown_id": "#__icon101",
+    "check_box_xpath": "//*[@id='_INST_A_00_CHECKBOX_CHK_checkbox-CbBg']",
+    "start_button_xpath": "//*[@id='__xmlview20--idFormStart-inner']",
+    "excise_scroll": "//*[@id='__xmlview16--TaxablePersonPage-cont']",
+    "login_text_validation_id":"#__text9",
+    
+    "Alert_Dialog_xpath": "//*[@id='__dialog8']",
+    "Alert_Accept_xpath": "//*[@id='oCloseButton-inner']",
+    "TRN_validation_Xpath": "//*[@id='__text233-__xmlview9--regoverviewTable-3']"
+    
+    
+  },
+  "EntryValues": {
+    "browser_type": "",
+    "mode": "",
+    "url": "https://eservices.tax.gov.ae/#/Logon",
+    "EOI_targetItem": "Abu Dhabi",
+    "POE_targetItem": "Guwaifat",
+    "target_date_value": "31/01/2024",
+    "uploadingFilePath": "C:/Users/Admin/Downloads/ExciseGoods.xlsx"
+  },
+  "Locators_202A": {
+    "EX202A_createNew_xpath": "//*[@id='__button133-__container49-__xmlview15--panelScrollcontainer-0-0-BDI-content']",
+   
+    "Release_goods_text": "//*[@id='__text405-__container49-__xmlview14--panelScrollcontainer-3-0']",
+    "Scroll_div_xpath": "//*[@id='__xmlview15--TaxablePersonPage-cont']",
+    "Search_xpath": "//*[@id='__xmlview15--id_Search_tile-I']"
+  }
 }
