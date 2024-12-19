@@ -67,6 +67,10 @@ Cypress.Commands.add('clickXpathElement', (selector) => {
     cy.xpath(selector).click();
 });
 
+Cypress.Commands.add('clickElement', (selector) => {
+    cy.get(selector).click();
+});
+
 // Perform login action
 Cypress.Commands.add('login', (emailSelector, emailValue, passwordSelector, passwordValue, captchaSelector, captchaImageSelector, loginButtonSelector, specName) => {
 
@@ -88,6 +92,10 @@ Cypress.Commands.add('login', (emailSelector, emailValue, passwordSelector, pass
 });
 
 // Wait for element presence
+Cypress.Commands.add('waitForXpathElementPresence', (selector) => {
+    cy.xpath(selector).should('be.visible');
+});
+
 Cypress.Commands.add('waitForElementPresence', (selector) => {
     cy.xpath(selector).should('be.visible');
 });
@@ -99,11 +107,20 @@ Cypress.Commands.add('waitAndClick', (selector) => {
 
 // Close popup if present
 Cypress.Commands.add('closePopupIfPresent', (popupSelector, buttonSelector) => {
-    cy.xpath(popupSelector).then((popup) => {
-        if (popup.is(':visible')) {
-            cy.xpath(buttonSelector).click();
+    try {
+        cy.xpath(popupSelector).then((popup) => {
+            if (popup.length > 0) {
+                cy.wrap(popup).should('be.visible').then(() => {
+                    cy.xpath(buttonSelector).click();
+                });
+            } else {
+                cy.log('Popup not present');
+            }
         }
-    });
+        )
+    } catch (error) {
+        cy.log('Error in closePopupIfPresent command:', error);
+    }
 });
 
 // Select list item
@@ -148,4 +165,13 @@ Cypress.Commands.add('inputField', (selector, inputValue) => {
 // Quit the browser (Cypress automatically handles this)
 Cypress.Commands.add('quit', () => {
     cy.log('Tests will end here');
+});
+
+Cypress.Commands.add('selectExcise', (excontainerid, extitleid, exdescriptionid, excreatenewid, exname, exdescription) => {
+    cy.scrollToView(excontainerid);
+    cy.get(excontainerid).should('be.visible').within(() => {
+        cy.get(extitleid).should('have.text', exname);
+        cy.get(exdescriptionid).should('have.text', exdescription);
+        cy.get(excreatenewid).click();
+    });
 });

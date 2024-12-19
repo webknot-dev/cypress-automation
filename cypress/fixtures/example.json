@@ -30,7 +30,9 @@
     "EOI_targetItem": "Abu Dhabi",
     "POE_targetItem": "Guwaifat",
     "target_date_value": "31/01/2024",
-    "uploadingFilePath": "C:/Users/Admin/Downloads/ExciseGoods.xlsx"
+    "uploadingFilePath": "C:/Users/Admin/Downloads/ExciseGoods.xlsx",
+    "EX202ADZ_Description": "Consumption of Goods Within a Designated Zone",
+    "EX202ADZ_zone_number": "D100151001"
   },
   "Locators_202A": {
     "EX202A_createNew_xpath": "//*[@id='__button133-__container49-__xmlview15--panelScrollcontainer-0-0-BDI-content']",
@@ -38,5 +40,14 @@
     "Release_goods_text": "//*[@id='__text405-__container49-__xmlview14--panelScrollcontainer-3-0']",
     "Scroll_div_xpath": "//*[@id='__xmlview15--TaxablePersonPage-cont']",
     "Search_xpath": "//*[@id='__xmlview15--id_Search_tile-I']"
+  },
+  "locators_ex202adz": {
+    "EX202ADZ_container_id": "#__tile7-__container49-__xmlview14--panelScrollcontainer-3-1-content",
+    "EX202ADZ_title_id": "#__title62-__container49-__xmlview14--panelScrollcontainer-3-1-inner",
+    "EX202ADZ_description_id": "#__text405-__container49-__xmlview14--panelScrollcontainer-3-1",
+    "EX202ADZ_createNew_id": "#__button132-__container49-__xmlview14--panelScrollcontainer-3-1-BDI-content",
+    "EX202ADZ_checkbox_id": "#_INST_A_00_CHECKBOX_CHK_checkbox-CbBg",
+    "EX202ADZ_Start_id": "#__xmlview19--idFormStart-inner",
+    "EX202ADZ_zone_id": "#_BIID_A_DZ_NO_input-inner"
   }
 }
