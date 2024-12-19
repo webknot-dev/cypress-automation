@@ -63,8 +63,8 @@ Cypress.Commands.add('visitUrl', (url) => {
 });
 
 // Click on an element
-Cypress.Commands.add('clickElement', (selector) => {
-    cy.get(selector).click();
+Cypress.Commands.add('clickXpathElement', (selector) => {
+    cy.xpath(selector).click();
 });
 
 // Perform login action
@@ -73,7 +73,7 @@ Cypress.Commands.add('login', (emailSelector, emailValue, passwordSelector, pass
     cy.get('#__xmlview0--idSplitter-content-0').should('be.visible');
     cy.get('#__text9').should('exist');
 
-    cy.get('#__data48').click({ force: true });
+    cy.wait(5000).get('#__data48').click({ force: true });
 
     cy.get(emailSelector).click({ force: true }).type(emailValue);
     cy.get(passwordSelector).click({ force: true }).type(passwordValue);
@@ -89,7 +89,7 @@ Cypress.Commands.add('login', (emailSelector, emailValue, passwordSelector, pass
 
 // Wait for element presence
 Cypress.Commands.add('waitForElementPresence', (selector) => {
-    cy.get(selector).should('be.visible');
+    cy.xpath(selector).should('be.visible');
 });
 
 // Wait and click
@@ -99,9 +99,9 @@ Cypress.Commands.add('waitAndClick', (selector) => {
 
 // Close popup if present
 Cypress.Commands.add('closePopupIfPresent', (popupSelector, buttonSelector) => {
-    cy.get(popupSelector).then((popup) => {
+    cy.xpath(popupSelector).then((popup) => {
         if (popup.is(':visible')) {
-            cy.get(buttonSelector).click();
+            cy.xpath(buttonSelector).click();
         }
     });
 });
