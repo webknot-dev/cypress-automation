@@ -32,7 +32,8 @@ Cypress.on('uncaught:exception', (err, runnable) => {
 // Cypress.Commands.add('loginWebsite', (email, password, spec) => {
 //     cy.visit('https://eservices.tax.gov.ae/#/Logon');
 //     cy.get('#__xmlview0--idSplitter-content-0').should('be.visible');
-//     cy.get('#__text9').should('exist');
+//     cy.get('#__text9').should('exist');`
+
 //     cy.get('#__data48').click({ force: true });
 
 //     cy.wait(2000).get('#__xmlview0--email-inner')
@@ -68,11 +69,16 @@ Cypress.Commands.add('clickElement', (selector) => {
 
 // Perform login action
 Cypress.Commands.add('login', (emailSelector, emailValue, passwordSelector, passwordValue, captchaSelector, captchaImageSelector, loginButtonSelector, specName) => {
+
+    cy.get('#__xmlview0--idSplitter-content-0').should('be.visible');
+    cy.get('#__text9').should('exist');
+
+    cy.get('#__data48').click({ force: true });
+
     cy.get(emailSelector).click({ force: true }).type(emailValue);
     cy.get(passwordSelector).click({ force: true }).type(passwordValue);
 
     cy.get(captchaImageSelector).screenshot('captcha-screenshot');
-    cy.wait(6000);
     cy.task('readCaptcha', `./cypress/screenshots/${specName}/captcha-screenshot.png`).then((captchaText) => {
         console.log('Recognized Captcha Text:', captchaText);
         cy.get(captchaSelector).type(captchaText, { force: true });
