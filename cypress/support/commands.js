@@ -108,12 +108,13 @@ Cypress.Commands.add('waitAndClick', (selector) => {
 
 // Close popup if present
 Cypress.Commands.add('closePopupIfPresent', (popupSelector, buttonSelector) => {
-    cy.xpath(popupSelector).should('not.be.exist')
-        .if('be.exist').and('be.visible')
-        .then(() =>
-            cy.clickXpathElement(buttonSelector))
-        .else()
-        .log('No popup found');
+    cy.get('body').then(() => {
+        cy.wrap(popupSelector).if('visible')
+            .then(() =>
+                cy.clickXpathElement(buttonSelector))
+            .else()
+            .log('No popup found');
+    })
 });
 
 
