@@ -69,7 +69,7 @@ Cypress.Commands.add('clickXpathElement', (selector) => {
 });
 
 Cypress.Commands.add('clickElement', (selector) => {
-    cy.get(selector).click();
+    cy.get(selector).click({ force: true });
 });
 
 // Perform login action
@@ -89,7 +89,7 @@ Cypress.Commands.add('login', (emailSelector, emailValue, passwordSelector, pass
         cy.get(captchaSelector).type(captchaText, { force: true });
     });
 
-    cy.get(loginButtonSelector).click();
+    cy.get(loginButtonSelector).click({ force: true });
 });
 
 // Wait for element presence

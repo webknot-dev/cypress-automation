@@ -19,7 +19,7 @@
     "excise_scroll": "//*[@id='__xmlview16--TaxablePersonPage-cont']",
     "login_text_validation_id": "#__text9",
 
-    "Alert_Dialog_xpath": "//*[@id='__dialog8']",
+    "Alert_Dialog_xpath": "//*[@id='__dialog8-cont']",
     "Alert_Accept_xpath": "//*[@id='oCloseButton-inner']",
     "TRN_validation_Xpath": "//*[@id='__text233-__xmlview9--regoverviewTable-3']"
   },
