@@ -24,6 +24,7 @@
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 require('cypress-xpath');
+require('cypress-if');
 
 Cypress.on('uncaught:exception', (err, runnable) => {
     return false;
@@ -64,7 +65,11 @@ Cypress.Commands.add('visitUrl', (url) => {
 
 // Click on an element
 Cypress.Commands.add('clickXpathElement', (selector) => {
-    cy.xpath(selector).click();
+    cy.xpath(selector).click({ force: true });
+});
+
+Cypress.Commands.add('clickElement', (selector) => {
+    cy.get(selector).click();
 });
 
 // Perform login action
@@ -88,6 +93,10 @@ Cypress.Commands.add('login', (emailSelector, emailValue, passwordSelector, pass
 });
 
 // Wait for element presence
+Cypress.Commands.add('waitForXpathElementPresence', (selector) => {
+    cy.xpath(selector).should('be.visible');
+});
+
 Cypress.Commands.add('waitForElementPresence', (selector) => {
     cy.xpath(selector).should('be.visible');
 });
@@ -99,12 +108,14 @@ Cypress.Commands.add('waitAndClick', (selector) => {
 
 // Close popup if present
 Cypress.Commands.add('closePopupIfPresent', (popupSelector, buttonSelector) => {
-    cy.xpath(popupSelector).then((popup) => {
-        if (popup.is(':visible')) {
-            cy.xpath(buttonSelector).click();
-        }
-    });
+    cy.xpath(popupSelector).should('not.be.exist')
+        .if('be.exist').and('be.visible')
+        .then(() =>
+            cy.clickXpathElement(buttonSelector))
+        .else()
+        .log('No popup found');
 });
+
 
 // Select list item
 Cypress.Commands.add('selectListItem', (listSelector, targetValue) => {
@@ -148,4 +159,14 @@ Cypress.Commands.add('inputField', (selector, inputValue) => {
 // Quit the browser (Cypress automatically handles this)
 Cypress.Commands.add('quit', () => {
     cy.log('Tests will end here');
+});
+
+// Select excise and validate the details then click on create new
+Cypress.Commands.add('selectExcise', (excontainerid, extitleid, exdescriptionid, excreatenewid, exname, exdescription) => {
+    cy.scrollToView(excontainerid);
+    cy.get(excontainerid).should('be.visible').within(() => {
+        cy.get(extitleid).should('have.text', exname);
+        cy.get(exdescriptionid).should('have.text', exdescription);
+        cy.get(excreatenewid).click();
+    });
 });
