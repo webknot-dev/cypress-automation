@@ -24,6 +24,7 @@
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 require('cypress-xpath');
+require('cypress-if');
 
 Cypress.on('uncaught:exception', (err, runnable) => {
     return false;
@@ -63,6 +64,10 @@ Cypress.Commands.add('visitUrl', (url) => {
 });
 
 // Click on an element
+Cypress.Commands.add('clickXpathElement', (selector) => {
+    cy.xpath(selector).click({ force: true });
+});
+
 Cypress.Commands.add('clickElement', (selector) => {
     cy.get(selector).click();
 });
@@ -73,7 +78,7 @@ Cypress.Commands.add('login', (emailSelector, emailValue, passwordSelector, pass
     cy.get('#__xmlview0--idSplitter-content-0').should('be.visible');
     cy.get('#__text9').should('exist');
 
-    cy.get('#__data48').click({ force: true });
+    cy.wait(5000).get('#__data48').click({ force: true });
 
     cy.get(emailSelector).click({ force: true }).type(emailValue);
     cy.get(passwordSelector).click({ force: true }).type(passwordValue);
@@ -88,8 +93,12 @@ Cypress.Commands.add('login', (emailSelector, emailValue, passwordSelector, pass
 });
 
 // Wait for element presence
+Cypress.Commands.add('waitForXpathElementPresence', (selector) => {
+    cy.xpath(selector).should('be.visible');
+});
+
 Cypress.Commands.add('waitForElementPresence', (selector) => {
-    cy.get(selector).should('be.visible');
+    cy.xpath(selector).should('be.visible');
 });
 
 // Wait and click
@@ -98,6 +107,7 @@ Cypress.Commands.add('waitAndClick', (selector, timeout = 10000) => { // Default
 });
 
 // Close popup if present
+<<<<<<< HEAD
 /* Cypress.Commands.add('closePopupIfPresent', (popupSelector, buttonSelector) => {
     console.log("popupSelector",popupSelector)
     console.log("buttonSelector",buttonSelector)
@@ -143,6 +153,15 @@ Cypress.Commands.add('closePopupIfPresent', (popupSelector, buttonSelector) => {
             cy.log("Error occurred while handling the popup: ", error.message);
         }
     });
+=======
+Cypress.Commands.add('closePopupIfPresent', (popupSelector, buttonSelector) => {
+    cy.xpath(popupSelector).should('not.be.exist')
+        .if('be.exist').and('be.visible')
+        .then(() =>
+            cy.clickXpathElement(buttonSelector))
+        .else()
+        .log('No popup found');
+>>>>>>> eb893410cd07f1809703e7936d2c0d5f5470ac0c
 });
 
 
@@ -193,4 +212,14 @@ Cypress.Commands.add('inputField', (selector, inputValue) => {
 // Quit the browser (Cypress automatically handles this)
 Cypress.Commands.add('quit', () => {
     cy.log('Tests will end here');
+});
+
+// Select excise and validate the details then click on create new
+Cypress.Commands.add('selectExcise', (excontainerid, extitleid, exdescriptionid, excreatenewid, exname, exdescription) => {
+    cy.scrollToView(excontainerid);
+    cy.get(excontainerid).should('be.visible').within(() => {
+        cy.get(extitleid).should('have.text', exname);
+        cy.get(exdescriptionid).should('have.text', exdescription);
+        cy.get(excreatenewid).click();
+    });
 });
