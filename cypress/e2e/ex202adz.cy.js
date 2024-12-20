@@ -17,7 +17,7 @@ describe("Automating EX202A consumption of goods with designated zone", () => {
             )
 
             cy.clickXpathElement(data.LocatorsPath.taxableProfileButton_xpath)
-            // cy.closePopupIfPresent(data.LocatorsPath.Alert_Dialog_xpath, data.LocatorsPath.Alert_Accept_xpath)
+            cy.closePopupIfPresent(data.LocatorsPath.Alert_Dialog_xpath, data.LocatorsPath.Alert_Accept_xpath)
             cy.waitForXpathElementPresence(data.LocatorsPath.TRN_validation_Xpath)
             cy.clickXpathElement(data.LocatorsPath.exciseTax_xpath);
 
