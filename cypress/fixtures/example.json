@@ -11,8 +11,8 @@
     "captchaInputField_id": "[placeholder='Enter security code']",
     "loginButton_id": "#__xmlview0--loginBtn-inner",
     "loginProfile_xpath": "//*[@id='__xmlview5--emailId']",
-    "taxableProfileButton_xpath": "//*[@id='__button55-__xmlview4--taxablePersonContainer-0']",
-    "exciseTax_xpath": "//*[@id='__item142-__item143-__xmlview10--sideNavigationList-1-1']",
+    "taxableProfileButton_xpath": "#__button55-__xmlview4--taxablePersonContainer-0",
+    "exciseTax_xpath": "#__item142-__item143-__xmlview10--sideNavigationList-1-1 > .sapTntNavLIItem > .sapMText",
     "ramda_dropDown_id": "#__icon101",
     "check_box_xpath": "//*[@id='_INST_A_00_CHECKBOX_CHK_checkbox-CbBg']",
     "start_button_xpath": "//*[@id='__xmlview20--idFormStart-inner']",
@@ -21,8 +21,15 @@
     
     "Alert_Dialog_xpath": "//*[@id='__dialog8']",
     "Alert_Accept_xpath": "//*[@id='oCloseButton-inner']",
-    "TRN_validation_Xpath": "//*[@id='__text233-__xmlview9--regoverviewTable-3']"
-    
+    "TRN_validation_Xpath": "//*[@id='__text233-__xmlview9--regoverviewTable-3']",
+
+    "EX201_create_new_id": "#__button132-__container49-__xmlview14--panelScrollcontainer-2-0-BDI-content",
+    "EX201_check_box_id":"#_INST_A_00_CHECKBOX_CHK_checkbox",
+    "Ex201_start_button": "#__xmlview19--idFormStart-inner",
+    "releaseFromDZButton_xpath": "//*[@id='_BIID_A_DECL_TYPE_radiobutton2-label']",
+
+    "dropDownEOI_id":"#_BIID_A_EMIRATE_combobox-arrow"
+      
     
   },
   "EntryValues": {
@@ -31,6 +38,7 @@
     "url": "https://eservices.tax.gov.ae/#/Logon",
     "EOI_targetItem": "Abu Dhabi",
     "POE_targetItem": "Guwaifat",
+    "date_selector":"//*[@id='_BIID_A_DATE_IMPORT_date-inner']",
     "target_date_value": "31/01/2024",
     "uploadingFilePath": "C:/Users/Admin/Downloads/ExciseGoods.xlsx"
   },
@@ -41,4 +49,6 @@
     "Scroll_div_xpath": "//*[@id='__xmlview15--TaxablePersonPage-cont']",
     "Search_xpath": "//*[@id='__xmlview15--id_Search_tile-I']"
   }
+
+  
 }

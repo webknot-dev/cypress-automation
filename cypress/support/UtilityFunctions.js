@@ -44,7 +44,7 @@ class UtilityFunctions {
     }
 
     // Close popup if present
-    async closePopupIfPresent(popupSelector, buttonSelector) {
+    async closePopupIfPresentUtility(popupSelector, buttonSelector) {
         cy.get(popupSelector).then((popup) => {
             if (popup.is(':visible')) {
                 cy.get(buttonSelector).click();
