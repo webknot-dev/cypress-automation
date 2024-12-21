@@ -1,9 +1,9 @@
-describe("Automating EX201 - ", () => {
+describe("Automating EX201 - Re Export ", () => {
     before(() => {
         // Set the viewport size for the tests
         cy.viewport(1024, 764)
     })
-    it("EX201 - Release from designated zone", () => {
+    it("EX201 - Re Export", () => {
         // Load data from the fixture file
         cy.fixture("example.json").then((data) => {
             // Visit the URL specified in the fixture data
@@ -43,15 +43,21 @@ describe("Automating EX201 - ", () => {
             cy.clickElement(data.locators_ex201im.EX201IM_checkbox_id)
             // Click on the start button to begin the process
             cy.clickElement(data.locators_ex201im.EX201IM_Start_id)
-            // click on "release from designated zone" radio button
-            cy.clickElement(data.locators_ex201dz.EX201DZ_DZ_id)
+            // click on "import for re-export" radio button
+            cy.clickElement(data.locators_ex201reim.EX201REIM_reim_id)
             // input date 
-            cy.selectingDate(data.locators_ex201im.EX201IM_date_id, data.EntryValues.EX201IM_date)
+            cy.selectingDate(data.locators_ex201im.EX201IM_date_id, data.EntryValues.EX201REIM_date)
             // selecting Emirate of Import 
             cy.clickElement(data.locators_ex201dz.EX201DZ_emirates_DropDown_id)
-            cy.selectFromDropdown(data.locators_ex201im.EX201IM_emirates_list_id, data.EntryValues.EX201DZ_emirates)
-            // Entering DZ Zone ID
-            cy.inputField(data.locators_ex201dz.EX201DZ_zone_id, data.EntryValues.EX201DZ_zone_number)
+            cy.selectFromDropdown(data.locators_ex201im.EX201IM_emirates_list_id, data.EntryValues.EX201REIM_emirates)
+            // selecting Port of Entry
+            cy.clickElement(data.locators_ex201im.EX201IM_Port_DropDown_id)
+            cy.selectFromDropdown(data.locators_ex201im.EX201IM_port_list_id, data.EntryValues.EX201REIM_port)
+            //clicking on next button
+            cy.clickElement(data.locators_ex201im.EX201IM_next_id)
+            cy.clickElement(data.locators_ex201im.EX201IM_download_id)
+            // upload the file
+            cy.uploadingFile(data.locators_ex201im.EX201IM_upload_id, data.EntryValues.EX201IM_filePath)
         })
     });
 })
