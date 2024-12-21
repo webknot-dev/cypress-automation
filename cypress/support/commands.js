@@ -123,6 +123,11 @@ Cypress.Commands.add('selectListItem', (listSelector, targetValue) => {
     cy.get(listSelector).contains('li', targetValue).click();
 });
 
+//select from drop down
+Cypress.Commands.add('selectFromDropdown', (dropdownSelector, value) => {
+    cy.get(dropdownSelector).contains(value).click({ force: true });
+});
+
 // To element in view
 Cypress.Commands.add('scrollToView', (locatorValue) => {
     try {
@@ -131,6 +136,15 @@ Cypress.Commands.add('scrollToView', (locatorValue) => {
         cy.log('Error in scrollintoview command:', error);
     }
 })
+
+Cypress.Commands.add('selectOptionBasedOnValue', (value, shipmentid) => {
+    if (value === "Yes" || value === "yes") {
+        cy.get("#_BIID_A_DTS_GOODS_radiobutton1").click({ force: true });
+        cy.get('#_BIID_A_SHIPMENT_ID_combobox-arrow').type(shipmentid, { force: true });
+    } else if (value === "No" || value === "no") {
+        cy.get("#_BIID_A_DTS_GOODS_radiobutton2").click({ force: true });
+    }
+});
 
 // Scroll within a container
 Cypress.Commands.add('scrollPageInContainer', (containerSelector, init, final) => {
@@ -144,12 +158,12 @@ Cypress.Commands.add('scrollPage', (init, final) => {
 
 // Upload a file
 Cypress.Commands.add('uploadingFile', (inputSelector, filePath) => {
-    cy.get(inputSelector).attachFile(filePath);
+    cy.get(inputSelector).selectFile(filePath, { force: true });
 });
 
 // Select a date
 Cypress.Commands.add('selectingDate', (selector, date) => {
-    cy.get(selector).type(date).type('{enter}');
+    cy.get(selector).type(date, { force: true }).type('{enter}');
 });
 
 // Input text into a field

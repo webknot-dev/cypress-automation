@@ -30,21 +30,21 @@ describe("Automating EX202A consumption of goods with designated zone", () => {
             // Click on the excise tax button
             cy.clickXpathElement(data.LocatorsPath.exciseTax_xpath);
 
-            // // Select the excise option using the locators and values from the fixture data
-            // cy.selectExcise(data.locators_ex202adz.EX202ADZ_container_id,
-            //     data.locators_ex202adz.EX202ADZ_title_id,
-            //     data.locators_ex202adz.EX202ADZ_description_id,
-            //     data.locators_ex202adz.EX202ADZ_createNew_id,
-            //     "EX202A",
-            //     data.EntryValues.EX202ADZ_Description
-            // )
+            // Select the excise option using the locators and values from the fixture data
+            cy.selectExcise(data.locators_ex202adz.EX202ADZ_container_id,
+                data.locators_ex202adz.EX202ADZ_title_id,
+                data.locators_ex202adz.EX202ADZ_description_id,
+                data.locators_ex202adz.EX202ADZ_createNew_id,
+                "EX202A",
+                data.EntryValues.EX202ADZ_Description
+            )
 
-            // // Click on the checkbox to agree to terms
-            // cy.clickElement(data.locators_ex202adz.EX202ADZ_checkbox_id)
-            // // Click on the start button to begin the process
-            // cy.clickElement(data.locators_ex202adz.EX202ADZ_Start_id)
-            // // Input the designated zone number
-            // cy.inputField(data.locators_ex202adz.EX202ADZ_zone_id, data.EntryValues.EX202ADZ_zone_number)
+            // Click on the checkbox to agree to terms
+            cy.clickElement(data.locators_ex202adz.EX202ADZ_checkbox_id)
+            // Click on the start button to begin the process
+            cy.clickElement(data.locators_ex202adz.EX202ADZ_Start_id)
+            // Input the designated zone number
+            cy.inputField(data.locators_ex202adz.EX202ADZ_zone_id, data.EntryValues.EX202ADZ_zone_number)
         })
     });
 })
