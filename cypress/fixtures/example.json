@@ -26,9 +26,11 @@
     "EX201_create_new_id": "#__button132-__container49-__xmlview14--panelScrollcontainer-2-0-BDI-content",
     "EX201_check_box_id":"#_INST_A_00_CHECKBOX_CHK_checkbox",
     "Ex201_start_button": "#__xmlview19--idFormStart-inner",
-    "releaseFromDZButton_xpath": "//*[@id='_BIID_A_DECL_TYPE_radiobutton2-label']",
+    "releaseFromDZButton_xpath": "#_BIID_A_DECL_TYPE_radiobutton2 > .sapMRbB",
 
-    "dropDownEOI_id":"#_BIID_A_EMIRATE_combobox-arrow"
+    "dropDownEOI_xpath":"//*[@id='_BIID_A_EMIRATE_combobox-arrow]",
+    "Designated_zone_xpath":"#_BIID_A_DZ_NO_input-inner",
+    "validate_xpath":"#_BIID_validateDesigZone_button-content"
       
     
   },
@@ -39,8 +41,9 @@
     "EOI_targetItem": "Abu Dhabi",
     "POE_targetItem": "Guwaifat",
     "date_selector":"//*[@id='_BIID_A_DATE_IMPORT_date-inner']",
-    "target_date_value": "31/01/2024",
-    "uploadingFilePath": "C:/Users/Admin/Downloads/ExciseGoods.xlsx"
+    "target_date_value": "21/12/2024",
+    "uploadingFilePath": "C:/Users/Admin/Downloads/ExciseGoods.xlsx",
+    "Designated_zone_number":"D100151001"
   },
   "Locators_202A": {
     "EX202A_createNew_xpath": "//*[@id='__button133-__container49-__xmlview15--panelScrollcontainer-0-0-BDI-content']",

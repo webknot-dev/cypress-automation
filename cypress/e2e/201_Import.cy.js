@@ -5,8 +5,8 @@ describe('Captcha Handling Test', () => {
 
   before(() => {
     cy.viewport(1024, 764);
-    cy.clearCookies();         // Clears all cookies
-    cy.clearLocalStorage();    // Clears all local storage
+    cy.clearCookies();
+    cy.clearLocalStorage();
     cy.reload();
   })
 
@@ -16,14 +16,14 @@ describe('Captcha Handling Test', () => {
 
       //Navigate to FTA Portal
       cy.visitUrl(data.EntryValues.url);
-      cy.wait(25000)
+      cy.wait(15000)
       cy.wait(5000)
       console.log("Navigated to FTA - Federal Tax Authority Successfully");
 
       //Validate Login text
       cy.waitForElementPresence(data.LocatorsPath.login_text_validation_id)
       console.log("Login Text is present and validated");
-      cy.wait(5000)
+      cy.wait(3000)
 
       //Login to FTA Portal
       cy.login(data.LocatorsPath.emailInputField_id,
@@ -37,7 +37,7 @@ describe('Captcha Handling Test', () => {
       )
 
       console.log("Login Successfully Done");
-      cy.wait(5000)
+      cy.wait(3000)
 
 
       //Click on Ramada Hotel & Suites Sharjah profile
@@ -52,10 +52,10 @@ describe('Captcha Handling Test', () => {
 
       // cy.closePopupIfPresent(data.LocatorsPath.Alert_Dialog_xpath,data.LocatorsPath.Alert_Accept_xpath);
       // cy.closePopupIfPresent(data.LocatorsPath.Alert_Dialog_xpath, data.LocatorsPath.Alert_Accept_xpath);
-    
-      cy.closePopupIfPresent(data.LocatorsPath.Alert_Dialog_xpath, data.LocatorsPath.Alert_Accept_xpath);
-         
 
+      cy.closePopupIfPresent(data.LocatorsPath.Alert_Dialog_xpath, data.LocatorsPath.Alert_Accept_xpath);
+
+      cy.wait(5000)
 
 
 
@@ -79,20 +79,30 @@ describe('Captcha Handling Test', () => {
 
       //scroll into view
       cy.scrollToView(data.LocatorsPath.EX201_check_box_id);
-      cy.wait(3000)
+      cy.wait(5000)
 
       //click on confirmation heck box - #_INST_A_00_CHECKBOX_CHK_checkbox
       cy.waitAndClick(data.LocatorsPath.EX201_check_box_id);
-      cy.wait(3000)
+      cy.wait(5000)
 
       //click on start -#__xmlview19--idFormStart-inner
 
       cy.waitAndClick(data.LocatorsPath.Ex201_start_button);
-      cy.wait(3000)
+      cy.wait(5000)
 
       //dropdown
-      cy.selectListItem(data.LocatorsPath.dropDownEOI_id, data.EntryValues.EOI_targetItem);
-      cy.wait(3000)
+      // cy.selectListItem(data.LocatorsPath.dropDownEOI_id, data.EntryValues.EOI_targetItem);
+      // cy.wait(5000)
+      cy.xpath('//*[@id="_BIID_A_EMIRATE_combobox-arrow"]')
+        .should('exist') // Ensure the element exists
+        .click();
+
+      // Select "Abu Dhabi" from the dropdown list
+      cy.get('ul') // Adjust 'ul' if the dropdown container is different
+        .should('be.visible') // Ensure the list is visible
+        .contains('li', 'Abu Dhabi') // Look for the item "Abu Dhabi"
+        .should('exist') // Ensure the item exists
+        .click({ force: true }); // Force click if needed
 
       //select date
       cy.selectingDate(data.EntryValues.date_selector, data.EntryValues.target_date_value);
@@ -100,6 +110,14 @@ describe('Captcha Handling Test', () => {
 
       //Radio button
       cy.waitAndClick(data.LocatorsPath.releaseFromDZButton_xpath);
+      cy.wait(3000)
+
+      cy.inputField(data.LocatorsPath.Designated_zone_xpath, data.EntryValues.Designated_zone_number);
+      cy.wait(3000)
+
+
+      cy.waitAndClick(data.LocatorsPath.validate_xpath);
+      cy.wait(3000)
 
       cy.quit();
 

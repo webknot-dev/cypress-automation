@@ -98,7 +98,7 @@ Cypress.Commands.add('waitForXpathElementPresence', (selector) => {
 });
 
 Cypress.Commands.add('waitForElementPresence', (selector) => {
-    cy.xpath(selector).should('be.visible');
+    cy.get(selector).should('be.visible');
 });
 
 // Wait and click
@@ -107,53 +107,6 @@ Cypress.Commands.add('waitAndClick', (selector, timeout = 10000) => { // Default
 });
 
 // Close popup if present
-<<<<<<< HEAD
-/* Cypress.Commands.add('closePopupIfPresent', (popupSelector, buttonSelector) => {
-    console.log("popupSelector",popupSelector)
-    console.log("buttonSelector",buttonSelector)
-    cy.xpath(popupSelector).then((popup) => {
-        console.log("inside method--")
-        if (popup.is(':visible')) {
-            console.log("inside if---")
-            cy.xpath(buttonSelector).click();
-            console.log("clickeddd")
-        }
-    });
-}); */
-// Close popup if present
-// Cypress.Commands.add('closePopupIfPresent', (popupSelector, buttonSelector) => {
-//     cy.xpath(popupSelector) // Locate the popup using xpath
-//         .should('exist') // Ensure the popup exists
-//         .then(($popup) => {
-//             if ($popup.is(':visible')) { // Check if the popup is visible
-//                 cy.log("Popup detected. Attempting to close.");
-//                 cy.xpath(buttonSelector).click(); // Close the popup
-//                 cy.wait(2000); // Wait for 2 seconds (adjust if necessary)
-//             } else {
-//                 cy.log("Popup is not visible.");
-//             }
-//         })
-//         .catch(() => {
-//             cy.log("No popup detected.");
-//         });
-// });
-
-Cypress.Commands.add('closePopupIfPresent', (popupSelector, buttonSelector) => {
-    cy.get('body').then(($body) => { // Check if the body contains the popup
-        try {
-            if ($body.find(popupSelector).length > 0) {
-                cy.get(popupSelector).should('be.visible'); // Assert the popup is visible
-                cy.log("Popup detected. Attempting to close.");
-                cy.get(buttonSelector).click(); // Close the popup
-                cy.wait(2000); // Optional wait
-            } else {
-                cy.log("No popup detected.");
-            }
-        } catch (error) {
-            cy.log("Error occurred while handling the popup: ", error.message);
-        }
-    });
-=======
 Cypress.Commands.add('closePopupIfPresent', (popupSelector, buttonSelector) => {
     cy.xpath(popupSelector).should('not.be.exist')
         .if('be.exist').and('be.visible')
@@ -161,18 +114,26 @@ Cypress.Commands.add('closePopupIfPresent', (popupSelector, buttonSelector) => {
             cy.clickXpathElement(buttonSelector))
         .else()
         .log('No popup found');
->>>>>>> eb893410cd07f1809703e7936d2c0d5f5470ac0c
 });
 
-
-// Select list item
+// //DropDown
 Cypress.Commands.add('selectListItem', (dropdownLocator, itemText) => {
     cy.get(dropdownLocator).click(); // Open the dropdown
-    cy.get('li') // Ensure 'li' is the correct tag for the dropdown items
-        .contains(itemText) // Match the item text
-        .should('be.visible') // Ensure it's visible
-        .click(); // Click on the item
+    cy.contains(itemText) // Find the item with the specified text
+        .should('be.visible') // Ensure the item is visible
+        .click(); // Click the item
 });
+
+// //DropDown
+// Cypress.Commands.add('selectListItem', (dropdownLocator, targetItem, timeout = 10000) => {
+//     // Open the dropdown
+//     cy.get(dropdownLocator).click();
+
+//     // Click the target item within the dropdown
+//     cy.get(dropdownLocator, targetItem)
+//         .should('be.visible')
+//         .click();
+// });
 
 
 // To element in view
@@ -201,7 +162,7 @@ Cypress.Commands.add('uploadingFile', (inputSelector, filePath) => {
 
 // Select a date
 Cypress.Commands.add('selectingDate', (selector, date) => {
-    cy.get(selector).type(date).type('{enter}');
+    cy.xpath(selector).type(date).type('{enter}');
 });
 
 // Input text into a field
