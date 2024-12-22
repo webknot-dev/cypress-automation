@@ -1,4 +1,4 @@
-describe("Automating EX201 - ", () => {
+describe("Automating EX201 - Import ", () => {
     before(() => {
         // Set the viewport size for the tests
         cy.viewport(1024, 764)
@@ -24,7 +24,7 @@ describe("Automating EX201 - ", () => {
             // Click on the taxable profile button
             cy.clickXpathElement(data.LocatorsPath.taxableProfileButton_xpath)
             // Close any popup if present
-            cy.closePopupIfPresent(data.LocatorsPath.PopUp_Selector, data.LocatorsPath.Alert_Accept_xpath)
+            cy.closePopupIfPresent(data.LocatorsPath.PopUp_Selector, data.LocatorsPath.PopUp_Accept)
             // Wait for the TRN validation element to be present
             cy.waitForXpathElementPresence(data.LocatorsPath.TRN_validation_Xpath)
             // Click on the excise tax button
@@ -42,7 +42,7 @@ describe("Automating EX201 - ", () => {
             // Click on the checkbox to agree to terms
             cy.clickElement(data.locators_ex201im.EX201IM_checkbox_id)
             // Click on the start button to begin the process
-            cy.clickElement(data.locators_ex201im.EX201IM_Start_id)
+            cy.clickXpathElement(data.locators_ex201im.EX201IM_Start_xpath)
             // click on "import" radio button
             cy.clickElement(data.locators_ex201im.EX201IM_import_id)
             // input date 
@@ -56,7 +56,7 @@ describe("Automating EX201 - ", () => {
             // selecting option for  Are the imported goods DTS goods? if yes enter shipment id
             cy.selectOptionBasedOnValue("no", "")
             //clicking on next button
-            cy.clickElement(data.locators_ex201im.EX201IM_next_id)
+            cy.clickXpathElement(data.locators_ex201im.EX201IM_next_xpath)
             // download the excel template
             cy.clickElement(data.locators_ex201im.EX201IM_download_id)
             // upload the file

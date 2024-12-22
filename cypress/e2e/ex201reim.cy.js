@@ -1,9 +1,9 @@
-describe("Automating EX201 - Re Export ", () => {
+describe("Automating EX201 - Import for Re-export ", () => {
     before(() => {
         // Set the viewport size for the tests
         cy.viewport(1024, 764)
     })
-    it("EX201 - Re Export", () => {
+    it("EX201 - RImport for Re-export ", () => {
         // Load data from the fixture file
         cy.fixture("example.json").then((data) => {
             // Visit the URL specified in the fixture data
@@ -24,7 +24,7 @@ describe("Automating EX201 - Re Export ", () => {
             // Click on the taxable profile button
             cy.clickXpathElement(data.LocatorsPath.taxableProfileButton_xpath)
             // Close any popup if present
-            cy.closePopupIfPresent(data.LocatorsPath.PopUp_Selector, data.LocatorsPath.Alert_Accept_xpath)
+            cy.closePopupIfPresent(data.LocatorsPath.PopUp_Selector, data.LocatorsPath.PopUp_Accept)
             // Wait for the TRN validation element to be present
             cy.waitForXpathElementPresence(data.LocatorsPath.TRN_validation_Xpath)
             // Click on the excise tax button
@@ -42,7 +42,7 @@ describe("Automating EX201 - Re Export ", () => {
             // Click on the checkbox to agree to terms
             cy.clickElement(data.locators_ex201im.EX201IM_checkbox_id)
             // Click on the start button to begin the process
-            cy.clickElement(data.locators_ex201im.EX201IM_Start_id)
+            cy.clickXpathElement(data.locators_ex201im.EX201IM_Start_xpath)
             // click on "import for re-export" radio button
             cy.clickElement(data.locators_ex201reim.EX201REIM_reim_id)
             // input date 
@@ -54,7 +54,7 @@ describe("Automating EX201 - Re Export ", () => {
             cy.clickElement(data.locators_ex201im.EX201IM_Port_DropDown_id)
             cy.selectFromDropdown(data.locators_ex201im.EX201IM_port_list_id, data.EntryValues.EX201REIM_port)
             //clicking on next button
-            cy.clickElement(data.locators_ex201im.EX201IM_next_id)
+            cy.clickXpathElement(data.locators_ex201im.EX201IM_next_xpath)
             cy.clickElement(data.locators_ex201im.EX201IM_download_id)
             // upload the file
             cy.uploadingFile(data.locators_ex201im.EX201IM_upload_id, data.EntryValues.EX201IM_filePath)

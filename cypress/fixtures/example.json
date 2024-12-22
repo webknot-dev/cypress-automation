@@ -11,8 +11,8 @@
     "captchaInputField_id": "[placeholder='Enter security code']",
     "loginButton_id": "#__xmlview0--loginBtn-inner",
     "loginProfile_xpath": "//*[@id='__xmlview5--emailId']",
-    "taxableProfileButton_xpath": "//*[@id='__button55-__xmlview4--taxablePersonContainer-0']",
-    "exciseTax_xpath": "//*[@id='__item142-__item143-__xmlview10--sideNavigationList-1-1']",
+    "taxableProfileButton_xpath": "(//bdi[text()='View'])[1]",
+    "exciseTax_xpath": "(//span[text()='Excise Tax'])[1]",
     "ramda_dropDown_id": "#__icon101",
     "check_box_xpath": "//*[@id='_INST_A_00_CHECKBOX_CHK_checkbox-CbBg']",
     "start_button_xpath": "//*[@id='__xmlview20--idFormStart-inner']",
@@ -21,8 +21,9 @@
 
     "Alert_Dialog_xpath": "//*[@id='__dialog8-cont']",
     "Alert_Accept_xpath": "//*[@id='oCloseButton-inner']",
-    "TRN_validation_Xpath": "//*[@id='__text233-__xmlview9--regoverviewTable-3']",
-    "PopUp_Selector": "#__dialog8-cont"
+    "TRN_validation_Xpath": "(//td[@data-sap-ui-column='__column124'])[4]",
+    "PopUp_Selector": "#__dialog8",
+    "PopUp_Accept": "#oCloseButton-BDI-content"
   },
   "EntryValues": {
     "browser_type": "",
@@ -59,28 +60,28 @@
     "Search_xpath": "//*[@id='__xmlview15--id_Search_tile-I']"
   },
   "locators_ex202adz": {
-    "EX202ADZ_container_id": "#__tile7-__container49-__xmlview14--panelScrollcontainer-3-1-content",
-    "EX202ADZ_title_id": "#__title62-__container49-__xmlview14--panelScrollcontainer-3-1-inner",
-    "EX202ADZ_description_id": "#__text405-__container49-__xmlview14--panelScrollcontainer-3-1",
-    "EX202ADZ_createNew_id": "#__button132-__container49-__xmlview14--panelScrollcontainer-3-1-BDI-content",
+    "EX202ADZ_container_id": "__tile7-__container49-__xmlview14--panelScrollcontainer-3-1-content",
+    "EX202ADZ_title_id": "__title62-__container49-__xmlview14--panelScrollcontainer-3-1-inner",
+    "EX202ADZ_description_id": "__text405-__container49-__xmlview14--panelScrollcontainer-3-1",
+    "EX202ADZ_createNew_id": "Create New",
     "EX202ADZ_checkbox_id": "#_INST_A_00_CHECKBOX_CHK_checkbox-CbBg",
-    "EX202ADZ_Start_id": "#__xmlview19--idFormStart-inner",
+    "EX202ADZ_Start_xpath": "//bdi[text()='Start']",
     "EX202ADZ_zone_id": "#_BIID_A_DZ_NO_input-inner"
   },
   "locators_ex201im": {
-    "EX201IM_container_id": "#__tile7-__container49-__xmlview14--panelScrollcontainer-2-0",
-    "EX201IM_title_id": "#__title62-__container49-__xmlview14--panelScrollcontainer-2-0-inner",
-    "EX201IM_description_id": "#__text405-__container49-__xmlview14--panelScrollcontainer-2-0",
-    "EX201IM_createNew_id": "#__button132-__container49-__xmlview14--panelScrollcontainer-2-0-BDI-content",
+    "EX201IM_container_id": "__tile7-__container49-__xmlview14--panelScrollcontainer-2-0",
+    "EX201IM_title_id": "__title62-__container49-__xmlview14--panelScrollcontainer-2-0-inner",
+    "EX201IM_description_id": "__text405-__container49-__xmlview14--panelScrollcontainer-2-0",
+    "EX201IM_createNew_id": "Create New",
     "EX201IM_checkbox_id": "#_INST_A_00_CHECKBOX_CHK_checkbox-CbBg",
-    "EX201IM_Start_id": "#__xmlview19--idFormStart-inner",
+    "EX201IM_Start_xpath": "//bdi[substring(@id, string-length(@id) - string-length('idFormStart-BDI-content') + 1) = 'idFormStart-BDI-content']",
     "EX201IM_import_id": "#_BIID_A_DECL_TYPE_radiobutton1-Button",
     "EX201IM_date_id": "#_BIID_A_DATE_IMPORT_date-inner",
     "EX201IM_emirates_DropDown_id": "#_BIID_A_EMIRATE_combobox-arrow",
     "EX201IM_Port_DropDown_id": "#_BIID_A_PORT_combobox-arrow",
     "EX201IM_emirates_list_id": "#_BIID_A_EMIRATE_combobox-popup-list-listUl",
     "EX201IM_port_list_id": "#_BIID_A_PORT_combobox-popup-list-listUl",
-    "EX201IM_next_id": "#__xmlview19--idFormNestStep-inner",
+    "EX201IM_next_xpath": "//span[substring(@id, string-length(@id) - string-length('idFormNestStep-inner') + 1) = 'idFormNestStep-inner']",
     "EX201IM_download_id": "#_EGCC_downloadTemp_link",
     "EX201IM_upload_id": "input[type='file'][name='_EGCC_uploadTemplate_fUploader']"
   },

@@ -1,9 +1,9 @@
-describe("Automating EX201 - ", () => {
+describe("Automating EX201 - Release from Designated Zone (Requiring Customs Clearance)", () => {
     before(() => {
         // Set the viewport size for the tests
         cy.viewport(1024, 764)
     })
-    it("EX201 - Release from designated zone", () => {
+    it("EX201 - Release from Designated Zone (Requiring Customs Clearance)", () => {
         // Load data from the fixture file
         cy.fixture("example.json").then((data) => {
             // Visit the URL specified in the fixture data
@@ -24,7 +24,7 @@ describe("Automating EX201 - ", () => {
             // Click on the taxable profile button
             cy.clickXpathElement(data.LocatorsPath.taxableProfileButton_xpath)
             // Close any popup if present
-            cy.closePopupIfPresent(data.LocatorsPath.data.LocatorsPath.PopUp_Selector, data.LocatorsPath.Alert_Accept_xpath)
+            cy.closePopupIfPresent(data.LocatorsPath.PopUp_Selector, data.LocatorsPath.PopUp_Accept)
             // Wait for the TRN validation element to be present
             cy.waitForXpathElementPresence(data.LocatorsPath.TRN_validation_Xpath)
             // Click on the excise tax button
@@ -42,7 +42,7 @@ describe("Automating EX201 - ", () => {
             // Click on the checkbox to agree to terms
             cy.clickElement(data.locators_ex201im.EX201IM_checkbox_id)
             // Click on the start button to begin the process
-            cy.clickElement(data.locators_ex201im.EX201IM_Start_id)
+            cy.clickXpathElement(data.locators_ex201im.EX201IM_Start_xpath)
             // click on "release from designated zone" radio button
             cy.clickElement(data.locators_ex201dz.EX201DZ_DZ_id)
             // input date 

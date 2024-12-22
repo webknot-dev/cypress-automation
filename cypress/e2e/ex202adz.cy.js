@@ -24,7 +24,7 @@ describe("Automating EX202A consumption of goods with designated zone", () => {
             // Click on the taxable profile button
             cy.clickXpathElement(data.LocatorsPath.taxableProfileButton_xpath)
             // Close any popup if present
-            cy.closePopupIfPresent(data.LocatorsPath.PopUp_Selector, data.LocatorsPath.Alert_Accept_xpath)
+            cy.closePopupIfPresent(data.LocatorsPath.PopUp_Selector, data.LocatorsPath.PopUp_Accept)
             // Wait for the TRN validation element to be present
             cy.waitForXpathElementPresence(data.LocatorsPath.TRN_validation_Xpath)
             // Click on the excise tax button
@@ -42,7 +42,7 @@ describe("Automating EX202A consumption of goods with designated zone", () => {
             // Click on the checkbox to agree to terms
             cy.clickElement(data.locators_ex202adz.EX202ADZ_checkbox_id)
             // Click on the start button to begin the process
-            cy.clickElement(data.locators_ex202adz.EX202ADZ_Start_id)
+            cy.clickXpathElement(data.locators_ex202adz.EX202ADZ_Start_xpath)
             // Input the designated zone number
             cy.inputField(data.locators_ex202adz.EX202ADZ_zone_id, data.EntryValues.EX202ADZ_zone_number)
         })

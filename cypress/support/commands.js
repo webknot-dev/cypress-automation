@@ -109,9 +109,11 @@ Cypress.Commands.add('waitAndClick', (selector) => {
 // Close popup if present
 Cypress.Commands.add('closePopupIfPresent', (popupSelector, buttonSelector) => {
     cy.wait(10000).get('body').then(() => {
-        cy.get(popupSelector).if('visible')
+        cy.get(popupSelector).if('visible').and('exist')
             .then(() =>
-                cy.clickXpathElement(buttonSelector))
+                cy.get(popupSelector).within(() => {
+                    cy.clickElement(buttonSelector)
+                }))
             .else()
             .log('No popup found');
     })
@@ -132,6 +134,14 @@ Cypress.Commands.add('selectFromDropdown', (dropdownSelector, value) => {
 Cypress.Commands.add('scrollToView', (locatorValue) => {
     try {
         cy.get(locatorValue).scrollIntoView().should('be.visible');
+    } catch (error) {
+        cy.log('Error in scrollintoview command:', error);
+    }
+})
+
+Cypress.Commands.add('scrollToViewXpath', (locatorValue) => {
+    try {
+        cy.xpath(locatorValue).scrollIntoView().should('be.visible');
     } catch (error) {
         cy.log('Error in scrollintoview command:', error);
     }
@@ -176,12 +186,16 @@ Cypress.Commands.add('quit', () => {
     cy.log('Tests will end here');
 });
 
+Cypress.Commands.add('getByPartialId', (start, end) => {
+    return cy.xpath(`//*[starts-with(@id, '${start}') and substring(@id, string-length(@id) - string-length('${end}') + 1) = '${end}']`);
+});
+
 // Select excise and validate the details then click on create new
 Cypress.Commands.add('selectExcise', (excontainerid, extitleid, exdescriptionid, excreatenewid, exname, exdescription) => {
-    cy.scrollToView(excontainerid);
-    cy.get(excontainerid).should('be.visible').within(() => {
-        cy.get(extitleid).should('have.text', exname);
-        cy.get(exdescriptionid).should('have.text', exdescription);
-        cy.get(excreatenewid).click();
+    cy.getByPartialId(excontainerid.substring(0, 21), excontainerid.substring(excontainerid.length - 25)).scrollIntoView()
+    cy.getByPartialId(excontainerid.substring(0, 21), excontainerid.substring(excontainerid.length - 25)).should('be.visible').within(() => {
+        cy.getByPartialId(extitleid.substring(0, 24), extitleid.substring(extitleid.length - 25)).should('have.text', exname);
+        cy.getByPartialId(exdescriptionid.substring(0, 23), exdescriptionid.substring(exdescriptionid.length - 25)).should('have.text', exdescription);
+        cy.contains(excreatenewid).click({ force: true });
     });
 });
