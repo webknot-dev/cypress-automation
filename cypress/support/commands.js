@@ -98,11 +98,11 @@ Cypress.Commands.add('waitForXpathElementPresence', (selector) => {
 });
 
 Cypress.Commands.add('waitForElementPresence', (selector) => {
-    cy.xpath(selector).should('be.visible');
+    cy.get(selector).should('be.visible');
 });
 
 // Wait and click
-Cypress.Commands.add('waitAndClick', (selector) => {
+Cypress.Commands.add('waitAndClick', (selector, timeout = 10000) => { // Default timeout set to 10 seconds
     cy.get(selector, { timeout }).click();
 });
 
@@ -117,10 +117,25 @@ Cypress.Commands.add('closePopupIfPresent', (popupSelector, buttonSelector) => {
     })
 });
 
-// Select list item
-Cypress.Commands.add('selectListItem', (listSelector, targetValue) => {
-    cy.get(listSelector).contains('li', targetValue).click();
+// //DropDown
+Cypress.Commands.add('selectListItem', (dropdownLocator, itemText) => {
+    cy.get(dropdownLocator).click(); // Open the dropdown
+    cy.contains(itemText) // Find the item with the specified text
+        .should('be.visible') // Ensure the item is visible
+        .click(); // Click the item
 });
+
+// //DropDown
+// Cypress.Commands.add('selectListItem', (dropdownLocator, targetItem, timeout = 10000) => {
+//     // Open the dropdown
+//     cy.get(dropdownLocator).click();
+
+//     // Click the target item within the dropdown
+//     cy.get(dropdownLocator, targetItem)
+//         .should('be.visible')
+//         .click();
+// });
+
 
 // To element in view
 Cypress.Commands.add('scrollToView', (locatorValue) => {
@@ -148,7 +163,7 @@ Cypress.Commands.add('uploadingFile', (inputSelector, filePath) => {
 
 // Select a date
 Cypress.Commands.add('selectingDate', (selector, date) => {
-    cy.get(selector).type(date).type('{enter}');
+    cy.xpath(selector).type(date).type('{enter}');
 });
 
 // Input text into a field
