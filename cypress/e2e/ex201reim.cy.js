@@ -18,7 +18,7 @@ describe("Automating EX201 - Re Export ", () => {
                 data.LocatorsPath.captchaInputField_id,
                 data.LocatorsPath.captcha_element_id,
                 data.LocatorsPath.loginButton_id,
-                "ex202adz.cy.js"
+                "ex201reim.cy.js"
             )
 
             // Click on the taxable profile button
