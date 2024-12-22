@@ -80,8 +80,8 @@ Cypress.Commands.add('login', (emailSelector, emailValue, passwordSelector, pass
 
     cy.wait(5000).get('#__data48').click({ force: true });
 
-    cy.get(emailSelector).click({ force: true }).type(emailValue);
-    cy.get(passwordSelector).click({ force: true }).type(passwordValue);
+    cy.get(emailSelector).click({ force: true }).type(emailValue, { force: true });
+    cy.get(passwordSelector).click({ force: true }).type(passwordValue, { force: true });
 
     cy.get(captchaImageSelector).screenshot('captcha-screenshot');
     cy.task('readCaptcha', `./cypress/screenshots/${specName}/captcha-screenshot.png`).then((captchaText) => {
@@ -178,7 +178,7 @@ Cypress.Commands.add('selectingDate', (selector, date) => {
 
 // Input text into a field
 Cypress.Commands.add('inputField', (selector, inputValue) => {
-    cy.get(selector).type(inputValue);
+    cy.get(selector).type(inputValue, { force: true });
 });
 
 // Quit the browser (Cypress automatically handles this)
