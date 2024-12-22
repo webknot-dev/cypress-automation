@@ -24,7 +24,7 @@ describe("Automating EX201 - ", () => {
             // Click on the taxable profile button
             cy.clickXpathElement(data.LocatorsPath.taxableProfileButton_xpath)
             // Close any popup if present
-            cy.closePopupIfPresent(data.LocatorsPath.Alert_Dialog_xpath, data.LocatorsPath.Alert_Accept_xpath)
+            cy.closePopupIfPresent(data.LocatorsPath.data.LocatorsPath.PopUp_Selector, data.LocatorsPath.Alert_Accept_xpath)
             // Wait for the TRN validation element to be present
             cy.waitForXpathElementPresence(data.LocatorsPath.TRN_validation_Xpath)
             // Click on the excise tax button

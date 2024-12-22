@@ -108,8 +108,8 @@ Cypress.Commands.add('waitAndClick', (selector) => {
 
 // Close popup if present
 Cypress.Commands.add('closePopupIfPresent', (popupSelector, buttonSelector) => {
-    cy.get('body').then(() => {
-        cy.wrap(popupSelector).if('visible')
+    cy.wait(10000).get('body').then(() => {
+        cy.get(popupSelector).if('visible')
             .then(() =>
                 cy.clickXpathElement(buttonSelector))
             .else()
@@ -158,7 +158,7 @@ Cypress.Commands.add('scrollPage', (init, final) => {
 
 // Upload a file
 Cypress.Commands.add('uploadingFile', (inputSelector, filePath) => {
-    cy.get(inputSelector).selectFile(filePath, { force: true });
+    cy.wait(5000).get(inputSelector).selectFile(filePath, { force: true });
 });
 
 // Select a date
