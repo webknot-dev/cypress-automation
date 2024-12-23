@@ -46,12 +46,31 @@
     "Designated_zone_number":"D100151001"
   },
   "Locators_202A": {
-    "EX202A_createNew_xpath": "//*[@id='__button133-__container49-__xmlview15--panelScrollcontainer-0-0-BDI-content']",
+    "EX202A_createNew_xpath": "#__button132-__container49-__xmlview14--panelScrollcontainer-3-0-content",
    
     "Release_goods_text": "//*[@id='__text405-__container49-__xmlview14--panelScrollcontainer-3-0']",
     "Scroll_div_xpath": "//*[@id='__xmlview15--TaxablePersonPage-cont']",
-    "Search_xpath": "//*[@id='__xmlview15--id_Search_tile-I']"
+    "Search_xpath": "//*[@id='__xmlview15--id_Search_tile-I']",
+    "Ex202A_checkBox_xpath":"#_INST_A_00_CHECKBOX_CHK_checkbox-CbBg",
+    "Ex202A_start_xpath":"//*[@id=__xmlview20--idFormStart-inner]",
+    "Ex202A_DZ_input_xpath":"//*[@id='_BIID_A_ODZ_NO_input-inner']",
+    "Dz_input_value":"D100151001",
+    "validate_xpath":"//*[@id='_BIID_validateDesigZone_button-BDI-content']",
+    
+    "date_selector":"//*[@id='_BIID_A_DATE_IMPORT_date-inner']",
+    "target_date_value": "21/12/2024"
+
+  },
+  "locators_ex202adz": {
+    "EX202ADZ_container_id": "__tile7-__container49-__xmlview14--panelScrollcontainer-3-1-content",
+    "EX202ADZ_title_id": "__title62-__container49-__xmlview14--panelScrollcontainer-3-1-inner",
+    "EX202ADZ_description_id": "__text405-__container49-__xmlview14--panelScrollcontainer-3-1",
+    "EX202ADZ_createNew_id": "Create New",
+    "EX202ADZ_checkbox_id": "#_INST_A_00_CHECKBOX_CHK_checkbox-CbBg",
+    "EX202ADZ_Start_xpath": "//bdi[text()='Start']",
+    "EX202ADZ_zone_id": "#_BIID_A_DZ_NO_input-inner"
   }
+  
 
   
 }
