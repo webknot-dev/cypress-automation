@@ -61,6 +61,22 @@
     "target_date_value": "21/12/2024"
 
   },
+  "Locators_202A_Consum": {
+    "EX202A_Consum_createNew_xpath": "//*[@id='__button132-__container49-__xmlview14--panelScrollcontainer-3-1-inner']",
+   
+    "Release_goods_text": "//*[@id='__text405-__container49-__xmlview14--panelScrollcontainer-3-0']",
+    "Scroll_div_xpath": "//*[@id='__xmlview15--TaxablePersonPage-cont']",
+    "Search_xpath": "//*[@id='__xmlview15--id_Search_tile-I']",
+    "Ex202A_checkBox_xpath":"#_INST_A_00_CHECKBOX_CHK_checkbox-CbBg", 
+    "Ex202A_start_xpath":"//*[@id=__xmlview20--idFormStart-inner]",
+    "Ex202A_DZ_input_xpath":"//*[@id='_BIID_A_ODZ_NO_input-inner']",
+    "Dz_input_value":"D100151001",
+    "validate_xpath":"//*[@id='_BIID_validateDesigZone_button-BDI-content']",
+    
+    "date_selector":"//*[@id='_BIID_A_DATE_IMPORT_date-inner']",
+    "target_date_value": "21/12/2024"
+
+  },
   "locators_ex202adz": {
     "EX202ADZ_container_id": "__tile7-__container49-__xmlview14--panelScrollcontainer-3-1-content",
     "EX202ADZ_title_id": "__title62-__container49-__xmlview14--panelScrollcontainer-3-1-inner",
