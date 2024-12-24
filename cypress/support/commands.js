@@ -25,6 +25,11 @@
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 require('cypress-xpath');
 require('cypress-if');
+require('cypress-downloadfile/lib/downloadFileCommand')
+
+
+// cy.downloadFile('link to file', 'path', 'file name with extension')
+
 
 Cypress.on('uncaught:exception', (err, runnable) => {
     return false;

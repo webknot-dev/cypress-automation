@@ -1,5 +1,6 @@
 const { defineConfig } = require("cypress");
 const { createWorker } = require('tesseract.js');
+const { downloadFile } = require('cypress-downloadfile/lib/addPlugin')
 const fs = require('fs');
 
 
@@ -22,7 +23,8 @@ module.exports = defineConfig({
           fs.unlinkSync(filePath)
           return text.trim();
         },
-      });
+      }),
+        on('task', { downloadFile })
     },
     chromeWebSecurity: false,
     waitForAnimations: true,
