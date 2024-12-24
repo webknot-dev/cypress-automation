@@ -34,17 +34,17 @@ describe("Automating EX202A consumption of goods with designated zone", () => {
             cy.selectExcise(data.locators_ex202adz.EX202ADZ_container_id,
                 data.locators_ex202adz.EX202ADZ_title_id,
                 data.locators_ex202adz.EX202ADZ_description_id,
-                data.locators_ex202adz.EX202ADZ_createNew_id,
+                data.locators_ex.EX_createNew_id,
                 "EX202A",
                 data.EntryValues.EX202ADZ_Description
             )
 
             // Click on the checkbox to agree to terms
-            cy.clickElement(data.locators_ex202adz.EX202ADZ_checkbox_id)
+            cy.clickElement(data.locators_ex.EX_checkbox_id)
             // Click on the start button to begin the process
-            cy.clickXpathElement(data.locators_ex202adz.EX202ADZ_Start_xpath)
+            cy.clickXpathElement(data.locators_ex.EX_Start_xpath)
             // Input the designated zone number
-            cy.inputField(data.locators_ex202adz.EX202ADZ_zone_id, data.EntryValues.EX202ADZ_zone_number)
+            cy.inputField(data.locators_ex.EX_zone_id, data.EntryValues.EX202ADZ_zone_number)
         })
     });
 })

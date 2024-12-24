@@ -59,36 +59,33 @@
     "Scroll_div_xpath": "//*[@id='__xmlview15--TaxablePersonPage-cont']",
     "Search_xpath": "//*[@id='__xmlview15--id_Search_tile-I']"
   },
+  "locators_ex": {
+    "EX_createNew_id": "Create New",
+    "EX_checkbox_id": "#_INST_A_00_CHECKBOX_CHK_checkbox-CbBg",
+    "EX_Start_xpath": "//bdi[text()='Start']",
+    "EX_zone_id": "#_BIID_A_DZ_NO_input-inner",
+    "EX_emirates_DropDown_id": "#_BIID_A_EMIRATE_combobox-arrow",
+    "EX_date_id": "#_BIID_A_DATE_IMPORT_date-inner",
+    "EX_Port_DropDown_id": "#_BIID_A_PORT_combobox-arrow",
+    "EX_emirates_list_id": "#_BIID_A_EMIRATE_combobox-popup-list-listUl",
+    "EX_port_list_id": "#_BIID_A_PORT_combobox-popup-list-listUl",
+    "EX_next_xpath": "//span[substring(@id, string-length(@id) - string-length('idFormNestStep-inner') + 1) = 'idFormNestStep-inner']",
+    "EX_download_id": "#_EGCC_downloadTemp_link",
+    "EX_upload_id": "input[type='file'][name='_EGCC_uploadTemplate_fUploader']"
+  },
   "locators_ex202adz": {
     "EX202ADZ_container_id": "__tile7-__container49-__xmlview14--panelScrollcontainer-3-1-content",
     "EX202ADZ_title_id": "__title62-__container49-__xmlview14--panelScrollcontainer-3-1-inner",
-    "EX202ADZ_description_id": "__text405-__container49-__xmlview14--panelScrollcontainer-3-1",
-    "EX202ADZ_createNew_id": "Create New",
-    "EX202ADZ_checkbox_id": "#_INST_A_00_CHECKBOX_CHK_checkbox-CbBg",
-    "EX202ADZ_Start_xpath": "//bdi[text()='Start']",
-    "EX202ADZ_zone_id": "#_BIID_A_DZ_NO_input-inner"
+    "EX202ADZ_description_id": "__text405-__container49-__xmlview14--panelScrollcontainer-3-1"
   },
   "locators_ex201im": {
     "EX201IM_container_id": "__tile7-__container49-__xmlview14--panelScrollcontainer-2-0",
     "EX201IM_title_id": "__title62-__container49-__xmlview14--panelScrollcontainer-2-0-inner",
     "EX201IM_description_id": "__text405-__container49-__xmlview14--panelScrollcontainer-2-0",
-    "EX201IM_createNew_id": "Create New",
-    "EX201IM_checkbox_id": "#_INST_A_00_CHECKBOX_CHK_checkbox-CbBg",
-    "EX201IM_Start_xpath": "//bdi[substring(@id, string-length(@id) - string-length('idFormStart-BDI-content') + 1) = 'idFormStart-BDI-content']",
-    "EX201IM_import_id": "#_BIID_A_DECL_TYPE_radiobutton1-Button",
-    "EX201IM_date_id": "#_BIID_A_DATE_IMPORT_date-inner",
-    "EX201IM_emirates_DropDown_id": "#_BIID_A_EMIRATE_combobox-arrow",
-    "EX201IM_Port_DropDown_id": "#_BIID_A_PORT_combobox-arrow",
-    "EX201IM_emirates_list_id": "#_BIID_A_EMIRATE_combobox-popup-list-listUl",
-    "EX201IM_port_list_id": "#_BIID_A_PORT_combobox-popup-list-listUl",
-    "EX201IM_next_xpath": "//span[substring(@id, string-length(@id) - string-length('idFormNestStep-inner') + 1) = 'idFormNestStep-inner']",
-    "EX201IM_download_id": "#_EGCC_downloadTemp_link",
-    "EX201IM_upload_id": "input[type='file'][name='_EGCC_uploadTemplate_fUploader']"
+    "EX201IM_import_id": "#_BIID_A_DECL_TYPE_radiobutton1-Button"
   },
   "locators_ex201dz": {
-    "EX201DZ_DZ_id": "#_BIID_A_DECL_TYPE_radiobutton2-Button",
-    "EX201DZ_zone_id": "#_BIID_A_DZ_NO_input-inner",
-    "EX201DZ_emirates_DropDown_id": "#_BIID_A_EMIRATE_combobox-arrow"
+    "EX201DZ_DZ_id": "#_BIID_A_DECL_TYPE_radiobutton2-Button"
   },
   "locators_ex201reim": {
     "EX201REIM_reim_id": "#_BIID_A_DECL_TYPE_radiobutton3-Button"

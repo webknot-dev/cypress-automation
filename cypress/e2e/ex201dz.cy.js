@@ -34,24 +34,24 @@ describe("Automating EX201 - Release from Designated Zone (Requiring Customs Cle
             cy.selectExcise(data.locators_ex201im.EX201IM_container_id,
                 data.locators_ex201im.EX201IM_title_id,
                 data.locators_ex201im.EX201IM_description_id,
-                data.locators_ex201im.EX201IM_createNew_id,
+                data.locators_ex.EX_createNew_id,
                 "EX201",
                 data.EntryValues.EX201IM_Description
             )
 
             // Click on the checkbox to agree to terms
-            cy.clickElement(data.locators_ex201im.EX201IM_checkbox_id)
+            cy.clickElement(data.locators_ex.EX_checkbox_id)
             // Click on the start button to begin the process
-            cy.clickXpathElement(data.locators_ex201im.EX201IM_Start_xpath)
+            cy.clickXpathElement(data.locators_ex.EX_Start_xpath)
             // click on "release from designated zone" radio button
             cy.clickElement(data.locators_ex201dz.EX201DZ_DZ_id)
             // input date 
-            cy.selectingDate(data.locators_ex201im.EX201IM_date_id, data.EntryValues.EX201IM_date)
+            cy.selectingDate(data.locators_ex.EX_date_id, data.EntryValues.EX201IM_date)
             // selecting Emirate of Import 
-            cy.clickElement(data.locators_ex201dz.EX201DZ_emirates_DropDown_id)
-            cy.selectFromDropdown(data.locators_ex201im.EX201IM_emirates_list_id, data.EntryValues.EX201DZ_emirates)
+            cy.clickElement(data.locators_ex.EX_emirates_DropDown_id)
+            cy.selectFromDropdown(data.locators_ex.EX_emirates_list_id, data.EntryValues.EX201DZ_emirates)
             // Entering DZ Zone ID
-            cy.inputField(data.locators_ex201dz.EX201DZ_zone_id, data.EntryValues.EX201DZ_zone_number)
+            cy.inputField(data.locators_ex.EX_zone_id, data.EntryValues.EX201DZ_zone_number)
         })
     });
 })
