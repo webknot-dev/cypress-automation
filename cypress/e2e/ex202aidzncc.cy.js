@@ -1,9 +1,9 @@
-describe("Automating EX202A Transfer Goods for Export From a Designated Zone", () => {
+describe("Automating EX202A Import to Designated Zone (No Customs Check)", () => {
     before(() => {
         // Set the viewport size for the tests
         cy.viewport(1024, 764)
     })
-    it("EX202A - TGEDZ", () => {
+    it("EX202A - IDZ(NCC)", () => {
         // Load data from the fixture file
         cy.fixture("example.json").then((data) => {
             // Visit the URL specified in the fixture data
@@ -18,7 +18,7 @@ describe("Automating EX202A Transfer Goods for Export From a Designated Zone", (
                 data.LocatorsPath.captchaInputField_id,
                 data.LocatorsPath.captcha_element_id,
                 data.LocatorsPath.loginButton_id,
-                "ex202atgedz.cy.js"
+                "ex202aidzncc.cy.js"
             )
 
             // Click on the taxable profile button
@@ -31,12 +31,12 @@ describe("Automating EX202A Transfer Goods for Export From a Designated Zone", (
             cy.clickXpathElement(data.LocatorsPath.exciseTax_xpath);
 
             // Select the excise option using the locators and values from the fixture data
-            cy.selectExcise(data.locators_ex202atgedz.EX202ATGEDZ_container_id,
-                data.locators_ex202atgedz.EX202ATGEDZ_title_id,
-                data.locators_ex202atgedz.EX202ATGEDZ_description_id,
+            cy.selectExcise(data.locators_ex202aidzncc.EX202AIDZNCC_container_id,
+                data.locators_ex202aidzncc.EX202AIDZNCC_title_id,
+                data.locators_ex202aidzncc.EX202AIDZNCC_description_id,
                 data.locators_ex.EX_createNew_id,
                 "EX202A",
-                data.EntryValues.EX202ATGEDZ_Description
+                data.EntryValues.EX202AIDZNCC_Description
             )
 
             // Click on the checkbox to agree to terms
@@ -44,17 +44,17 @@ describe("Automating EX202A Transfer Goods for Export From a Designated Zone", (
             // Click on the start button to begin the process
             cy.clickXpathElement(data.locators_ex.EX_Start_xpath)
             // Input the designated zone number
-            cy.inputField(data.locators_ex.EX_zone_id2, data.EntryValues.EX202ATGEDZ_zone_number)
+            cy.inputField(data.locators_ex.EX_zone_id2, data.EntryValues.EX202AIDZNCC_zone_number)
             // click validate button
             cy.clickXpathElement(data.locators_ex.Ex_validate_xpath)
-            //enter the Export date
-            cy.inputField(data.locators_ex.EX_export_date_id, data.EntryValues.EX202ATGEDZ_export_date)
+            //enter the Release date
+            cy.inputField(data.locators_ex.EX_export_date_id, data.EntryValues.EX202AIDZNCC_release_date)
             //clicking on next button
             cy.clickXpathElement(data.locators_ex.EX_next_xpath)
             // download the excel template
             cy.clickElement(data.locators_ex.EX_download_id)
             // upload the file
-            cy.uploadingFile(data.locators_ex.EX_upload_id, data.EntryValues.EX202ATGEDZ_filePath)
+            cy.uploadingFile(data.locators_ex.EX_upload_id, data.EntryValues.EX202AIDZNCC_filePath)
         })
     });
 })

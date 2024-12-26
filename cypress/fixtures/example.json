@@ -58,7 +58,12 @@
     "EX202ATGEDZ_Description": "Transfer Goods for Export From a Designated Zone",
     "EX202ATGEDZ_zone_number": "D100151001",
     "EX202ATGEDZ_export_date": "25/12/2024",
-    "EX202ATGEDZ_filePath": "cypress/downloads/ExciseTaxExport.xlsx"
+    "EX202ATGEDZ_filePath": "cypress/downloads/ExciseTaxExport.xlsx",
+
+    "EX202AIDZNCC_Description": "Release Goods from Designated Zone into Free Circulation (No Customs Check)",
+    "EX202AIDZNCC_zone_number": "D100151001",
+    "EX202AIDZNCC_release_date": "27/12/2024",
+    "EX202AIDZNCC_filePath": "cypress/downloads/ExciseGoods.xlsx"
   },
   "Locators_202A": {
     "EX202A_createNew_xpath": "//*[@id='__button133-__container49-__xmlview15--panelScrollcontainer-0-0-BDI-content']",
@@ -82,6 +87,7 @@
     "EX_download_id": "#_EGCC_downloadTemp_link",
     "EX_upload_id": "input[type='file'][name='_EGCC_uploadTemplate_fUploader']",
     "EX_validate_id": "#_BIID_validateODesigZone_button-content",
+    "Ex_validate_xpath": "//bdi[text()='Validate']",
     "Ex_cons_date_id": "#_BIID_A_DATE_CONSUME_date-inner",
     "EX_export_date_id": "#_BIID_A_DATE_TRANSFER_date-inner"
   },
@@ -106,5 +112,10 @@
   },
   "locators_ex201reim": {
     "EX201REIM_reim_id": "#_BIID_A_DECL_TYPE_radiobutton3-Button"
+  },
+  "locators_ex202aidzncc": {
+    "EX202AIDZNCC_container_id": "__tile7-__container49-__xmlview14--panelScrollcontainer-3-0-content",
+    "EX202AIDZNCC_title_id": "__title62-__container49-__xmlview14--panelScrollcontainer-3-0-inner",
+    "EX202AIDZNCC_description_id": "__text405-__container49-__xmlview14--panelScrollcontainer-3-0"
   }
 }
