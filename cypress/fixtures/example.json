@@ -51,7 +51,10 @@
 
     "EX201REIM_date": "25/12/2024",
     "EX201REIM_emirates": "Abu Dhabi",
-    "EX201REIM_port": "Guwaifat"
+    "EX201REIM_port": "Guwaifat",
+
+    "EX202ATGEDZ_Description": "Transfer Goods for Export From a Designated Zone",
+    "EX202ATGEDZ_zone_number": "D100151001"
   },
   "Locators_202A": {
     "EX202A_createNew_xpath": "//*[@id='__button133-__container49-__xmlview15--panelScrollcontainer-0-0-BDI-content']",
@@ -65,6 +68,7 @@
     "EX_checkbox_id": "#_INST_A_00_CHECKBOX_CHK_checkbox-CbBg",
     "EX_Start_xpath": "//bdi[text()='Start']",
     "EX_zone_id": "#_BIID_A_DZ_NO_input-inner",
+    "EX_zone_id2": "#_BIID_A_ODZ_NO_input-inner",
     "EX_emirates_DropDown_id": "#_BIID_A_EMIRATE_combobox-arrow",
     "EX_date_id": "#_BIID_A_DATE_IMPORT_date-inner",
     "EX_Port_DropDown_id": "#_BIID_A_PORT_combobox-arrow",
@@ -78,6 +82,11 @@
     "EX202ADZ_container_id": "__tile7-__container49-__xmlview14--panelScrollcontainer-3-1-content",
     "EX202ADZ_title_id": "__title62-__container49-__xmlview14--panelScrollcontainer-3-1-inner",
     "EX202ADZ_description_id": "__text405-__container49-__xmlview14--panelScrollcontainer-3-1"
+  },
+  "locators_ex202atgedz": {
+    "EX202ATGEDZ_container_id": "__tile7-__container49-__xmlview14--panelScrollcontainer-3-4-content",
+    "EX202ATGEDZ_title_id": "__title62-__container49-__xmlview14--panelScrollcontainer-3-4-inner",
+    "EX202ATGEDZ_description_id": "__text405-__container49-__xmlview14--panelScrollcontainer-3-4"
   },
   "locators_ex201im": {
     "EX201IM_container_id": "__tile7-__container49-__xmlview14--panelScrollcontainer-2-0",
