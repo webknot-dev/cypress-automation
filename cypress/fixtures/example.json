@@ -37,6 +37,8 @@
 
     "EX202ADZ_Description": "Consumption of Goods Within a Designated Zone",
     "EX202ADZ_zone_number": "D100151001",
+    "EX202ADZ_cons_date": "25/12/2024",
+    "EX202ADZ_filePath": "cypress/downloads/ExciseGoodsConsumption.xlsx",
 
     "EX201IM_Description": "Excise Goods that Require Customs Clearance (Import Declaration)",
     "EX201IM_zone_number": "D100151001",
@@ -54,7 +56,9 @@
     "EX201REIM_port": "Guwaifat",
 
     "EX202ATGEDZ_Description": "Transfer Goods for Export From a Designated Zone",
-    "EX202ATGEDZ_zone_number": "D100151001"
+    "EX202ATGEDZ_zone_number": "D100151001",
+    "EX202ATGEDZ_export_date": "25/12/2024",
+    "EX202ATGEDZ_filePath": "cypress/downloads/ExciseTaxExport.xlsx"
   },
   "Locators_202A": {
     "EX202A_createNew_xpath": "//*[@id='__button133-__container49-__xmlview15--panelScrollcontainer-0-0-BDI-content']",
@@ -76,7 +80,10 @@
     "EX_port_list_id": "#_BIID_A_PORT_combobox-popup-list-listUl",
     "EX_next_xpath": "//span[substring(@id, string-length(@id) - string-length('idFormNestStep-inner') + 1) = 'idFormNestStep-inner']",
     "EX_download_id": "#_EGCC_downloadTemp_link",
-    "EX_upload_id": "input[type='file'][name='_EGCC_uploadTemplate_fUploader']"
+    "EX_upload_id": "input[type='file'][name='_EGCC_uploadTemplate_fUploader']",
+    "EX_validate_id": "#_BIID_validateODesigZone_button-content",
+    "Ex_cons_date_id": "#_BIID_A_DATE_CONSUME_date-inner",
+    "EX_export_date_id": "#_BIID_A_DATE_TRANSFER_date-inner"
   },
   "locators_ex202adz": {
     "EX202ADZ_container_id": "__tile7-__container49-__xmlview14--panelScrollcontainer-3-1-content",

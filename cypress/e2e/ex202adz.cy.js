@@ -45,6 +45,16 @@ describe("Automating EX202A consumption of goods with designated zone", () => {
             cy.clickXpathElement(data.locators_ex.EX_Start_xpath)
             // Input the designated zone number
             cy.inputField(data.locators_ex.EX_zone_id, data.EntryValues.EX202ADZ_zone_number)
+            // click validate button
+            cy.clickElement(data.locators_ex.EX_validate_id)
+            //enter the consumption date
+            cy.inputField(data.locators_ex.Ex_cons_date_id, data.EntryValues.EX202ADZ_cons_date)
+            //clicking on next button
+            cy.clickXpathElement(data.locators_ex.EX_next_xpath)
+            // download the excel template
+            cy.clickElement(data.locators_ex.EX_download_id)
+            // upload the file
+            cy.uploadingFile(data.locators_ex.EX_upload_id, data.EntryValues.EX202ADZ_filePath)
         })
     });
 })

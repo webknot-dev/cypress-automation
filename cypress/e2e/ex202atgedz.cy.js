@@ -45,6 +45,16 @@ describe("Automating EX202A Transfer Goods for Export From a Designated Zone", (
             cy.clickXpathElement(data.locators_ex.EX_Start_xpath)
             // Input the designated zone number
             cy.inputField(data.locators_ex.EX_zone_id2, data.EntryValues.EX202ATGEDZ_zone_number)
+            // click validate button
+            cy.clickElement(data.locators_ex.EX_validate_id)
+            //enter the Export date
+            cy.inputField(data.locators_ex.EX_export_date_id, data.EntryValues.EX202ATGEDZ_export_date)
+            //clicking on next button
+            cy.clickXpathElement(data.locators_ex.EX_next_xpath)
+            // download the excel template
+            cy.clickElement(data.locators_ex.EX_download_id)
+            // upload the file
+            cy.uploadingFile(data.locators_ex.EX_upload_id, data.EntryValues.EX202ATGEDZ_filePath)
         })
     });
 })
