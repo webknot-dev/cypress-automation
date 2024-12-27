@@ -63,7 +63,12 @@
     "EX202AIDZNCC_Description": "Release Goods from Designated Zone into Free Circulation (No Customs Check)",
     "EX202AIDZNCC_zone_number": "D100151001",
     "EX202AIDZNCC_release_date": "27/12/2024",
-    "EX202AIDZNCC_filePath": "cypress/downloads/ExciseGoods.xlsx"
+    "EX202AIDZNCC_filePath": "cypress/downloads/ExciseGoods.xlsx",
+
+    "EX202ARGDZNCC_Description": "Release Goods from Designated Zone into Free Circulation (No Customs Check)",
+    "EX202ARGDZNCC_zone_number": "D100151001",
+    "EX202ARGDZNCC_release_date": "27/12/2024",
+    "EX202ARGDZNCC_filePath": "cypress/downloads/ExciseGoods.xlsx"
   },
   "Locators_202A": {
     "EX202A_createNew_xpath": "//*[@id='__button133-__container49-__xmlview15--panelScrollcontainer-0-0-BDI-content']",
@@ -117,5 +122,10 @@
     "EX202AIDZNCC_container_id": "__tile7-__container49-__xmlview14--panelScrollcontainer-3-0-content",
     "EX202AIDZNCC_title_id": "__title62-__container49-__xmlview14--panelScrollcontainer-3-0-inner",
     "EX202AIDZNCC_description_id": "__text405-__container49-__xmlview14--panelScrollcontainer-3-0"
+  },
+  "locators_ex202argdzncc": {
+    "EX202ARGDZNCC_container_id": "__tile7-__container49-__xmlview14--panelScrollcontainer-3-0-content",
+    "EX202ARGDZNCC_title_id": "__title62-__container49-__xmlview14--panelScrollcontainer-3-0-inner",
+    "EX202ARGDZNCC_description_id": "__text405-__container49-__xmlview14--panelScrollcontainer-3-0"
   }
 }
