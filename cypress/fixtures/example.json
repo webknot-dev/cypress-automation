@@ -62,12 +62,12 @@
 
     "EX202AIDZNCC_Description": "Release Goods from Designated Zone into Free Circulation (No Customs Check)",
     "EX202AIDZNCC_zone_number": "D100151001",
-    "EX202AIDZNCC_release_date": "27/12/2024",
+    "EX202AIDZNCC_release_date": "25/12/2024",
     "EX202AIDZNCC_filePath": "cypress/downloads/ExciseGoods.xlsx",
 
     "EX202ARGDZNCC_Description": "Release Goods from Designated Zone into Free Circulation (No Customs Check)",
     "EX202ARGDZNCC_zone_number": "D100151001",
-    "EX202ARGDZNCC_release_date": "27/12/2024",
+    "EX202ARGDZNCC_release_date": "25/12/2024",
     "EX202ARGDZNCC_filePath": "cypress/downloads/ExciseGoods.xlsx",
 
     "EX202APWDZ_Description": "Production Within a Designated Zone",
