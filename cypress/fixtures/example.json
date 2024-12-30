@@ -73,7 +73,11 @@
     "EX202APWDZ_Description": "Production Within a Designated Zone",
     "EX202APWDZ_zone_number": "D100151001",
     "EX202APWDZ_production_date": "25/12/2024",
-    "EX202APWDZ_filePath": "cypress/downloads/ExciseGoods.xlsx"
+    "EX202APWDZ_filePath": "cypress/downloads/ExciseGoods.xlsx",
+
+    "EX202BPD_Description": "Producer Declaration",
+    "EX202BPD_period": "December 2024",
+    "EX202BPD_filePath": "cypress/downloads/ExciseGoodsProducerDeclaration.xlsx"
   },
   "Locators_202A": {
     "EX202A_createNew_xpath": "//*[@id='__button133-__container49-__xmlview15--panelScrollcontainer-0-0-BDI-content']",
@@ -99,7 +103,9 @@
     "EX_validate_id": "#_BIID_validateODesigZone_button-content",
     "Ex_validate_xpath": "//bdi[text()='Validate']",
     "Ex_cons_date_id": "#_BIID_A_DATE_CONSUME_date-inner",
-    "EX_export_date_id": "#_BIID_A_DATE_TRANSFER_date-inner"
+    "EX_export_date_id": "#_BIID_A_DATE_TRANSFER_date-inner",
+    "Ex_period_Dropdown_id": "#_BIID_A_PEROID_combobox-arrow",
+    "EX_period_list_id": "#_BIID_A_PEROID_combobox-popup-list-listUl"
   },
   "locators_ex202adz": {
     "EX202ADZ_container_id": "__tile7-__container49-__xmlview14--panelScrollcontainer-3-1-content",
@@ -137,5 +143,10 @@
     "EX202APWDZ_container_id": "__tile7-__container49-__xmlview14--panelScrollcontainer-3-6-content",
     "EX202APWDZ_title_id": "__title62-__container49-__xmlview14--panelScrollcontainer-3-6-inner",
     "EX202APWDZ_description_id": "__text405-__container49-__xmlview14--panelScrollcontainer-3-6"
+  },
+  "locators_ex202bpd": {
+    "EX202BPD_container_id": "__tile7-__container49-__xmlview14--panelScrollcontainer-2-1-content",
+    "EX202BPD_title_id": "__title62-__container49-__xmlview14--panelScrollcontainer-2-1-inner",
+    "EX202BPD_description_id": "__text405-__container49-__xmlview14--panelScrollcontainer-2-1"
   }
 }
