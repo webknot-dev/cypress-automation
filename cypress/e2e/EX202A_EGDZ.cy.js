@@ -1,9 +1,9 @@
-describe("Automating EX202A consumption of goods with designated zone", () => {
+describe("Automating EX202A -Enter Goods into a Designated Zone", () => {
     before(() => {
         // Set the viewport size for the tests
         cy.viewport(1024, 764)
     })
-    it("EX202A - DZ", () => {
+    it("EX202A -Enter Goods into a Designated Zone", () => {
         // Load data from the fixture file
         cy.fixture("example.json").then((data) => {
             // Visit the URL specified in the fixture data

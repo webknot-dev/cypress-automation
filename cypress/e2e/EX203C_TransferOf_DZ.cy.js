@@ -1,9 +1,9 @@
-describe("Automating EX202A -Transfer Goods to Another Designated Zone", () => {
+describe("Automating EX202A consumption of goods with designated zone", () => {
     before(() => {
         // Set the viewport size for the tests
         cy.viewport(1024, 764)
     })
-    it("EX202A -Transfer Goods to Another Designated Zone", () => {
+    it("EX202A - DZ", () => {
         // Load data from the fixture file
         cy.fixture("example.json").then((data) => {
             // Visit the URL specified in the fixture data
@@ -31,31 +31,30 @@ describe("Automating EX202A -Transfer Goods to Another Designated Zone", () => {
             cy.clickXpathElement(data.LocatorsPath.exciseTax_xpath);
 
             // Select the excise option using the locators and values from the fixture data
-            cy.selectExcise(data.locators_EX202A_EGDZ.EX202EGDZ_container_id,
-                data.locators_EX202A_EGDZ.EX202EGDZ_title_id,
-                data.locators_EX202A_EGDZ.EX202EGDZ_description_id,
+            cy.selectExcise(data.locators_EX203C_TDZ.EX203CTDZ_container_id,
+                data.locators_EX203C_TDZ.EX203CTDZ_title_id,
+                data.locators_EX203C_TDZ.EX203CTDZ_description_id,
                 data.locators_ex.EX_createNew_id,
-                "EX202A",
-                data.EntryValues.EX202AEGDZ_Description
+                "EX203C",
+                data.locators_EX203C_TDZ.EX203CTDZ_Description
             )
 
             // Click on the checkbox to agree to terms
             cy.clickElement(data.locators_ex.EX_checkbox_id)
             // Click on the start button to begin the process
             cy.clickXpathElement(data.locators_ex.EX_Start_xpath)
-            // Input the designated zone number
-            cy.inputField(data.locators_ex.EX_zone_id, data.EntryValues.EX202ADZ_zone_number)
+           
 
-            //CLICK ON VALIDATE
-            cy.clickElement(data.locators_EX202A_EGDZ.Validate_button);
+            //Enter Purchaser TRN
 
+            cy.clickElement(data.locators_EX203C_TDZ.EX203CTDZ_Purchaser_trn_id);
 
-            //Add dates
-            cy.wait(5000)
-            cy.scrollToView(data.locators_EX202A_EGDZ.date_field_xpath);
-            cy.selectingDate(data.locators_EX202A_EGDZ.date_field_xpath,data.locators_EX202A_EGDZ.date_field_xpath)
+            cy.inputField(data.locators_EX203C_TDZ.EX203CTDZ_Purchaser_trn_id, data.locators_EX203C_TDZ.EX203CTDZ_Purchaser_trn_value)
+          
 
 
+          
+             
 
         })
     });
