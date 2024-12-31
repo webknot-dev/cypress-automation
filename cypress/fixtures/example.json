@@ -51,7 +51,12 @@
 
     "EX201REIM_date": "25/12/2024",
     "EX201REIM_emirates": "Abu Dhabi",
-    "EX201REIM_port": "Guwaifat"
+    "EX201REIM_port": "Guwaifat",
+
+
+
+    "EX202AEGDZ_Description":"Enter Goods into a Designated Zone",
+    "EX203BLD_Description":"Lost & Damaged Declaration"
   },
   "Locators_202A": {
     "EX202A_createNew_xpath": "//*[@id='__button133-__container49-__xmlview15--panelScrollcontainer-0-0-BDI-content']",
@@ -68,7 +73,7 @@
     "EX_emirates_DropDown_id": "#_BIID_A_EMIRATE_combobox-arrow",
     "EX_date_id": "#_BIID_A_DATE_IMPORT_date-inner",
     "EX_Port_DropDown_id": "#_BIID_A_PORT_combobox-arrow",
-    "EX_emirates_list_id": "#_BIID_A_EMIRATE_combobox-popup-list-listUl",
+    "EX_emirates_list_id": "#_BIID_A_EMIRATE_combobox-popup-list-listUl", 
     "EX_port_list_id": "#_BIID_A_PORT_combobox-popup-list-listUl",
     "EX_next_xpath": "//span[substring(@id, string-length(@id) - string-length('idFormNestStep-inner') + 1) = 'idFormNestStep-inner']",
     "EX_download_id": "#_EGCC_downloadTemp_link",
@@ -90,5 +95,51 @@
   },
   "locators_ex201reim": {
     "EX201REIM_reim_id": "#_BIID_A_DECL_TYPE_radiobutton3-Button"
+  },
+
+  "locators_EX202A_EGDZ": {
+    "EX202EGDZ_container_id": "__tile7-__container49-__xmlview14--panelScrollcontainer-3-2-content",
+    "EX202EGDZ_title_id": "__title62-__container49-__xmlview14--panelScrollcontainer-3-2-inner",
+    "EX202EGDZ_description_id": "__text405-__container49-__xmlview14--panelScrollcontainer-3-2",
+    "EX202EGDZ_import_id": "_BIID_A_DECL_TYPE_radiobutton1-Button",
+    "Validate_button":"#_BIID_validateDDesigZone_button-content",
+    "date_field_xpath": "#_BIID_A_DATE_TRANSFER_date-inner",
+    "date":"25/12/2024"
+  },
+
+  "locators_EX203B_LostnDeclare": {
+    "EX203BLD_container_id": "__tile7-__container49-__xmlview14--panelScrollcontainer-3-7-content",
+    "EX203BLD_title_id": "__title62-__container49-__xmlview14--panelScrollcontainer-3-7-inner",
+    "EX203BLD_description_id": "__text405-__container49-__xmlview14--panelScrollcontainer-3-7",
+    "EX203BLD_import_id": "_BIID_A_DECL_TYPE_radiobutton1-Button",
+    "Validate_button":"#_BIID_validateODesigZone_button-BDI-content",
+    "date_field_xpath": "#_BIID_A_DATE_TRANSFER_date-inner",
+    "date":"25/12/2024",
+    "EX203BLD_zone_number":"D100151001",
+    "EX203BLD_filePath": "cypress/downloads/ExciseTaxLost&Damaged.xlsx",
+
+    "loss_damaged_xpath": "#_EGCC_A_PHYSICAL_combobox-arrow",
+    "LossDamaged_dropDown_xpath": "#_EGCC_A_PHYSICAL_combobox-popup-list-listUl",
+    "LossDamaged_dropDown_Value": "Physical",
+
+    "reason_damaged_xpath":"#_EGCC_A_ITEM_REASON_combobox-arrow",
+    "ReasonForLoss_dropDown_xpath": "#_EGCC_A_ITEM_REASON_combobox-popup-list-listUl",
+    "ReasonForLoss_dropDown_value" : "Lost/Shortage in Goods",
+
+    "placeOfDestruction_xpath":"#_EGCC_A_ITEM_PLACEGOODSDESTROY_combobox-arrow",
+    "placeOfDestruction_dropdown_xpath":"#_EGCC_A_ITEM_PLACEGOODSDESTROY_combobox-popup-list-listUl",
+    "placeOfDestruction_dropdown_value":"Internal – Inside Designated Zone",
+
+
+    "external_facility_xpath":"#_EGCC_A_FACILITY_combobox-arrow",
+    "external_facility_dropdown_xpath":"#_EGCC_A_FACILITY_combobox-popup-list-listUl",
+    "external_facility_dropdown_value":"Municipal Approved Facility",
+
+    "emirate_xpath":"#_EGCC_A_EMIRATE_combobox-arrow",
+    "emirate_dropdown_xpath":"#_EGCC_A_EMIRATE_combobox-popup-list-listUl",
+    "emirate_dropdown_value":"Umm Al Quwain"
+
+  
+
   }
 }
