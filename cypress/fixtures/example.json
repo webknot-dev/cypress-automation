@@ -77,7 +77,11 @@
 
     "EX202BPD_Description": "Producer Declaration",
     "EX202BPD_period": "December 2024",
-    "EX202BPD_filePath": "cypress/downloads/ExciseGoodsProducerDeclaration.xlsx"
+    "EX202BPD_filePath": "cypress/downloads/ExciseGoodsProducerDeclaration.xlsx",
+
+    "EX203ALPF_Description": "Local Purchase Form",
+    "EX203ALPF_filePath": "cypress/downloads/ExciseGoodsLocalPurchaseForm.xlsx",
+    "EX203ALPF_document_path": "./cypress/downloads/testpdf.pdf"
   },
   "Locators_202A": {
     "EX202A_createNew_xpath": "//*[@id='__button133-__container49-__xmlview15--panelScrollcontainer-0-0-BDI-content']",
@@ -148,5 +152,11 @@
     "EX202BPD_container_id": "__tile7-__container49-__xmlview14--panelScrollcontainer-2-1-content",
     "EX202BPD_title_id": "__title62-__container49-__xmlview14--panelScrollcontainer-2-1-inner",
     "EX202BPD_description_id": "__text405-__container49-__xmlview14--panelScrollcontainer-2-1"
+  },
+  "locators_ex203alpf": {
+    "EX203ALPF_container_id": "__tile7-__container49-__xmlview14--panelScrollcontainer-2-3-content",
+    "EX203ALPF_title_id": "__title62-__container49-__xmlview14--panelScrollcontainer-2-3-inner",
+    "EX203ALPF_description_id": "__text405-__container49-__xmlview14--panelScrollcontainer-2-3",
+    "EX203ALPF_upload_id": "#AttachmentUploader-1-uploader-fu"
   }
 }

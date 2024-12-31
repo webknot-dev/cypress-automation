@@ -161,6 +161,16 @@ Cypress.Commands.add('selectOptionBasedOnValue', (value, shipmentid) => {
     }
 });
 
+Cypress.Commands.add('optionBasedOnValue', (value, trn) => {
+    if (value === "Yes" || value === "yes") {
+        cy.get("#_BIID_A_SEL_REG_radiobutton1").click({ force: true });
+        cy.get('#_BIID_A_SEL_TRN_input-inner').type(trn, { force: true });
+        cy.get('#_BIID_VALIDATE_button-content').click({ force: true });
+    } else if (value === "No" || value === "no") {
+        cy.get("#_BIID_A_SEL_REG_radiobutton2").click({ force: true });
+    }
+});
+
 // Scroll within a container
 Cypress.Commands.add('scrollPageInContainer', (containerSelector, init, final) => {
     cy.get(containerSelector).scrollTo(init, final);
@@ -174,6 +184,7 @@ Cypress.Commands.add('scrollPage', (init, final) => {
 // Upload a file
 Cypress.Commands.add('uploadingFile', (inputSelector, filePath) => {
     cy.wait(5000).get(inputSelector).selectFile(filePath, { force: true });
+    cy.wait(5000)
 });
 
 // Select a date
