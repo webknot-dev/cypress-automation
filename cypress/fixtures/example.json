@@ -81,11 +81,11 @@
 
     "EX203ALPF_Description": "Local Purchase Form",
     "EX203ALPF_filePath": "cypress/downloads/ExciseGoodsLocalPurchaseForm.xlsx",
-    "EX203ALPF_document_path": "./cypress/downloads/testpdf.pdf",
+    "EX203ALPF_document_path": "./cypress/data/testpdf.pdf",
 
     "EX203DETF_Description": "Deductible Excise Tax Form",
     "EX203DETF_period": "27/12/2024",
-    "EX203DETF_document_path": "./cypress/downloads/testpdf.pdf",
+    "EX203DETF_document_path": "./cypress/data/testpdf.pdf",
     "EX203DETF_reason": "Export"
   },
   "Locators_202A": {
@@ -162,13 +162,13 @@
     "EX203ALPF_container_id": "__tile7-__container49-__xmlview14--panelScrollcontainer-2-3-content",
     "EX203ALPF_title_id": "__title62-__container49-__xmlview14--panelScrollcontainer-2-3-inner",
     "EX203ALPF_description_id": "__text405-__container49-__xmlview14--panelScrollcontainer-2-3",
-    "EX203ALPF_upload_id": "#AttachmentUploader-1-uploader-fu"
+    "EX203ALPF_upload_id": "#DOPR_1-drag-drop-area"
   },
   "locators_ex203detf": {
     "EX203DETF_container_id": "__tile7-__container49-__xmlview14--panelScrollcontainer-2-2-content",
     "EX203DETF_title_id": "__title62-__container49-__xmlview14--panelScrollcontainer-2-2-inner",
     "EX203DETF_description_id": "__text405-__container49-__xmlview14--panelScrollcontainer-2-2",
-    "EX203DETF_upload_id": "#AttachmentUploader-1-uploader-fu",
+    "EX203DETF_upload_id": "#DOPR_1-drag-drop-area",
     "EX203DETF_reason_id": "#_EGCC_A_ITEM_REAS_REAS_combobox-arrow",
     "EX203DETF_reason_list_id": "#_EGCC_A_ITEM_REAS_REAS_combobox-popup-list-listUl"
   }

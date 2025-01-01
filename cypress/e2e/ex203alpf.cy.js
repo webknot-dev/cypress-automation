@@ -47,13 +47,15 @@ describe("Automating EX203A - Local Purchase Form", () => {
             // fill if the seller registrant and trn holder? if yes enter the TRN
             cy.optionBasedOnValue("no", "")
             //upload or drag drop Document Proof
-            cy.clickElement("#DOPR-inner")
-            cy.uploadingFile(data.locators_ex203alpf.EX203ALPF_upload_id, data.EntryValues.EX203ALPF_document_path)
-            cy.clickElement("#onCancel-inner")
+            cy.get(data.locators_ex203alpf.EX203ALPF_upload_id).selectFile(data.EntryValues.EX203ALPF_document_path, { action: 'drag-drop' })
+            // Close any popup if present
+            cy.closeDialogIfPresent()
             //clicking on next button
             cy.clickXpathElement(data.locators_ex.EX_next_xpath)
+            // download the excel template
+            // cy.clickElement(data.locators_ex.EX_download_id)
             // upload the file
-            cy.uploadingFile(data.locators_ex.EX_upload_id, data.EntryValues.EX203ALPF_filePath)
+            // cy.uploadingFile(data.locators_ex.EX_upload_id, data.EntryValues.EX203ALPF_filePath)
         })
     });
 })

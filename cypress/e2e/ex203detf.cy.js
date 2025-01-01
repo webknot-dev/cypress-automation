@@ -52,11 +52,14 @@ describe("Automating EX203 - Deductible Excise Tax Form", () => {
             cy.clickElement(data.locators_ex203detf.EX203DETF_reason_id)
             cy.selectFromDropdown(data.locators_ex203detf.EX203DETF_reason_list_id, data.EntryValues.EX203DETF_reason)
             //upload or drag drop Document Proof
-            cy.clickElement("#DOPR-inner")
-            cy.uploadingFile(data.locators_ex203detf.EX203DETF_upload_id, data.EntryValues.EX203DETF_document_path)
-            cy.clickElement("#onCancel-inner")
-
-            // // upload the file
+            cy.get(data.locators_ex203detf.EX203DETF_upload_id).selectFile(data.EntryValues.EX203DETF_document_path, { action: 'drag-drop' })
+            // Close any popup if present
+            cy.closeDialogIfPresent()
+            //clicking on next button
+            cy.clickXpathElement(data.locators_ex.EX_next_xpath)
+            // download the excel template
+            // cy.clickElement(data.locators_ex.EX_download_id)
+            // upload the file
             // cy.uploadingFile(data.locators_ex.EX_upload_id, data.EntryValues.EX203DETF_filePath)
         })
     });

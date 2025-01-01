@@ -6,7 +6,7 @@ screenshots/
 
 # Node modules
 node_modules/
-
+data
 # Logs
 logs/
 *.log

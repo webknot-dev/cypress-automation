@@ -124,6 +124,19 @@ Cypress.Commands.add('closePopupIfPresent', (popupSelector, buttonSelector) => {
     })
 });
 
+// Close dialog if present
+Cypress.Commands.add('closeDialogIfPresent', () => {
+    cy.wait(10000).get('body').then(() => {
+        cy.get('[role="dialog"]').if('visible').and('exist')
+            .then(() =>
+                cy.get('[role="dialog"]').last().within(() => {
+                    cy.contains('OK').click({ force: true });
+                }))
+            .else()
+            .log('No popup found');
+    })
+});
+
 
 // Select list item
 Cypress.Commands.add('selectListItem', (listSelector, targetValue) => {
