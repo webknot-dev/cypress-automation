@@ -86,7 +86,10 @@
     "EX203DETF_Description": "Deductible Excise Tax Form",
     "EX203DETF_period": "27/12/2024",
     "EX203DETF_document_path": "./cypress/data/testpdf.pdf",
-    "EX203DETF_reason": "Export"
+    "EX203DETF_reason": "Export",
+
+    "EX203DSD_Description": "Stockpile Declaration",
+    "EX203DSD_period": "January 2025"
   },
   "Locators_202A": {
     "EX202A_createNew_xpath": "//*[@id='__button133-__container49-__xmlview15--panelScrollcontainer-0-0-BDI-content']",
@@ -171,5 +174,11 @@
     "EX203DETF_upload_id": "#DOPR_1-drag-drop-area",
     "EX203DETF_reason_id": "#_EGCC_A_ITEM_REAS_REAS_combobox-arrow",
     "EX203DETF_reason_list_id": "#_EGCC_A_ITEM_REAS_REAS_combobox-popup-list-listUl"
+  },
+  "locators_ex203dsd": {
+    "EX203DSD_container_id": "__tile7-__container49-__xmlview14--panelScrollcontainer-2-4-content",
+    "EX203DSD_title_id": "__title62-__container49-__xmlview14--panelScrollcontainer-2-4-inner",
+    "EX203DSD_description_id": "__text405-__container49-__xmlview14--panelScrollcontainer-2-4",
+    "EX203DSD_upload_id": ""
   }
 }

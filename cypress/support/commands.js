@@ -184,6 +184,18 @@ Cypress.Commands.add('optionBasedOnValue', (value, trn) => {
     }
 });
 
+Cypress.Commands.add('optionBasedValue', (value) => {
+    if (value === "Yes" || value === "yes") {
+        cy.get("#_EGCC_A_REG_GOODS_radiobutton1-label-text").click({ force: true });
+        // download the excel template
+        cy.clickElement(data.locators_ex.EX_download_id)
+        // upload the file
+        cy.uploadingFile(data.locators_ex.EX_upload_id, data.EntryValues.EX203DSD_filePath)
+    } else if (value === "No" || value === "no") {
+        cy.get("#_EGCC_A_REG_GOODS_radiobutton2-label-text").click({ force: true });
+    }
+});
+
 // Scroll within a container
 Cypress.Commands.add('scrollPageInContainer', (containerSelector, init, final) => {
     cy.get(containerSelector).scrollTo(init, final);
