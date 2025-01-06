@@ -40,6 +40,7 @@
     "EX202ADZ_zone_number": "D100151001",
     "EX202ADZ_cons_date": "25/12/2024",
     "EX202ADZ_filePath": "cypress/downloads/ExciseGoodsConsumption.xlsx",
+    "EX202ADZ_url": "https://eservices.tax.gov.ae/sap/bc/ui5_ui5/sap/zmcf_fmca/index.html?saml2=disabled&sap-client=100&sap-language=EN#/Form/202S",
 
     "EX201IM_Description": "Excise Goods that Require Customs Clearance (Import Declaration)",
     "EX201IM_zone_number": "D100151001",
@@ -47,6 +48,7 @@
     "EX201IM_port": "Guwaifat",
     "EX201IM_date": "25/12/2024",
     "EX201IM_filePath": "cypress/downloads/574e7711-ba7b-4899-a881-5b6cd97067ce.xlsx",
+    "EX201IM_url": "https://eservices.tax.gov.ae/sap/bc/ui5_ui5/sap/zmcf_fmca/index.html?saml2=disabled&sap-client=100&sap-language=EN#/Form/201X",
 
     "EX201DZ_emirates": "Abu Dhabi",
     "EX201DZ_zone_number": "D100151001",
@@ -60,37 +62,45 @@
     "EX202ATGEDZ_zone_number": "D100151001",
     "EX202ATGEDZ_export_date": "25/12/2024",
     "EX202ATGEDZ_filePath": "cypress/downloads/ExciseTaxExport.xlsx",
+    "EX202ATGEDZ_url": "https://eservices.tax.gov.ae/sap/bc/ui5_ui5/sap/zmcf_fmca/index.html?saml2=disabled&sap-client=100&sap-language=EN#/Form/202V",
 
-    "EX202AIDZNCC_Description": "Release Goods from Designated Zone into Free Circulation (No Customs Check)",
+    "EX202AIDZNCC_Description": "Import to Designated Zone (No Customs Check)",
     "EX202AIDZNCC_zone_number": "D100151001",
     "EX202AIDZNCC_release_date": "25/12/2024",
     "EX202AIDZNCC_filePath": "cypress/downloads/ExciseGoods.xlsx",
+    "EX202AIDZNCC_url": "https://eservices.tax.gov.ae/sap/bc/ui5_ui5/sap/zmcf_fmca/index.html?saml2=disabled&sap-client=100&sap-language=EN#/Form/202W",
 
     "EX202ARGDZNCC_Description": "Release Goods from Designated Zone into Free Circulation (No Customs Check)",
     "EX202ARGDZNCC_zone_number": "D100151001",
     "EX202ARGDZNCC_release_date": "25/12/2024",
     "EX202ARGDZNCC_filePath": "cypress/downloads/ExciseGoods.xlsx",
+    "EX202ARGDZNCC_url": "https://eservices.tax.gov.ae/sap/bc/ui5_ui5/sap/zmcf_fmca/index.html?saml2=disabled&sap-client=100&sap-language=EN#/Form/202R",
 
     "EX202APWDZ_Description": "Production Within a Designated Zone",
     "EX202APWDZ_zone_number": "D100151001",
     "EX202APWDZ_production_date": "25/12/2024",
     "EX202APWDZ_filePath": "cypress/downloads/ExciseGoods.xlsx",
+    "EX202APWDZ_url": "https://eservices.tax.gov.ae/sap/bc/ui5_ui5/sap/zmcf_fmca/index.html?saml2=disabled&sap-client=100&sap-language=EN#/Form/202Q",
 
     "EX202BPD_Description": "Producer Declaration",
     "EX202BPD_period": "December 2024",
     "EX202BPD_filePath": "cypress/downloads/ExciseGoodsProducerDeclaration.xlsx",
+    "EX202BPD_url": "https://eservices.tax.gov.ae/sap/bc/ui5_ui5/sap/zmcf_fmca/index.html?saml2=disabled&sap-client=100&sap-language=EN#/Form/202B",
 
     "EX203ALPF_Description": "Local Purchase Form",
     "EX203ALPF_filePath": "cypress/downloads/ExciseGoodsLocalPurchaseForm.xlsx",
     "EX203ALPF_document_path": "./cypress/data/testpdf.pdf",
+    "EX203ALPF_url": "https://eservices.tax.gov.ae/sap/bc/ui5_ui5/sap/zmcf_fmca/index.html?saml2=disabled&sap-client=100&sap-language=EN#/Form/203A",
 
     "EX203DETF_Description": "Deductible Excise Tax Form",
     "EX203DETF_period": "27/12/2024",
     "EX203DETF_document_path": "./cypress/data/testpdf.pdf",
     "EX203DETF_reason": "Export",
+    "EX203DETF_url": "https://eservices.tax.gov.ae/sap/bc/ui5_ui5/sap/zmcf_fmca/index.html?saml2=disabled&sap-client=100&sap-language=EN#/Form/203X",
 
     "EX203DSD_Description": "Stockpile Declaration",
-    "EX203DSD_period": "January 2025"
+    "EX203DSD_period": "January 2025",
+    "EX203DSD_url": "https://eservices.tax.gov.ae/sap/bc/ui5_ui5/sap/zmcf_fmca/index.html?saml2=disabled&sap-client=100&sap-language=EN#/Form/203D"
   },
   "Locators_202A": {
     "EX202A_createNew_xpath": "//*[@id='__button133-__container49-__xmlview15--panelScrollcontainer-0-0-BDI-content']",
@@ -142,10 +152,11 @@
   "locators_ex201reim": {
     "EX201REIM_reim_id": "#_BIID_A_DECL_TYPE_radiobutton3-Button"
   },
+
   "locators_ex202aidzncc": {
-    "EX202AIDZNCC_container_id": "__tile7-__container49-__xmlview14--panelScrollcontainer-3-0-content",
-    "EX202AIDZNCC_title_id": "__title62-__container49-__xmlview14--panelScrollcontainer-3-0-inner",
-    "EX202AIDZNCC_description_id": "__text405-__container49-__xmlview14--panelScrollcontainer-3-0"
+    "EX202AIDZNCC_container_id": "__tile7-__container49-__xmlview15--panelScrollcontainer-3-5-content",
+    "EX202AIDZNCC_title_id": "__title62-__container49-__xmlview15--panelScrollcontainer-3-5-inner",
+    "EX202AIDZNCC_description_id": "__text405-__container49-__xmlview15--panelScrollcontainer-3-5"
   },
   "locators_ex202argdzncc": {
     "EX202ARGDZNCC_container_id": "__tile7-__container49-__xmlview14--panelScrollcontainer-3-0-content",

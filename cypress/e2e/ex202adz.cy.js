@@ -42,6 +42,8 @@ describe("Automating EX202A consumption of goods with designated zone", () => {
                 "EX202A",
                 data.EntryValues.EX202ADZ_Description
             )
+            // validate the form page url
+            cy.validateUrl(data.EntryValues.EX202ADZ_url)
 
             // Click on the checkbox to agree to terms
             cy.clickElement(data.locators_ex.EX_checkbox_id)

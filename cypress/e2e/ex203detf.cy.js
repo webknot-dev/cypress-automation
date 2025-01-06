@@ -44,6 +44,9 @@ describe("Automating EX203 - Deductible Excise Tax Form", () => {
                 data.EntryValues.EX203DETF_Description
             )
 
+            // validate the form page url
+            cy.validateUrl(data.EntryValues.EX203DETF_url)
+
             // Click on the checkbox to agree to terms
             cy.clickElement(data.locators_ex.EX_checkbox_id)
             // Click on the start button to begin the process

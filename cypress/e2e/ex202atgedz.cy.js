@@ -42,6 +42,8 @@ describe("Automating EX202A Transfer Goods for Export From a Designated Zone", (
                 "EX202A",
                 data.EntryValues.EX202ATGEDZ_Description
             )
+            // validate the form page url
+            cy.validateUrl(data.EntryValues.EX202ATGEDZ_url)
 
             // Click on the checkbox to agree to terms
             cy.clickElement(data.locators_ex.EX_checkbox_id)

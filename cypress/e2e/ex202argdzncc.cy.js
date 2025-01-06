@@ -43,6 +43,9 @@ describe("Automating EX202A Release Goods from Designated Zone into Free Circula
                 data.EntryValues.EX202ARGDZNCC_Description
             )
 
+            // validate the form page url
+            cy.validateUrl(data.EntryValues.EX202ARGDZNCC_url)
+
             // Click on the checkbox to agree to terms
             cy.clickElement(data.locators_ex.EX_checkbox_id)
             // Click on the start button to begin the process

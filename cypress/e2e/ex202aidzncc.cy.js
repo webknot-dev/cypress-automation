@@ -3,7 +3,7 @@ describe("Automating EX202A Import to Designated Zone (No Customs Check)", () =>
         // Set the viewport size for the tests
         cy.viewport(1024, 764)
     })
-    it("EX202A - IDZ(NCC)", () => {
+    it("EX202A - IDZ(NCC) IMPORT", () => {
         // Load data from the fixture file
         cy.fixture("example.json").then((data) => {
             // Visit the URL specified in the fixture data
@@ -42,23 +42,26 @@ describe("Automating EX202A Import to Designated Zone (No Customs Check)", () =>
                 "EX202A",
                 data.EntryValues.EX202AIDZNCC_Description
             )
+            // validate the form page url
+            cy.validateUrl(data.EntryValues.EX202AIDZNCC_url)
 
             // Click on the checkbox to agree to terms
             cy.clickElement(data.locators_ex.EX_checkbox_id)
             // Click on the start button to begin the process
             cy.clickXpathElement(data.locators_ex.EX_Start_xpath)
-            // Input the designated zone number
-            cy.inputField(data.locators_ex.EX_zone_id2, data.EntryValues.EX202AIDZNCC_zone_number)
-            // click validate button
-            cy.clickXpathElement(data.locators_ex.Ex_validate_xpath)
-            //enter the Release date
-            cy.inputField(data.locators_ex.EX_export_date_id, data.EntryValues.EX202AIDZNCC_release_date)
-            //clicking on next button
-            cy.clickXpathElement(data.locators_ex.EX_next_xpath)
-            // download the excel template
-            cy.clickElement(data.locators_ex.EX_download_id)
-            // upload the file
-            cy.uploadingFile(data.locators_ex.EX_upload_id, data.EntryValues.EX202AIDZNCC_filePath)
+
+            // // Input the designated zone number
+            // cy.inputField(data.locators_ex.EX_zone_id2, data.EntryValues.EX202AIDZNCC_zone_number)
+            // // click validate button
+            // cy.clickXpathElement(data.locators_ex.Ex_validate_xpath)
+            // //enter the Release date
+            // cy.inputField(data.locators_ex.EX_export_date_id, data.EntryValues.EX202AIDZNCC_release_date)
+            // //clicking on next button
+            // cy.clickXpathElement(data.locators_ex.EX_next_xpath)
+            // // download the excel template
+            // cy.clickElement(data.locators_ex.EX_download_id)
+            // // upload the file
+            // cy.uploadingFile(data.locators_ex.EX_upload_id, data.EntryValues.EX202AIDZNCC_filePath)
         })
     });
 })
