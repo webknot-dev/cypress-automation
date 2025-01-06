@@ -66,9 +66,18 @@
 
     "EX202AIDZNCC_Description": "Import to Designated Zone (No Customs Check)",
     "EX202AIDZNCC_zone_number": "D100151001",
-    "EX202AIDZNCC_release_date": "25/12/2024",
-    "EX202AIDZNCC_filePath": "cypress/downloads/ExciseGoods.xlsx",
     "EX202AIDZNCC_url": "https://eservices.tax.gov.ae/sap/bc/ui5_ui5/sap/zmcf_fmca/index.html?saml2=disabled&sap-client=100&sap-language=EN#/Form/202W",
+
+    "EX202AIDZNCC_IM_zone_number": "D100151001",
+    "EX202AIDZNCC_IM_shipment_id": "123456789",
+    "EX202AIDZNCC_IM_Port": "Airport Free Zone Customs Center - Dubai",
+    "EX202AIDZNCC_IM_import_date": "25/12/2024",
+    "EX202AIDZNCC_IM_filePath": "cypress/downloads/ExciseGoods.xlsx",
+
+    "EX202AIDZNCC_RE_Port": "Airport Free Zone Customs Center - Dubai",
+    "EX202AIDZNCC_RE_zone_number": "D100151001",
+    "EX202AIDZNCC_RE_import_date": "25/12/2024",
+    "EX202AIDZNCC_RE_filePath": "cypress/downloads/ExciseGoods.xlsx",
 
     "EX202ARGDZNCC_Description": "Release Goods from Designated Zone into Free Circulation (No Customs Check)",
     "EX202ARGDZNCC_zone_number": "D100151001",
@@ -156,7 +165,10 @@
   "locators_ex202aidzncc": {
     "EX202AIDZNCC_container_id": "__tile7-__container49-__xmlview15--panelScrollcontainer-3-5-content",
     "EX202AIDZNCC_title_id": "__title62-__container49-__xmlview15--panelScrollcontainer-3-5-inner",
-    "EX202AIDZNCC_description_id": "__text405-__container49-__xmlview15--panelScrollcontainer-3-5"
+    "EX202AIDZNCC_description_id": "__text405-__container49-__xmlview15--panelScrollcontainer-3-5",
+
+    "EX202AIDZNCC_import_id": "#_BIID_A_DECL_TYPE_radiobutton1-label-bdi",
+    "EX202AIDZNCC_re_export_id": "#_BIID_A_DECL_TYPE_radiobutton2-label-bdi"
   },
   "locators_ex202argdzncc": {
     "EX202ARGDZNCC_container_id": "__tile7-__container49-__xmlview14--panelScrollcontainer-3-0-content",

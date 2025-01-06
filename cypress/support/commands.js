@@ -196,6 +196,18 @@ Cypress.Commands.add('optionBasedValue', (value) => {
     }
 });
 
+// Yes or no for IMPORT in EX202AIDZNCC
+Cypress.Commands.add('optionsForImport', (ans, zoneNumber, Shipmentid) => {
+    if (ans === "Yes" || ans === "yes") {
+        cy.get('#_BIID_A_DTS_GOODS_radiobutton1-label-bdi').click({ force: true });
+        cy.inputField('#_BIID_A_SHIPMENT_ID_combobox-arrow', Shipmentid);
+        cy.inputField('#_BIID_A_DZ_NO_input-inner', zoneNumber);
+    } else if (ans === "No" || ans == "NO") {
+        cy.get('#_BIID_A_DTS_GOODS_radiobutton2-label-bdi').click({ force: true });
+        cy.inputField('#_BIID_A_DZ_NO_input-inner', zoneNumber);
+    }
+});
+
 // Scroll within a container
 Cypress.Commands.add('scrollPageInContainer', (containerSelector, init, final) => {
     cy.get(containerSelector).scrollTo(init, final);

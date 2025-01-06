@@ -3,7 +3,7 @@ describe("Automating EX202A Import to Designated Zone (No Customs Check)", () =>
         // Set the viewport size for the tests
         cy.viewport(1024, 764)
     })
-    it("EX202A - IDZ(NCC) IMPORT", () => {
+    it("EX202A - IDZ(NCC) IMPORT - RE IMPORT", () => {
         // Load data from the fixture file
         cy.fixture("example.json").then((data) => {
             // Visit the URL specified in the fixture data
@@ -18,7 +18,7 @@ describe("Automating EX202A Import to Designated Zone (No Customs Check)", () =>
                 data.LocatorsPath.captchaInputField_id,
                 data.LocatorsPath.captcha_element_id,
                 data.LocatorsPath.loginButton_id,
-                "ex202aidzncc.cy.js"
+                "ex202aidznccre.cy.js"
             )
             //validate the landing page url
             cy.validateUrl(data.EntryValues.land_url)
@@ -49,28 +49,27 @@ describe("Automating EX202A Import to Designated Zone (No Customs Check)", () =>
             cy.clickElement(data.locators_ex.EX_checkbox_id)
             // Click on the start button to begin the process
             cy.clickXpathElement(data.locators_ex.EX_Start_xpath)
-            // click on "import" radio button
-            cy.clickElement(data.locators_ex202aidzncc.EX202AIDZNCC_import_id)
+            // click on "import to re export" radio button
+            cy.clickElement(data.locators_ex202aidzncc.EX202AIDZNCC_re_export_id)
 
-            // select "yes" or "no" import of DTS Goods for Consumption in the UAE
-            // if yes provide zone number and shipment id else provide shipment id
-            cy.optionsForImport("NO", data.EntryValues.EX202AIDZNCC_IM_zone_number, data.EntryValues.EX202AIDZNCC_IM_shipment_id)
+            // Entering Zone ID
+            cy.inputField(data.locators_ex.EX_zone_id, data.EntryValues.EX202AIDZNCC_RE_zone_number)
 
             // click validate button
             cy.clickXpathElement(data.locators_ex.Ex_validate_xpath)
 
             // selecting Port of Entry
             cy.clickElement(data.locators_ex.EX_Port_DropDown_id)
-            cy.selectFromDropdown(data.locators_ex.EX_port_list_id, data.EntryValues.EX202AIDZNCC_IM_Port)
+            cy.selectFromDropdown(data.locators_ex.EX_port_list_id, data.EntryValues.EX202AIDZNCC_RE_Port)
 
             //enter the import date
-            cy.inputField(data.locators_ex.EX_export_date_id, data.EntryValues.EX202AIDZNCC_IM_import_date)
+            cy.inputField(data.locators_ex.EX_export_date_id, data.EntryValues.EX202AIDZNCC_RE_import_date)
             //clicking on next button
             cy.clickXpathElement(data.locators_ex.EX_next_xpath)
             // download the excel template
             cy.clickElement(data.locators_ex.EX_download_id)
             // upload the file
-            cy.uploadingFile(data.locators_ex.EX_upload_id, data.EntryValues.EX202AIDZNCC_IM_filePath)
+            cy.uploadingFile(data.locators_ex.EX_upload_id, data.EntryValues.EX202AIDZNCC_RE_filePath)
         })
     });
 })
