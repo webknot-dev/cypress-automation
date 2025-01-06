@@ -52,6 +52,10 @@ describe("Automating EX201 - Release from Designated Zone (Requiring Customs Cle
             cy.selectFromDropdown(data.locators_ex.EX_emirates_list_id, data.EntryValues.EX201DZ_emirates)
             // Entering DZ Zone ID
             cy.inputField(data.locators_ex.EX_zone_id, data.EntryValues.EX201DZ_zone_number)
+            // click validate button
+            cy.clickXpathElement(data.locators_ex.Ex_validate_xpath)
+            //clicking on next button
+            cy.clickXpathElement(data.locators_ex.EX_next_xpath)
         })
     });
 })
