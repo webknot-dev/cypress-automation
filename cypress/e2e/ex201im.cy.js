@@ -23,6 +23,8 @@ describe("Automating EX201 - Import ", () => {
             )
             //validate the landing page url
             cy.validateUrl(data.EntryValues.land_url)
+            // validate the Email ID
+            cy.validateEmail()
 
             // Click on the taxable profile button
             cy.clickXpathElement(data.LocatorsPath.taxableProfileButton_xpath)

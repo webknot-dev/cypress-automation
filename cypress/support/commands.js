@@ -246,3 +246,10 @@ Cypress.Commands.add('selectExcise', (excontainerid, extitleid, exdescriptionid,
 Cypress.Commands.add('validateUrl', (url) => {
     cy.url().should('eq', url);
 });
+
+// Email validation
+Cypress.Commands.add('validateEmail', () => {
+    cy.fixture('example.json').then((data) => {
+        cy.get('[id$=emailId]').first().should('have.text', data.AuthDetails.email);
+    });
+})
