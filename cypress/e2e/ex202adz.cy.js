@@ -20,6 +20,8 @@ describe("Automating EX202A consumption of goods with designated zone", () => {
                 data.LocatorsPath.loginButton_id,
                 "ex202adz.cy.js"
             )
+            //validate the landing page url
+            cy.validateUrl(data.EntryValues.land_url)
 
             // Click on the taxable profile button
             cy.clickXpathElement(data.LocatorsPath.taxableProfileButton_xpath)

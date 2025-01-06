@@ -20,6 +20,8 @@ describe("Automating EX202A Release Goods from Designated Zone into Free Circula
                 data.LocatorsPath.loginButton_id,
                 "ex202argdzncc.cy.js"
             )
+            //validate the landing page url
+            cy.validateUrl(data.EntryValues.land_url)
 
             // Click on the taxable profile button
             cy.clickXpathElement(data.LocatorsPath.taxableProfileButton_xpath)

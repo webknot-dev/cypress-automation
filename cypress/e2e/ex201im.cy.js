@@ -21,6 +21,8 @@ describe("Automating EX201 - Import ", () => {
                 data.LocatorsPath.loginButton_id,
                 "ex201im.cy.js"
             )
+            //validate the landing page url
+            cy.validateUrl(data.EntryValues.land_url)
 
             // Click on the taxable profile button
             cy.clickXpathElement(data.LocatorsPath.taxableProfileButton_xpath)

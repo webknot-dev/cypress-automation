@@ -21,6 +21,9 @@ describe("Automating EX201 - Release from Designated Zone (Requiring Customs Cle
                 "ex201dz.cy.js"
             )
 
+            //validate the landing page url
+            cy.validateUrl(data.EntryValues.land_url)
+
             // Click on the taxable profile button
             cy.clickXpathElement(data.LocatorsPath.taxableProfileButton_xpath)
             // Close any popup if present

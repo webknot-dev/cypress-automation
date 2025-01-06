@@ -34,6 +34,7 @@
     "POE_targetItem": "Guwaifat",
     "target_date_value": "31/01/2024",
     "uploadingFilePath": "C:/Users/Admin/Downloads/ExciseGoods.xlsx",
+    "land_url": "https://eservices.tax.gov.ae/sap/bc/ui5_ui5/sap/zmcf_fmca/index.html?saml2=disabled&sap-client=100&sap-language=EN#/TaxablePerson",
 
     "EX202ADZ_Description": "Consumption of Goods Within a Designated Zone",
     "EX202ADZ_zone_number": "D100151001",

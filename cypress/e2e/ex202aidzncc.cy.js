@@ -20,6 +20,8 @@ describe("Automating EX202A Import to Designated Zone (No Customs Check)", () =>
                 data.LocatorsPath.loginButton_id,
                 "ex202aidzncc.cy.js"
             )
+            //validate the landing page url
+            cy.validateUrl(data.EntryValues.land_url)
 
             // Click on the taxable profile button
             cy.clickXpathElement(data.LocatorsPath.taxableProfileButton_xpath)

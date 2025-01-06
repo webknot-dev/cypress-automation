@@ -240,3 +240,9 @@ Cypress.Commands.add('selectExcise', (excontainerid, extitleid, exdescriptionid,
         cy.contains(excreatenewid).click({ force: true });
     });
 });
+
+//validations methods
+// url validation
+Cypress.Commands.add('validateUrl', (url) => {
+    cy.url().should('eq', url);
+});
