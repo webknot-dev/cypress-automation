@@ -51,6 +51,8 @@ describe("Automating EX201 - Import ", () => {
             cy.clickElement(data.locators_ex.EX_checkbox_id)
             // Click on the start button to begin the process
             cy.clickXpathElement(data.locators_ex.EX_Start_xpath)
+            // validate trn
+            cy.validateTRN(data.EntryValues.TRN)
             // click on "import" radio button
             cy.clickElement(data.locators_ex201im.EX201IM_import_id)
             // input date 

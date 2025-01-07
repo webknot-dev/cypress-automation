@@ -49,6 +49,8 @@ describe("Automating EX202A Import to Designated Zone (No Customs Check)", () =>
             cy.clickElement(data.locators_ex.EX_checkbox_id)
             // Click on the start button to begin the process
             cy.clickXpathElement(data.locators_ex.EX_Start_xpath)
+            // validate trn
+            cy.validateTRN(data.EntryValues.TRN)
             // click on "import" radio button
             cy.clickElement(data.locators_ex202aidzncc.EX202AIDZNCC_import_id)
 

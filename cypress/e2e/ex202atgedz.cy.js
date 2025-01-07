@@ -49,6 +49,8 @@ describe("Automating EX202A Transfer Goods for Export From a Designated Zone", (
             cy.clickElement(data.locators_ex.EX_checkbox_id)
             // Click on the start button to begin the process
             cy.clickXpathElement(data.locators_ex.EX_Start_xpath)
+            // validate trn
+            cy.validateTRN(data.EntryValues.TRN)
             // Input the designated zone number
             cy.inputField(data.locators_ex.EX_zone_id2, data.EntryValues.EX202ATGEDZ_zone_number)
             // click validate button

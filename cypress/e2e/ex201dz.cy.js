@@ -50,6 +50,8 @@ describe("Automating EX201 - Release from Designated Zone (Requiring Customs Cle
             cy.clickElement(data.locators_ex.EX_checkbox_id)
             // Click on the start button to begin the process
             cy.clickXpathElement(data.locators_ex.EX_Start_xpath)
+            // validate trn
+            cy.validateTRN(data.EntryValues.TRN)
             // click on "release from designated zone" radio button
             cy.clickElement(data.locators_ex201dz.EX201DZ_DZ_id)
             // input date 

@@ -49,6 +49,8 @@ describe("Automating EX202A consumption of goods with designated zone", () => {
             cy.clickElement(data.locators_ex.EX_checkbox_id)
             // Click on the start button to begin the process
             cy.clickXpathElement(data.locators_ex.EX_Start_xpath)
+            // validate trn
+            cy.validateTRN(data.EntryValues.TRN)
             // Input the designated zone number
             cy.inputField(data.locators_ex.EX_zone_id, data.EntryValues.EX202ADZ_zone_number)
             // click validate button

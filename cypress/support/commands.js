@@ -271,3 +271,8 @@ Cypress.Commands.add('validateStatusAndTRN', (status, trn) => {
     cy.xpath("(//td[@data-sap-ui-column='__column123'])[4]").should('have.text', status);
     cy.xpath("(//td[@data-sap-ui-column='__column124'])[4]").should('have.text', trn);
 });
+
+//validate trn
+Cypress.Commands.add('validateTRN', (trn) => {
+    cy.contains(trn).should('exist').should('be.visible');
+});

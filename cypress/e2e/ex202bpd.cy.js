@@ -51,6 +51,8 @@ describe("Automating EX202B - Producer Declaration", () => {
             cy.clickElement(data.locators_ex.EX_checkbox_id)
             // Click on the start button to begin the process
             cy.clickXpathElement(data.locators_ex.EX_Start_xpath)
+            // validate trn
+            cy.validateTRN(data.EntryValues.TRN)
             // select period of Declaration
             cy.clickElement(data.locators_ex.Ex_period_Dropdown_id)
             cy.selectFromDropdown(data.locators_ex.EX_period_list_id, data.EntryValues.EX202BPD_period)
