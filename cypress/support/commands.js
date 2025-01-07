@@ -265,3 +265,9 @@ Cypress.Commands.add('validateEmail', () => {
         cy.get('[id$=emailId]').first().should('have.text', data.AuthDetails.email);
     });
 })
+
+//status and trn validation
+Cypress.Commands.add('validateStatusAndTRN', (status, trn) => {
+    cy.xpath("(//td[@data-sap-ui-column='__column123'])[4]").should('have.text', status);
+    cy.xpath("(//td[@data-sap-ui-column='__column124'])[4]").should('have.text', trn);
+});

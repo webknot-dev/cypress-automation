@@ -29,8 +29,8 @@ describe("Automating EX202A consumption of goods with designated zone", () => {
             cy.clickXpathElement(data.LocatorsPath.taxableProfileButton_xpath)
             // Close any popup if present
             cy.closePopupIfPresent(data.LocatorsPath.PopUp_Selector, data.LocatorsPath.PopUp_Accept)
-            // Wait for the TRN validation element to be present
-            cy.waitForXpathElementPresence(data.LocatorsPath.TRN_validation_Xpath)
+            // validate status and TRN
+            cy.validateStatusAndTRN("Active", data.EntryValues.TRN)
             // Click on the excise tax button
             cy.clickXpathElement(data.LocatorsPath.exciseTax_xpath);
 
