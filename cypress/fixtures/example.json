@@ -187,12 +187,17 @@
     "Validate_button":"#_BIID_validateDDesigZone_button-content",
     "date_field_xpath": "#_BIID_A_DATE_TRANSFER_date-inner",
     "date":"31/12/2024",
-    "EX203F_Purchaser_trn_id":"#__data1600",
-    "EX203F_Purchaser_trn_value":"D100151001",
-    "EX203F_filePath": "cypress/downloads/ExciseTaxLost&Damaged.xlsx",
     "EX203F_Description":"Transfer of Ownership within Designated Zone – Registered Seller to Non-Registered Purchaser",
     "Ex203F_Dz_zone": "#_BIID_A_DZ_NO_input-inner",
-    "EX203F_dz_number":"D100151001"
+    "EX203F_dz_number":"D100151001",
+    
+    "upload_image_id":"#DOPR",
+    "fileName_path":"image.png",
+    "okButtonSelector1_xpath":"#__button164-inner",
+    "okButtonSelector2_xpath":"#onCancel-inner",
+    "next_step_id_dz":"#__xmlview19--idFormNestStep-inner",
+
+    "EX203F_filePath": "cypress/downloads/ExciseGoods.xlsx"
     
 
 

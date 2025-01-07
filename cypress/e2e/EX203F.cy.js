@@ -51,12 +51,26 @@ describe("Automating EX203F - Transfer of Ownership within Designated Zone – R
 
             cy.clickElement(data.locators_EX203F.Ex203F_Dz_zone);
 
-            cy.inputField(data.locators_EX203F.Ex203F_Dz_zone, data.locators_EX203F.EX203F_dz_number)
-          
+            cy.inputField(data.locators_EX203F.Ex203F_Dz_zone, data.locators_EX203F.EX203F_dz_number);
 
+            cy.clickElement(data.locators_EX203F.Validate_button);
 
-          
-             
+            //date
+
+            cy.scrollToView(data.locators_EX203F.date_field_xpath);
+            cy.selectingDate(data.locators_EX203F.date_field_xpath,data.locators_EX203C_TDZ.date)
+
+            //uploading image
+            cy.uploadFile(
+                data.locators_EX203F.upload_image_id,
+                data.locators_EX203F.fileName_path,
+                // data.locators_EX203C_TDZ.upload_button_xpath, 
+                data.locators_EX203F.okButtonSelector1_xpath,
+                data.locators_EX203F.okButtonSelector2_xpath,
+              );
+           
+            cy.clickElement(data.locators_EX203F.next_step_id_dz);
+            cy.uploadingFile(data.locators_ex.EX_upload_id, data.locators_EX203F.EX203F_filePath)
 
         })
     });
