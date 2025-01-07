@@ -1,9 +1,9 @@
-describe("Automating EX203C consumption of goods with designated zone", () => {
+describe("Automating EX203C Transfer of Ownership within Designated Zones", () => {
     before(() => {
         // Set the viewport size for the tests
         cy.viewport(1024, 764)
     })
-    it("EX203C - DZ", () => {
+    it("EX203C - Transfer of Ownership within Designated Zones", () => {
         // Load data from the fixture file
         cy.fixture("example.json").then((data) => {
             // Visit the URL specified in the fixture data
@@ -51,10 +51,32 @@ describe("Automating EX203C consumption of goods with designated zone", () => {
 
             cy.inputField(data.locators_EX203C_TDZ.EX203CTDZ_Purchaser_trn_id, data.locators_EX203C_TDZ.EX203CTDZ_Purchaser_trn_value)
           
+            cy.clickElement(data.locators_EX203C_TDZ.Validate_button);
 
+            //date
+            cy.scrollToView(data.locators_EX203C_TDZ.date_field_xpath);
+            cy.selectingDate(data.locators_EX203C_TDZ.date_field_xpath,data.locators_EX203C_TDZ.date)
 
-          
-             
+            //upload_image
+            cy.uploadFile(
+                data.locators_EX203C_TDZ.upload_image_id,
+                data.locators_EX203C_TDZ.fileName_path,
+                // data.locators_EX203C_TDZ.upload_button_xpath, 
+                data.locators_EX203C_TDZ.okButtonSelector1_xpath,
+                data.locators_EX203C_TDZ.okButtonSelector2_xpath,
+              );
+           
+            cy.clickElement(data.locators_EX203C_TDZ.next_step_id);
+
+            cy.scrollToView(data.locators_EX203C_TDZ.dezignated_zone_xpath);
+            cy.inputField(data.locators_EX203C_TDZ.dezignated_zone_xpath, data.locators_EX203C_TDZ.dz_number);
+            cy.clickElement(data.locators_EX203C_TDZ.Dz_validate_xpath);
+
+            //Click on next step
+            cy.clickElement(data.locators_EX203C_TDZ.next_step_id_dz);
+
+            cy.uploadingFile(data.locators_ex.EX_upload_id, data.locators_EX203B_LostnDeclare.EX203C_filePath)
+
 
         })
     });

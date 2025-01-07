@@ -53,7 +53,8 @@ describe("Automating EX202A -Transfer Goods to Another Designated Zone", () => {
             //Add dates
             cy.wait(5000)
             cy.scrollToView(data.locators_EX202A_EGDZ.date_field_xpath);
-            cy.selectingDate(data.locators_EX202A_EGDZ.date_field_xpath,data.locators_EX202A_EGDZ.date_field_xpath)
+            cy.selectingDate(data.locators_EX202A_EGDZ.date_field_xpath,data.locators_EX202A_EGDZ.date)
+            cy.clickElement(data.locators_EX202A_EGDZ.next_step_id)
 
 
 

@@ -52,17 +52,20 @@ describe("Automating EX203B - Lost & Damaged Declaration", () => {
 
             //Add dates
             cy.wait(5000)
-            cy.scrollToView(data.locators_EX203B_LostnDeclare.date_field_xpath);
+            
+            
+
+            
             cy.selectingDate(data.locators_EX203B_LostnDeclare.date_field_xpath,data.locators_EX203B_LostnDeclare.date)
             cy.clickXpathElement(data.locators_ex.EX_next_xpath)
 
-            // cy.clickElement(data.locators_ex.EX_download_id)
+            cy.clickElement(data.locators_ex.EX_download_id)
 
             //UPLOAD Excise goods 
 
             //Filling  out the mandatory details
 
-            // cy.uploadingFile(data.locators_ex.EX_upload_id, data.locators_EX203B_LostnDeclare.EX203BLD_filePath)
+            cy.uploadingFile(data.locators_ex.EX_upload_id, data.locators_EX203B_LostnDeclare.EX203BLD_filePath)
 
 
             //DropDown - Lost and Damaged Declaration
@@ -71,6 +74,7 @@ describe("Automating EX203B - Lost & Damaged Declaration", () => {
             cy.clickElement(data.locators_EX203B_LostnDeclare.loss_damaged_xpath)
             cy.selectFromDropdown(data.locators_EX203B_LostnDeclare.LossDamaged_dropDown_xpath, data.locators_EX203B_LostnDeclare.LossDamaged_dropDown_Value);
 
+            cy.uploadingFile(data.locators_ex.upload_image_id, data.locators_EX203B_LostnDeclare.image_path)
 
             
             //DropDown - Reason of damage
@@ -100,7 +104,8 @@ describe("Automating EX203B - Lost & Damaged Declaration", () => {
             cy.clickElement(data.locators_EX203B_LostnDeclare.emirate_xpath)
   
             cy.selectFromDropdown(data.locators_EX203B_LostnDeclare.emirate_dropdown_xpath, data.locators_EX203B_LostnDeclare.emirate_dropdown_value);
-  
+            cy.clickElement(data.locators_EX203B_LostnDeclare.next_step_id)
+
              
 
         })

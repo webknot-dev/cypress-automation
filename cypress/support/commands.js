@@ -26,6 +26,7 @@
 require('cypress-xpath');
 require('cypress-if');
 require('cypress-downloadfile/lib/downloadFileCommand')
+import 'cypress-file-upload';
 
 
 // cy.downloadFile('link to file', 'path', 'file name with extension')
@@ -203,4 +204,25 @@ Cypress.Commands.add('selectExcise', (excontainerid, extitleid, exdescriptionid,
         cy.getByPartialId(exdescriptionid.substring(0, 23), exdescriptionid.substring(exdescriptionid.length - 25)).should('have.text', exdescription);
         cy.contains(excreatenewid).click({ force: true });
     });
+});
+
+
+
+// Custom command for file upload
+Cypress.Commands.add('uploadFile', (addButtonSelector, fileName, okButtonSelector1, okButtonSelector2) => {
+  // Click the "Add" button
+  cy.get(addButtonSelector).click();
+
+  // Simulate file upload
+  cy.get('input[type="file"]').attachFile(fileName);
+
+  // Click the "Upload" button
+//   cy.get(uploadButtonSelector).click();
+
+  // Handle the final "OK" buttons
+  cy.get(okButtonSelector1).click(); 
+  cy.get(okButtonSelector2).click(); 
+
+  // Optional: Validate the upload (you can remove this if not needed)
+//   cy.get('.upload-status').should('contain', 'Upload successful');
 });

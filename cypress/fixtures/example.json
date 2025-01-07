@@ -1,7 +1,7 @@
 {
   "AuthDetails": {
-    "email": "gaurav.chugani@ae.andersen.com",
-    "password": "Praveen@2022"
+    "email": "Excise@shamlantobacco.com",
+    "password": "@Shamlan2023"
   },
   "LocatorsPath": {
     "refresh_captcha_id": "#__icon1",
@@ -104,7 +104,8 @@
     "EX202EGDZ_import_id": "_BIID_A_DECL_TYPE_radiobutton1-Button",
     "Validate_button":"#_BIID_validateDDesigZone_button-content",
     "date_field_xpath": "#_BIID_A_DATE_TRANSFER_date-inner",
-    "date":"25/12/2024"
+    "date":"25/12/2024",
+    "next_step_id":"#__xmlview19--idFormNestStep-content"
   },
 
   "locators_EX203B_LostnDeclare": {
@@ -137,7 +138,11 @@
 
     "emirate_xpath":"#_EGCC_A_EMIRATE_combobox-arrow",
     "emirate_dropdown_xpath":"#_EGCC_A_EMIRATE_combobox-popup-list-listUl",
-    "emirate_dropdown_value":"Umm Al Quwain"
+    "emirate_dropdown_value":"Umm Al Quwain",
+
+    "upload_image_id":"#EVLD-inner",
+    "image_path":"C:/Users/cheth/Downloads/Screenshot 2024-12-27 193016.png",
+    "next_step_id":"#__xmlview19--idFormNestStep-content"
   },
 
 
@@ -146,14 +151,29 @@
     "EX203CTDZ_title_id": "__title62-__container49-__xmlview14--panelScrollcontainer-3-8-inner",
     "EX203CTDZ_description_id": "__text405-__container49-__xmlview14--panelScrollcontainer-3-8",
     
-    "Validate_button":"#_BIID_validateODesigZone_button-BDI-content",
-    "date_field_xpath": "#_BIID_A_DATE_TRANSFER_date-inner",
+    "Validate_button":"#_BIID_validateTrn_button-content",
+    "date_field_xpath": "#_BIID_A_DATE_SALES_date-inner",
     "date":"31/12/2024",
-    "EX203CTDZ_Purchaser_trn_id":"#__data1600",
-    "EX203CTDZ_Purchaser_trn_value":"D100151001",
+    "EX203CTDZ_Purchaser_trn_id":"#_BIID_A_PUR_TRN_input-inner",
+    "EX203CTDZ_Purchaser_trn_value":"100035299500007",
     "EX203CTDZ_filePath": "cypress/downloads/ExciseTaxLost&Damaged.xlsx",
-    "EX203CTDZ_Description":"Transfer of Ownership within Designated Zones"
+    "EX203CTDZ_Description":"Transfer of Ownership within Designated Zones",
 
+
+    "upload_image_id":"#DOPR",
+    
+    "fileName_path":"image.png",
+    "upload_button_xpath":"//*[@id='AttachmentUploader-1-uploader-fu']",
+    "okButtonSelector1_xpath":"#__button164-inner",
+    "okButtonSelector2_xpath":"#onCancel-inner",
+
+    "dezignated_zone_xpath":"#_BIID_A_DZ_NO_input-inner",
+    "dz_number":"D100151001",
+    "Dz_validate_xpath":"#_BIID_validateDesigZone_button-content",
+    "next_step_id_dz":"#__xmlview19--idFormNestStep-content",
+    "EX203C_filePath": "cypress/downloads/ExciseGoods.xlsx",
+    "file_xpath":"#_EGCC_uploadTemplate_fUploader-fu"
+    
 
   },
 
@@ -173,6 +193,7 @@
     "EX203F_Description":"Transfer of Ownership within Designated Zone – Registered Seller to Non-Registered Purchaser",
     "Ex203F_Dz_zone": "#_BIID_A_DZ_NO_input-inner",
     "EX203F_dz_number":"D100151001"
+    
 
 
   }
