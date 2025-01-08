@@ -51,7 +51,7 @@ describe("Automating EX201 - Import for Re-export ", () => {
             // Click on the start button to begin the process
             cy.clickXpathElement(data.locators_ex.EX_Start_xpath)
             // validate trn
-            cy.validateTRN(data.EntryValues.TRN)
+            cy.validateTRNandName(data.EntryValues.TRN, data.EntryValues.name)
             // click on "import for re-export" radio button
             cy.clickElement(data.locators_ex201reim.EX201REIM_reim_id)
             // input date 

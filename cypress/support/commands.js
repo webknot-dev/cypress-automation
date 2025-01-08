@@ -273,6 +273,7 @@ Cypress.Commands.add('validateStatusAndTRN', (status, trn) => {
 });
 
 //validate trn
-Cypress.Commands.add('validateTRN', (trn) => {
+Cypress.Commands.add('validateTRNandName', (trn, name) => {
     cy.contains(trn).should('exist').should('be.visible');
+    cy.contains(name).should('exist').should('be.visible');
 });

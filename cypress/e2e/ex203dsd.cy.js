@@ -52,7 +52,7 @@ describe("Automating EX203D - Stockpile Declaration", () => {
             // Click on the start button to begin the process
             cy.clickXpathElement(data.locators_ex.EX_Start_xpath)
             // validate trn
-            cy.validateTRN(data.EntryValues.TRN)
+            cy.validateTRNandName(data.EntryValues.TRN, data.EntryValues.name)
             // enter period of Declaration
             cy.inputField(data.locators_ex.EX_export_date_id, data.EntryValues.EX203DSD_period)
             //clicking on next button

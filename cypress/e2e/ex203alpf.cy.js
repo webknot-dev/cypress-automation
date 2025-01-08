@@ -52,7 +52,7 @@ describe("Automating EX203A - Local Purchase Form", () => {
             // Click on the start button to begin the process
             cy.clickXpathElement(data.locators_ex.EX_Start_xpath)
             // validate trn
-            cy.validateTRN(data.EntryValues.TRN)
+            cy.validateTRNandName(data.EntryValues.TRN, data.EntryValues.name)
             // fill if the seller registrant and trn holder? if yes enter the TRN
             cy.optionBasedOnValue("no", "")
             //upload or drag drop Document Proof

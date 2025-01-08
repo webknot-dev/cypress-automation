@@ -51,7 +51,7 @@ describe("Automating EX202A Release Goods from Designated Zone into Free Circula
             // Click on the start button to begin the process
             cy.clickXpathElement(data.locators_ex.EX_Start_xpath)
             // validate trn
-            cy.validateTRN(data.EntryValues.TRN)
+            cy.validateTRNandName(data.EntryValues.TRN, data.EntryValues.name)
             // Input the designated zone number
             cy.inputField(data.locators_ex.EX_zone_id2, data.EntryValues.EX202ARGDZNCC_zone_number)
             // click validate button
