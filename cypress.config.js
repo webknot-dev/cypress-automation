@@ -11,10 +11,13 @@ module.exports = defineConfig({
         async readCaptcha(filePath) {
           if (!fs.existsSync(filePath)) {
             const alternateFilePath = './cypress/screenshots/captcha-screenshot.png';
+            const anotherAlternateFilePath = './cypress/screenshots/main.cy.js/captcha-screenshot.png';
             if (fs.existsSync(alternateFilePath)) {
               filePath = alternateFilePath;
+            } else if (fs.existsSync(anotherAlternateFilePath)) {
+              filePath = anotherAlternateFilePath;
             } else {
-              throw new Error(`File not found in both directories: ${filePath} and ${alternateFilePath}`);
+              throw new Error(`File not found in both directories: ${filePath} and ${alternateFilePath} also in ${anotherAlternateFilePath}`);
             }
           }
           const worker = await createWorker();
