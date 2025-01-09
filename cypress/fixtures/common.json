@@ -1,0 +1,54 @@
+{
+  "AuthDetails": {
+    "email": "gaurav.chugani@ae.andersen.com",
+    "password": "Praveen@2022"
+  },
+  "Values": {
+    "TRN": "100035299500007",
+    "name": "Ramada Hotel & Suites Sharjah",
+    "url": "https://eservices.tax.gov.ae/#/Logon",
+    "land_url": "https://eservices.tax.gov.ae/sap/bc/ui5_ui5/sap/zmcf_fmca/index.html?saml2=disabled&sap-client=100&sap-language=EN#/TaxablePerson"
+  },
+  "LocatorsPath": {
+    "refresh_captcha_id": "#__icon1",
+    "captcha_element_id": "#captcha-pad-logon",
+    "emailInputField_id": "#__xmlview0--email-inner",
+    "passwordInputField_id": "#__xmlview0--PasswordInput-inner",
+    "captchaInputField_id": "[placeholder='Enter security code']",
+    "loginButton_id": "#__xmlview0--loginBtn-inner",
+    "loginProfile_xpath": "//*[@id='__xmlview5--emailId']",
+    "taxableProfileButton_xpath": "(//bdi[text()='View'])[1]",
+    "exciseTax_xpath": "(//span[text()='Excise Tax'])[1]",
+    "ramda_dropDown_id": "#__icon101",
+    "check_box_xpath": "//*[@id='_INST_A_00_CHECKBOX_CHK_checkbox-CbBg']",
+    "start_button_xpath": "//*[@id='__xmlview20--idFormStart-inner']",
+    "excise_scroll": "//*[@id='__xmlview16--TaxablePersonPage-cont']",
+    "login_text_validation_id": "#__text9",
+    "Alert_Dialog_xpath": "//*[@id='__dialog8-cont']",
+    "Alert_Accept_xpath": "//*[@id='oCloseButton-inner']",
+    "TRN_validation_Xpath": "(//td[@data-sap-ui-column='__column124'])[4]",
+    "PopUp_Selector": "#__dialog8",
+    "PopUp_Accept": "#oCloseButton-BDI-content"
+  },
+  "locators_ex": {
+    "EX_createNew_id": "Create New",
+    "EX_checkbox_id": "#_INST_A_00_CHECKBOX_CHK_checkbox-CbBg",
+    "EX_Start_xpath": "//bdi[text()='Start']",
+    "EX_zone_id": "#_BIID_A_DZ_NO_input-inner",
+    "EX_zone_id2": "#_BIID_A_ODZ_NO_input-inner",
+    "EX_emirates_DropDown_id": "#_BIID_A_EMIRATE_combobox-arrow",
+    "EX_date_id": "#_BIID_A_DATE_IMPORT_date-inner",
+    "EX_Port_DropDown_id": "#_BIID_A_PORT_combobox-arrow",
+    "EX_emirates_list_id": "#_BIID_A_EMIRATE_combobox-popup-list-listUl",
+    "EX_port_list_id": "#_BIID_A_PORT_combobox-popup-list-listUl",
+    "EX_next_xpath": "//span[substring(@id, string-length(@id) - string-length('idFormNestStep-inner') + 1) = 'idFormNestStep-inner']",
+    "EX_download_id": "#_EGCC_downloadTemp_link",
+    "EX_upload_id": "input[type='file'][name='_EGCC_uploadTemplate_fUploader']",
+    "EX_validate_id": "#_BIID_validateODesigZone_button-content",
+    "Ex_validate_xpath": "//bdi[text()='Validate']",
+    "Ex_cons_date_id": "#_BIID_A_DATE_CONSUME_date-inner",
+    "EX_export_date_id": "#_BIID_A_DATE_TRANSFER_date-inner",
+    "Ex_period_Dropdown_id": "#_BIID_A_PEROID_combobox-arrow",
+    "EX_period_list_id": "#_BIID_A_PEROID_combobox-popup-list-listUl"
+  }
+}

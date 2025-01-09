@@ -1,0 +1,15 @@
+{
+  "EntryValues": {
+    "EX201DZ_emirates": "Abu Dhabi",
+    "EX201DZ_Description": "Excise Goods that Require Customs Clearance (Import Declaration)",
+    "EX201DZ_zone_number": "D100151001",
+    "EX201DZ_date": "25/12/2024",
+    "EX201DZ_url": "https://eservices.tax.gov.ae/sap/bc/ui5_ui5/sap/zmcf_fmca/index.html?saml2=disabled&sap-client=100&sap-language=EN#/Form/201X"
+  },
+  "locators_ex201dz": {
+    "EX201DZ_container_id": "__tile7-__container49-__xmlview14--panelScrollcontainer-2-0",
+    "EX201DZ_title_id": "__title62-__container49-__xmlview14--panelScrollcontainer-2-0-inner",
+    "EX201DZ_description_id": "__text405-__container49-__xmlview14--panelScrollcontainer-2-0",
+    "EX201DZ_DZ_id": "#_BIID_A_DECL_TYPE_radiobutton2-Button"
+  }
+}

@@ -7,7 +7,7 @@ describe("Automating EX202B - Producer Declaration", () => {
         // Load data from the fixture file
         cy.fixture("example.json").then((data) => {
             // Visit the URL specified in the fixture data
-            cy.visitUrl(data.EntryValues.url)
+            cy.visitUrl(data.Values.url)
             cy.log("Navigated to FTA - Federal Tax Authority Successfully");
             // cy.downloadFile(data.EntryValues.file_url, 'cypress/downloads', '574e7711-ba7b-4899-a881-5b6cd97067ce.xlsx')
 
@@ -22,7 +22,7 @@ describe("Automating EX202B - Producer Declaration", () => {
                 "ex202bpd.cy.js"
             )
             //validate the landing page url
-            cy.validateUrl(data.EntryValues.land_url)
+            cy.validateUrl(data.Values.land_url)
             // validate the Email ID
             cy.validateEmail()
 
@@ -31,7 +31,7 @@ describe("Automating EX202B - Producer Declaration", () => {
             // Close any popup if present
             cy.closePopupIfPresent(data.LocatorsPath.PopUp_Selector, data.LocatorsPath.PopUp_Accept)
             // validate status and TRN
-            cy.validateStatusAndTRN("Active", data.EntryValues.TRN)
+            cy.validateStatusAndTRN("Active", data.Values.TRN)
             // Click on the excise tax button
             cy.clickXpathElement(data.LocatorsPath.exciseTax_xpath);
 
@@ -52,7 +52,7 @@ describe("Automating EX202B - Producer Declaration", () => {
             // Click on the start button to begin the process
             cy.clickXpathElement(data.locators_ex.EX_Start_xpath)
             // validate trn
-            cy.validateTRNandName(data.EntryValues.TRN, data.EntryValues.name)
+            cy.validateTRNandName(data.Values.TRN, data.Values.name)
             // select period of Declaration
             cy.clickElement(data.locators_ex.Ex_period_Dropdown_id)
             cy.selectFromDropdown(data.locators_ex.EX_period_list_id, data.EntryValues.EX202BPD_period)

@@ -7,7 +7,7 @@ describe("Automating EX201 - Import for Re-export ", () => {
         // Load data from the fixture file
         cy.fixture("example.json").then((data) => {
             // Visit the URL specified in the fixture data
-            cy.visitUrl(data.EntryValues.url)
+            cy.visitUrl(data.Values.url)
             cy.log("Navigated to FTA - Federal Tax Authority Successfully");
 
             // Perform login using the credentials and locators from the fixture data
@@ -21,7 +21,7 @@ describe("Automating EX201 - Import for Re-export ", () => {
                 "ex201reim.cy.js"
             )
             //validate the landing page url
-            cy.validateUrl(data.EntryValues.land_url)
+            cy.validateUrl(data.Values.land_url)
             // validate the Email ID
             cy.validateEmail()
 
@@ -30,7 +30,7 @@ describe("Automating EX201 - Import for Re-export ", () => {
             // Close any popup if present
             cy.closePopupIfPresent(data.LocatorsPath.PopUp_Selector, data.LocatorsPath.PopUp_Accept)
             // validate status and TRN
-            cy.validateStatusAndTRN("Active", data.EntryValues.TRN)
+            cy.validateStatusAndTRN("Active", data.Values.TRN)
             // Click on the excise tax button
             cy.clickXpathElement(data.LocatorsPath.exciseTax_xpath);
 
@@ -51,7 +51,7 @@ describe("Automating EX201 - Import for Re-export ", () => {
             // Click on the start button to begin the process
             cy.clickXpathElement(data.locators_ex.EX_Start_xpath)
             // validate trn
-            cy.validateTRNandName(data.EntryValues.TRN, data.EntryValues.name)
+            cy.validateTRNandName(data.Values.TRN, data.Values.name)
             // click on "import for re-export" radio button
             cy.clickElement(data.locators_ex201reim.EX201REIM_reim_id)
             // input date 

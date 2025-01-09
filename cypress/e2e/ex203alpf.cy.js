@@ -7,7 +7,7 @@ describe("Automating EX203A - Local Purchase Form", () => {
         // Load data from the fixture file
         cy.fixture("example.json").then((data) => {
             // Visit the URL specified in the fixture data
-            cy.visitUrl(data.EntryValues.url)
+            cy.visitUrl(data.Values.url)
             cy.log("Navigated to FTA - Federal Tax Authority Successfully");
             // cy.downloadFile(data.EntryValues.file_url, 'cypress/downloads', '574e7711-ba7b-4899-a881-5b6cd97067ce.xlsx')
 
@@ -22,7 +22,7 @@ describe("Automating EX203A - Local Purchase Form", () => {
                 "ex203alpf.cy.js"
             )
             //validate the landing page url
-            cy.validateUrl(data.EntryValues.land_url)
+            cy.validateUrl(data.Values.land_url)
             // validate the Email ID
             cy.validateEmail()
 
@@ -31,7 +31,7 @@ describe("Automating EX203A - Local Purchase Form", () => {
             // Close any popup if present
             cy.closePopupIfPresent(data.LocatorsPath.PopUp_Selector, data.LocatorsPath.PopUp_Accept)
             // validate status and TRN
-            cy.validateStatusAndTRN("Active", data.EntryValues.TRN)
+            cy.validateStatusAndTRN("Active", data.Values.TRN)
             // Click on the excise tax button
             cy.clickXpathElement(data.LocatorsPath.exciseTax_xpath);
 
@@ -52,7 +52,7 @@ describe("Automating EX203A - Local Purchase Form", () => {
             // Click on the start button to begin the process
             cy.clickXpathElement(data.locators_ex.EX_Start_xpath)
             // validate trn
-            cy.validateTRNandName(data.EntryValues.TRN, data.EntryValues.name)
+            cy.validateTRNandName(data.Values.TRN, data.Values.name)
             // fill if the seller registrant and trn holder? if yes enter the TRN
             cy.optionBasedOnValue("no", "")
             //upload or drag drop Document Proof
