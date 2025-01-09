@@ -55,13 +55,13 @@ describe("Automating EX201 - Import ", () => {
         cy.clickXpathElement(data.locators_ex.EX_Start_xpath)
         // validate trn
         cy.validateTRNandName(data.Values.TRN, data.Values.name)
-        // click on "import" radio button
-        cy.clickElement(data.locators_ex201im.EX201IM_import_id)
-        // input date 
-        cy.selectingDate(data.locators_ex.EX_date_id, data.EntryValues.EX201IM_date)
         // selecting Emirate of Import 
         cy.clickElement(data.locators_ex.EX_emirates_DropDown_id)
         cy.selectFromDropdown(data.locators_ex.EX_emirates_list_id, data.EntryValues.EX201IM_emirates)
+        // input date 
+        cy.selectingDate(data.locators_ex.EX_date_id, data.EntryValues.EX201IM_date)
+        // click on "import" radio button
+        cy.clickElement(data.locators_ex201im.EX201IM_import_id)
         // selecting Port of Entry
         cy.clickElement(data.locators_ex.EX_Port_DropDown_id)
         cy.selectFromDropdown(data.locators_ex.EX_port_list_id, data.EntryValues.EX201IM_port)
