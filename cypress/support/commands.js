@@ -185,15 +185,19 @@ Cypress.Commands.add('optionBasedOnValue', (value, trn) => {
 });
 
 Cypress.Commands.add('optionBasedValue', (value) => {
-    if (value === "Yes" || value === "yes") {
-        cy.get("#_EGCC_A_REG_GOODS_radiobutton1-label-text").click({ force: true });
-        // download the excel template
-        cy.clickElement(data.locators_ex.EX_download_id)
-        // upload the file
-        cy.uploadingFile(data.locators_ex.EX_upload_id, data.EntryValues.EX203DSD_filePath)
-    } else if (value === "No" || value === "no") {
-        cy.get("#_EGCC_A_REG_GOODS_radiobutton2-label-text").click({ force: true });
-    }
+    cy.fixture('common.json').then((data) => {
+        cy.fixture('ex203dsd.json').then((data1) => {
+            if (value === "Yes" || value === "yes") {
+                cy.get("#_EGCC_A_REG_GOODS_radiobutton1-label-text").click({ force: true });
+                // download the excel template
+                cy.clickElement(data.locators_ex.EX_download_id)
+                // upload the file
+                cy.uploadingFile(data.locators_ex.EX_upload_id, data1.EntryValues.EX203DSD_filePath)
+            } else if (value === "No" || value === "no") {
+                cy.get("#_EGCC_A_REG_GOODS_radiobutton2-label-text").click({ force: true });
+            }
+        });
+    });
 });
 
 // Yes or no for IMPORT in EX202AIDZNCC
@@ -261,7 +265,7 @@ Cypress.Commands.add('validateUrl', (url) => {
 
 // Email validation
 Cypress.Commands.add('validateEmail', () => {
-    cy.fixture('example.json').then((data) => {
+    cy.fixture('common.json').then((data) => {
         cy.get('[id$=emailId]').first().should('have.text', data.AuthDetails.email);
     });
 })
