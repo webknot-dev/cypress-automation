@@ -1,0 +1,14 @@
+{
+  "EntryValues": {
+    "EX202ATGEDZ_Description": "Transfer Goods for Export From a Designated Zone",
+    "EX202ATGEDZ_zone_number": "D100151001",
+    "EX202ATGEDZ_export_date": "25/12/2024",
+    "EX202ATGEDZ_filePath": "cypress/downloads/ExciseTaxExport.xlsx",
+    "EX202ATGEDZ_url": "https://eservices.tax.gov.ae/sap/bc/ui5_ui5/sap/zmcf_fmca/index.html?saml2=disabled&sap-client=100&sap-language=EN#/Form/202V"
+  },
+  "locators_ex202atgedz": {
+    "EX202ATGEDZ_container_id": "__tile7-__container49-__xmlview14--panelScrollcontainer-3-4-content",
+    "EX202ATGEDZ_title_id": "__title62-__container49-__xmlview14--panelScrollcontainer-3-4-inner",
+    "EX202ATGEDZ_description_id": "__text405-__container49-__xmlview14--panelScrollcontainer-3-4"
+  }
+}
