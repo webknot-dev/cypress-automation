@@ -7,7 +7,8 @@ describe("Automating EX203F - Transfer of Ownership within Designated Zone – R
         // Load data from the fixture file
         cy.fixture("example.json").then((data) => {
             // Visit the URL specified in the fixture data
-            cy.visitUrl(data.EntryValues.url)
+            cy.visitUrl(data.EntryValues.url);
+            cy.validateUrl(data.EntryValues.url);
             cy.log("Navigated to FTA - Federal Tax Authority Successfully");
 
             // Perform login using the credentials and locators from the fixture data
@@ -21,12 +22,14 @@ describe("Automating EX203F - Transfer of Ownership within Designated Zone – R
                 "ex202adz.cy.js"
             )
 
+            cy.validateEmail();
             // Click on the taxable profile button
             cy.clickXpathElement(data.LocatorsPath.taxableProfileButton_xpath)
             // Close any popup if present
             cy.closePopupIfPresent(data.LocatorsPath.PopUp_Selector, data.LocatorsPath.PopUp_Accept)
             // Wait for the TRN validation element to be present
             cy.waitForXpathElementPresence(data.LocatorsPath.TRN_validation_Xpath)
+            cy.validateStatusAndTRN('Active', data.EntryValues.validate_trn);
             // Click on the excise tax button
             cy.clickXpathElement(data.LocatorsPath.exciseTax_xpath);
 

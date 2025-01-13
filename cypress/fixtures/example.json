@@ -1,6 +1,6 @@
 {
   "AuthDetails": {
-    "email": "Excise@shamlantobacco.com",
+    "email": "excise@shamlantobacco.com",
     "password": "@Shamlan2023"
   },
   "LocatorsPath": {
@@ -30,6 +30,7 @@
     "browser_type": "",
     "mode": "",
     "url": "https://eservices.tax.gov.ae/#/Logon",
+    "validate_trn":"100437653700007",
     "EOI_targetItem": "Abu Dhabi",
     "POE_targetItem": "Guwaifat",
     "target_date_value": "31/01/2024",
@@ -104,7 +105,7 @@
     "EX202EGDZ_import_id": "_BIID_A_DECL_TYPE_radiobutton1-Button",
     "Validate_button":"#_BIID_validateDDesigZone_button-content",
     "date_field_xpath": "#_BIID_A_DATE_TRANSFER_date-inner",
-    "date":"25/12/2024",
+    "date":"13/01/2025",
     "next_step_id":"#__xmlview19--idFormNestStep-content"
   },
 

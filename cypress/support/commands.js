@@ -208,7 +208,7 @@ Cypress.Commands.add('selectExcise', (excontainerid, extitleid, exdescriptionid,
 
 
 
-// Custom command for file upload
+// Custom command for file upload for images
 Cypress.Commands.add('uploadFile', (addButtonSelector, fileName, okButtonSelector1, okButtonSelector2) => {
   // Click the "Add" button
   cy.get(addButtonSelector).click();
@@ -226,3 +226,29 @@ Cypress.Commands.add('uploadFile', (addButtonSelector, fileName, okButtonSelecto
   // Optional: Validate the upload (you can remove this if not needed)
 //   cy.get('.upload-status').should('contain', 'Upload successful');
 });
+
+//Validations
+// url validation
+Cypress.Commands.add('validateUrl', (url) => {
+    cy.url().should('eq', url);
+});
+
+// Email validation
+Cypress.Commands.add('validateEmail', () => {
+    cy.fixture('example.json').then((data) => {
+        cy.get('[id$=emailId]').first().should('have.text', data.AuthDetails.email);
+    });
+})
+
+//status and trn validation
+Cypress.Commands.add('validateStatusAndTRN', (status, trn) => {
+    cy.xpath("(//td[@data-sap-ui-column='__column123'])[4]").should('have.text', status);
+    cy.xpath("(//td[@data-sap-ui-column='__column124'])[4]").should('have.text', trn);
+});
+
+//validate trn
+Cypress.Commands.add('validateTRNandName', (trn, name) => {
+    cy.contains(trn).should('exist').should('be.visible');
+    cy.contains(name).should('exist').should('be.visible');
+});
+
