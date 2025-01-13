@@ -4,7 +4,7 @@
     "EX202ATGEDZ_zone_number": "D100151001",
     "EX202ATGEDZ_export_date": "01/01/2025",
     "EX202ATGEDZ_filePath": "cypress/downloads/ExciseTaxExport.xlsx",
-    "EX202ATGEDZ_url": "https://eservices.tax.gov.ae/sap/bc/ui5_ui5/sap/zmcf_fmca/index.html?saml2=disabled&sap-client=100&sap-language=EN#/Form/202V"
+    "file_url": "https://eservices.tax.gov.ae/sap/bc/ui5_ui5/sap/zmcf_fmca/index.html?saml2=disabled&sap-client=100&sap-language=EN#/Form/202V"
   },
   "locators_ex202atgedz": {
     "EX202ATGEDZ_container_id": "__tile7-__container49-__xmlview14--panelScrollcontainer-3-4-content",
