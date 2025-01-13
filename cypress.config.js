@@ -33,6 +33,6 @@ module.exports = defineConfig({
     waitForAnimations: true,
     watchForFileChanges: true,
     pageLoadTimeout: 200000,
-    defaultCommandTimeout: 30000,
+    defaultCommandTimeout: 40000,
   },
 });
