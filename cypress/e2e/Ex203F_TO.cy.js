@@ -32,7 +32,7 @@ describe("Automating EX203F - Transfer of Ownership within Designated Zone – R
         cy.validateEmail();
         cy.clickXpathElement(data.LocatorsPath.taxableProfileButton_xpath);
         cy.closePopupIfPresent(data.LocatorsPath.PopUp_Selector, data.LocatorsPath.PopUp_Accept);
-        cy.validateStatusAndTRN("Active", data.EntryValues.validate_trn);
+        cy.validateStatusAndTRN("Active", data.Values.TRN)
         cy.clickXpathElement(data.LocatorsPath.exciseTax_xpath);
 
         // Select the excise option

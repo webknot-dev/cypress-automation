@@ -35,7 +35,7 @@ describe("Automating EX202A - Transfer Goods to Another Designated Zone", functi
         cy.closePopupIfPresent(data.LocatorsPath.PopUp_Selector, data.LocatorsPath.PopUp_Accept);
         // Wait for the TRN validation element to be present
         cy.waitForXpathElementPresence(data.LocatorsPath.TRN_validation_Xpath);
-        cy.validateStatusAndTRN("Active", data.EntryValues.validate_trn);
+        cy.validateStatusAndTRN("Active", data.Values.TRN)
 
         // Click on the excise tax button
         cy.clickXpathElement(data.LocatorsPath.exciseTax_xpath);

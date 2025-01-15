@@ -39,7 +39,7 @@ describe("Automating EX203C Transfer of Ownership within Designated Zones", () =
         cy.clickXpathElement(data.LocatorsPath.taxableProfileButton_xpath);
         cy.closePopupIfPresent(data.LocatorsPath.PopUp_Selector, data.LocatorsPath.PopUp_Accept);
         cy.waitForXpathElementPresence(data.LocatorsPath.TRN_validation_Xpath);
-        cy.validateStatusAndTRN('Active', data.EntryValues.validate_trn);
+        cy.validateStatusAndTRN("Active", data.Values.TRN)
         cy.clickXpathElement(data.LocatorsPath.exciseTax_xpath);
 
         // Select the excise option using the locators and values from the fixture data

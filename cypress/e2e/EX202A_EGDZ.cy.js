@@ -39,7 +39,7 @@ describe("Automating EX202A - Enter Goods into a Designated Zone", () => {
         cy.waitForXpathElementPresence(data.LocatorsPath.TRN_validation_Xpath);
 
         // Validate status and TRN
-        cy.validateStatusAndTRN("Active", data.EntryValues.validate_trn);
+        cy.validateStatusAndTRN("Active", data.Values.TRN)
 
         // Click on the excise tax button
         cy.clickXpathElement(data.LocatorsPath.exciseTax_xpath);

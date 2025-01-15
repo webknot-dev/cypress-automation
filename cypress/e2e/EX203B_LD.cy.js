@@ -32,7 +32,7 @@ describe("Automating EX203B - Lost & Damaged Declaration", () => {
         // Click on the taxable profile button
         cy.clickXpathElement(data.LocatorsPath.taxableProfileButton_xpath);
         cy.closePopupIfPresent(data.LocatorsPath.PopUp_Selector, data.LocatorsPath.PopUp_Accept);
-        cy.validateStatusAndTRN("Active", data.EntryValues.validate_trn);
+        cy.validateStatusAndTRN("Active", data.Values.TRN)
 
         // Click on the excise tax button
         cy.clickXpathElement(data.LocatorsPath.exciseTax_xpath);
