@@ -18,8 +18,8 @@ describe("Automating EX203C Transfer of Ownership within Designated Zones", () =
         const data = { ...testData, ...commonData };
 
         // Visit the URL specified in the fixture data
-        cy.visitUrl(data.EntryValues.url);
-        cy.validateUrl(data.EntryValues.url);
+        cy.visitUrl(data.Values.url);
+        cy.validateUrl(data.Values.url);
         cy.log("Navigated to FTA - Federal Tax Authority Successfully");
 
         // Perform login using the credentials and locators from the fixture data
@@ -42,8 +42,8 @@ describe("Automating EX203C Transfer of Ownership within Designated Zones", () =
         cy.validateStatusAndTRN('Active', data.EntryValues.validate_trn);
         cy.clickXpathElement(data.LocatorsPath.exciseTax_xpath);
 
-          // Select the excise option using the locators and values from the fixture data
-          cy.selectExcise(data.locators_EX203C_TDZ.EX203CTDZ_container_id,
+        // Select the excise option using the locators and values from the fixture data
+        cy.selectExcise(data.locators_EX203C_TDZ.EX203CTDZ_container_id,
             data.locators_EX203C_TDZ.EX203CTDZ_title_id,
             data.locators_EX203C_TDZ.EX203CTDZ_description_id,
             data.locators_ex.EX_createNew_id,
@@ -55,19 +55,19 @@ describe("Automating EX203C Transfer of Ownership within Designated Zones", () =
         cy.clickElement(data.locators_ex.EX_checkbox_id)
         // Click on the start button to begin the process
         cy.clickXpathElement(data.locators_ex.EX_Start_xpath)
-       
+
 
         //Enter Purchaser TRN
 
         cy.clickElement(data.locators_EX203C_TDZ.EX203CTDZ_Purchaser_trn_id);
 
         cy.inputField(data.locators_EX203C_TDZ.EX203CTDZ_Purchaser_trn_id, data.locators_EX203C_TDZ.EX203CTDZ_Purchaser_trn_value)
-      
+
         cy.clickElement(data.locators_EX203C_TDZ.Validate_button);
 
         //date
         cy.scrollToView(data.locators_EX203C_TDZ.date_field_xpath);
-        cy.selectingDate(data.locators_EX203C_TDZ.date_field_xpath,data.locators_EX203C_TDZ.date)
+        cy.selectingDate(data.locators_EX203C_TDZ.date_field_xpath, data.locators_EX203C_TDZ.date)
 
         //upload_image
         cy.uploadFile(
@@ -76,8 +76,8 @@ describe("Automating EX203C Transfer of Ownership within Designated Zones", () =
             // data.locators_EX203C_TDZ.upload_button_xpath, 
             data.locators_EX203C_TDZ.okButtonSelector1_xpath,
             data.locators_EX203C_TDZ.okButtonSelector2_xpath,
-          );
-       
+        );
+
         // cy.clickElement(data.locators_EX203C_TDZ.next_step_id);
 
         cy.scrollToView(data.locators_EX203C_TDZ.dezignated_zone_xpath);

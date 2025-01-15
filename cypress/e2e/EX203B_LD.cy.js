@@ -12,8 +12,8 @@ describe("Automating EX203B - Lost & Damaged Declaration", () => {
         const data = { ...this.testData, ...this.commonData };
 
         // Visit the URL specified in the fixture data
-        cy.visitUrl(data.EntryValues.url);
-        cy.validateUrl(data.EntryValues.url);
+        cy.visitUrl(data.Values.url);
+        cy.validateUrl(data.Values.url);
         cy.log("Navigated to FTA - Federal Tax Authority Successfully");
 
         // Perform login using the credentials and locators from the fixture data
