@@ -1,7 +1,7 @@
 {
   "AuthDetails": {
-    "email": "gaurav.chugani@ae.andersen.com",
-    "password": "Praveen@2022"
+    "email": "excise@shamlantobacco.com",
+    "password": "@Shamlan2023"
   },
   "Values": {
     "TRN": "100035299500007",
@@ -18,7 +18,18 @@
     "taxableProfileButton_xpath": "(//bdi[text()='View'])[1]",
     "exciseTax_xpath": "(//span[text()='Excise Tax'])[1]",
     "PopUp_Selector": "#__dialog8",
-    "PopUp_Accept": "#oCloseButton-BDI-content"
+    "PopUp_Accept": "#oCloseButton-BDI-content",
+
+    "refresh_captcha_id": "#__icon1",
+    "loginProfile_xpath": "//*[@id='__xmlview5--emailId']",
+    "ramda_dropDown_id": "#__icon101",
+    "check_box_xpath": "//*[@id='_INST_A_00_CHECKBOX_CHK_checkbox-CbBg']",
+    "start_button_xpath": "//*[@id='__xmlview20--idFormStart-inner']",
+    "excise_scroll": "//*[@id='__xmlview16--TaxablePersonPage-cont']",
+    "login_text_validation_id": "#__text9",
+    "Alert_Dialog_xpath": "//*[@id='__dialog8-cont']",
+    "Alert_Accept_xpath": "//*[@id='oCloseButton-inner']",
+    "TRN_validation_Xpath": "(//td[@data-sap-ui-column='__column124'])[4]"
   },
   "locators_ex": {
     "EX_createNew_id": "Create New",

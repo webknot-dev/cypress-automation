@@ -26,6 +26,7 @@
 require('cypress-xpath');
 require('cypress-if');
 require('cypress-downloadfile/lib/downloadFileCommand')
+import 'cypress-file-upload';
 
 
 // cy.downloadFile('link to file', 'path', 'file name with extension')
@@ -34,34 +35,6 @@ require('cypress-downloadfile/lib/downloadFileCommand')
 Cypress.on('uncaught:exception', (err, runnable) => {
     return false;
 });
-
-// Cypress.Commands.add('loginWebsite', (email, password, spec) => {
-//     cy.visit('https://eservices.tax.gov.ae/#/Logon');
-//     cy.get('#__xmlview0--idSplitter-content-0').should('be.visible');
-//     cy.get('#__text9').should('exist');`
-
-//     cy.get('#__data48').click({ force: true });
-
-//     cy.wait(2000).get('#__xmlview0--email-inner')
-//         .should('exist')
-//         .type(email, { force: true });
-
-//     cy.get('#__xmlview0--PasswordInput-inner')
-//         .should('exist')
-//         .type(password, { force: true });
-
-//     cy.get('#captcha-pad-logon').screenshot('captcha-screenshot');
-//     cy.task('readCaptcha', `./cypress/screenshots/${spec}/captcha-screenshot.png`).then((captchaText) => {
-//         console.log('Recognized Captcha Text:', captchaText);
-
-//         cy.get('#__xmlview0--LOGIN_A_SEC_CODE_input-inner')
-//             .type(captchaText, { force: true })
-//     });
-//     cy.get('#__xmlview0--loginBtn-inner').click({ force: true });
-//     cy.get('#__xmlview5--emailId').should('have.text', email);
-//     cy.contains('Create New Taxable Person Profile').should('exist');
-
-// })
 
 // Visit a URL
 Cypress.Commands.add('visitUrl', (url) => {
@@ -280,4 +253,23 @@ Cypress.Commands.add('validateStatusAndTRN', (status, trn) => {
 Cypress.Commands.add('validateTRNandName', (trn, name) => {
     cy.contains(trn).should('exist').should('be.visible');
     cy.contains(name).should('exist').should('be.visible');
+});
+
+// Custom command for file upload for images
+Cypress.Commands.add('uploadFile', (addButtonSelector, fileName, okButtonSelector1, okButtonSelector2) => {
+    // Click the "Add" button
+    cy.get(addButtonSelector).click();
+
+    // Simulate file upload
+    cy.get('input[type="file"]').attachFile(fileName);
+
+    // Click the "Upload" button
+    //   cy.get(uploadButtonSelector).click();
+
+    // Handle the final "OK" buttons
+    cy.get(okButtonSelector1).click();
+    cy.get(okButtonSelector2).click();
+
+    // Optional: Validate the upload (you can remove this if not needed)
+    //   cy.get('.upload-status').should('contain', 'Upload successful');
 });

@@ -1,0 +1,39 @@
+{
+    "locators_EX203B_LostnDeclare": {
+    "EX203BLD_container_id": "__tile7-__container49-__xmlview14--panelScrollcontainer-3-7-content",
+    "EX203BLD_title_id": "__title62-__container49-__xmlview14--panelScrollcontainer-3-7-inner",
+    "EX203BLD_description_id": "__text405-__container49-__xmlview14--panelScrollcontainer-3-7",
+    
+    "Validate_button":"#_BIID_validateODesigZone_button-BDI-content",
+    "date_field_xpath": "#_BIID_A_DATE_TRANSFER_date-inner",
+    "date":"25/12/2024",
+    "EX203BLD_zone_number":"D100151001",
+    "EX203BLD_filePath": "cypress/downloads/ExciseTaxLost&Damaged.xlsx",
+
+    "loss_damaged_xpath": "#_EGCC_A_PHYSICAL_combobox-arrow",
+    "LossDamaged_dropDown_xpath": "#_EGCC_A_PHYSICAL_combobox-popup-list-listUl",
+    "LossDamaged_dropDown_Value": "Physical",
+
+    "reason_damaged_xpath":"#_EGCC_A_ITEM_REASON_combobox-arrow",
+    "ReasonForLoss_dropDown_xpath": "#_EGCC_A_ITEM_REASON_combobox-popup-list-listUl",
+    "ReasonForLoss_dropDown_value" : "Lost/Shortage in Goods",
+
+    "placeOfDestruction_xpath":"#_EGCC_A_ITEM_PLACEGOODSDESTROY_combobox-arrow",
+    "placeOfDestruction_dropdown_xpath":"#_EGCC_A_ITEM_PLACEGOODSDESTROY_combobox-popup-list-listUl",
+    "placeOfDestruction_dropdown_value":"Internal – Inside Designated Zone",
+
+
+    "external_facility_xpath":"#_EGCC_A_FACILITY_combobox-arrow",
+    "external_facility_dropdown_xpath":"#_EGCC_A_FACILITY_combobox-popup-list-listUl",
+    "external_facility_dropdown_value":"Municipal Approved Facility",
+
+    "emirate_xpath":"#_EGCC_A_EMIRATE_combobox-arrow",
+    "emirate_dropdown_xpath":"#_EGCC_A_EMIRATE_combobox-popup-list-listUl",
+    "emirate_dropdown_value":"Umm Al Quwain",
+
+    "upload_image_id":"#EVLD",
+    "fileName_path":"image.png",
+    "okButtonSelector1_xpath":"#__button168-inner",
+    "okButtonSelector2_xpath":"#onCancel-inner"
+  }
+}
