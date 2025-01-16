@@ -216,6 +216,7 @@ Cypress.Commands.add('uploadFile', (addButtonSelector, fileName, okButtonSelecto
   // Simulate file upload
   cy.get('input[type="file"]').attachFile(fileName);
 
+  cy.wait(3000);
   // Click the "Upload" button
 //   cy.get(uploadButtonSelector).click();
 
