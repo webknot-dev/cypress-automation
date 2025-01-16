@@ -1,10 +1,10 @@
 {
     "locators_EX202A_TGADZ": {
-        "EX202TGADZ_container_id": "__tile7-__container49-__xmlview14--panelScrollcontainer-3-4-content",
-        "EX202TGADZ_title_id": "__title62-__container49-__xmlview14--panelScrollcontainer-3-4-inner",
-        "EX202TGADZ_description_id": "__text405-__container49-__xmlview14--panelScrollcontainer-3-4",
+        "EX202TGADZ_container_id": "__tile7-__container49-__xmlview14--panelScrollcontainer-3-3-content",
+        "EX202TGADZ_title_id": "__title62-__container49-__xmlview14--panelScrollcontainer-3-3-inner",
+        "EX202TGADZ_description_id": "__text405-__container49-__xmlview14--panelScrollcontainer-3-3",
         "EX202TGADZ_import_id": "_BIID_A_DECL_TYPE_radiobutton1-Button",
-        "EX202TGADZ_Description":"Transfer Goods for Export From a Designated Zone",
+        "EX202TGADZ_Description":"Transfer Goods to Another Designated Zone",
         "EX_zone_id":"#_BIID_A_ODZ_NO_input-inner",
         "EX202TGAZ_zone_number": "D100151001",
         "Validate_button":"#_BIID_validateODesigZone_button-content",
