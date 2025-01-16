@@ -13,6 +13,8 @@
         "next_step_id":"#__xmlview19--idFormNestStep-content",
         "EX202TGADZ_url":"https://eservices.tax.gov.ae/sap/bc/ui5_ui5/sap/zmcf_fmca/index.html?saml2=disabled&sap-client=100&sap-language=EN#/Form/202T",
         "EX_upload_id": "#_EGCC_uploadTemplate_fUploader-fu",
-        "EX202ATGADZ_filePath":"cypress/downloads/ExciseGoods.xlsx"
+        "EX202ATGADZ_filePath":"cypress/downloads/ExciseGoods.xlsx",
+        "EX_dest_zone_id":"#_BIID_A_DZ_NO_input-inner",
+        "Destination_validation_btnId":"#_BIID_validateDDesigZone_button-content"
       }
 }
