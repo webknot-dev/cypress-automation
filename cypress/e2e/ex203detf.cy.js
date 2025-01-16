@@ -11,7 +11,7 @@ describe("Automating EX203 - Deductible Excise Tax Form", () => {
         // Visit the URL specified in the fixture data
         cy.visitUrl(data.Values.url)
         cy.log("Navigated to FTA - Federal Tax Authority Successfully");
-        cy.downloadFile(data.EntryValues.file_url, 'cypress/downloads', '574e7711-ba7b-4899-a881-5b6cd97067ce.xlsx')
+        // cy.downloadFile(data.EntryValues.file_url, 'cypress/downloads', '574e7711-ba7b-4899-a881-5b6cd97067ce.xlsx')
 
         // Perform login using the credentials and locators from the fixture data
         cy.login(data.LocatorsPath.emailInputField_id,

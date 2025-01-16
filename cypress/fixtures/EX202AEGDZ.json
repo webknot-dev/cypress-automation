@@ -1,17 +1,17 @@
 {
-    "locators_EX202A_EGDZ": {
-        "EX202EGDZ_container_id": "__tile7-__container49-__xmlview14--panelScrollcontainer-3-2-content",
-        "EX202EGDZ_title_id": "__title62-__container49-__xmlview14--panelScrollcontainer-3-2-inner",
-        "EX202EGDZ_description_id": "__text405-__container49-__xmlview14--panelScrollcontainer-3-2",
-        "EX202EGDZ_import_id": "_BIID_A_DECL_TYPE_radiobutton1-Button",
-        "EX_zone_id": "#_BIID_A_ODZ_NO_input-inner",
-        "Validate_button":"#_BIID_validateDDesigZone_button-content",
-        "date_field_xpath": "#_BIID_A_DATE_TRANSFER_date-inner",
-        "date":"01/01/2025",
-        
-        "next_step_id":"#__xmlview19--idFormNestStep-content",
-
-
-        "EX202AEGDZ_url":"https://eservices.tax.gov.ae/sap/bc/ui5_ui5/sap/zmcf_fmca/index.html?saml2=disabled&sap-client=100&sap-language=EN#/Form/202T"
-      }
+  "locators_EX202A_EGDZ": {
+    "EX202EGDZ_container_id": "__tile7-__container49-__xmlview14--panelScrollcontainer-3-2-content",
+    "EX202EGDZ_title_id": "__title62-__container49-__xmlview14--panelScrollcontainer-3-2-inner",
+    "EX202EGDZ_description_id": "__text405-__container49-__xmlview14--panelScrollcontainer-3-2",
+    "EX202EGDZ_import_id": "_BIID_A_DECL_TYPE_radiobutton1-Button",
+    "EX_zone_id": "#_BIID_A_ODZ_NO_input-inner",
+    "Validate_button": "#_BIID_validateDDesigZone_button-content",
+    "date_field_xpath": "#_BIID_A_DATE_TRANSFER_date-inner",
+    "date": "01/01/2025",
+    "EX202AEGDZ_Description": "Enter Goods into a Designated Zone",
+    "EX202ADZ_zone_number": "D100151001",
+    "file_path": "cypress/downloads/file.xlsx",
+    "next_step_id": "#__xmlview19--idFormNestStep-content",
+    "EX202AEGDZ_url": "https://eservices.tax.gov.ae/sap/bc/ui5_ui5/sap/zmcf_fmca/index.html?saml2=disabled&sap-client=100&sap-language=EN#/Form/202T"
+  }
 }

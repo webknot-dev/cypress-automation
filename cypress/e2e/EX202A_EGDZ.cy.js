@@ -24,7 +24,7 @@ describe("Automating EX202A - Enter Goods into a Designated Zone", () => {
             data.LocatorsPath.captchaInputField_id,
             data.LocatorsPath.captcha_element_id,
             data.LocatorsPath.loginButton_id,
-            "ex202adz.cy.js"
+            "EX202A_EGDZ.cy.js"
         );
 
         cy.validateEmail();
@@ -51,7 +51,7 @@ describe("Automating EX202A - Enter Goods into a Designated Zone", () => {
             data.locators_EX202A_EGDZ.EX202EGDZ_description_id,
             data.locators_ex.EX_createNew_id,
             "EX202A",
-            data.EntryValues.EX202AEGDZ_Description
+            data.locators_EX202A_EGDZ.EX202AEGDZ_Description
         );
 
         cy.validateUrl(data.locators_EX202A_EGDZ.EX202AEGDZ_url);
@@ -63,7 +63,7 @@ describe("Automating EX202A - Enter Goods into a Designated Zone", () => {
         cy.clickXpathElement(data.locators_ex.EX_Start_xpath);
 
         // Input the designated zone number
-        cy.inputField(data.locators_ex.EX_zone_id, data.EntryValues.EX202ADZ_zone_number);
+        cy.inputField(data.locators_ex.EX_zone_id, data.locators_EX202A_EGDZ.EX202ADZ_zone_number);
 
         // Click on Validate
         cy.clickElement(data.locators_EX202A_EGDZ.Validate_button);

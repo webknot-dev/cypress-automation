@@ -1,20 +1,20 @@
 {
-    "locators_EX202A_TGADZ": {
-        "EX202TGADZ_container_id": "__tile7-__container49-__xmlview14--panelScrollcontainer-3-3-content",
-        "EX202TGADZ_title_id": "__title62-__container49-__xmlview14--panelScrollcontainer-3-3-inner",
-        "EX202TGADZ_description_id": "__text405-__container49-__xmlview14--panelScrollcontainer-3-3",
-        "EX202TGADZ_import_id": "_BIID_A_DECL_TYPE_radiobutton1-Button",
-        "EX202TGADZ_Description":"Transfer Goods to Another Designated Zone",
-        "EX_zone_id":"#_BIID_A_ODZ_NO_input-inner",
-        "EX202TGAZ_zone_number": "D100151001",
-        "Validate_button":"#_BIID_validateODesigZone_button-content",
-        "date_field_xpath": "#_BIID_A_DATE_TRANSFER_date-inner",
-        "date":"13/01/2025",
-        "next_step_id":"#__xmlview19--idFormNestStep-content",
-        "EX202TGADZ_url":"https://eservices.tax.gov.ae/sap/bc/ui5_ui5/sap/zmcf_fmca/index.html?saml2=disabled&sap-client=100&sap-language=EN#/Form/202T",
-        "EX_upload_id": "#_EGCC_uploadTemplate_fUploader-fu",
-        "EX202ATGADZ_filePath":"cypress/downloads/ExciseGoods.xlsx",
-        "EX_dest_zone_id":"#_BIID_A_DZ_NO_input-inner",
-        "Destination_validation_btnId":"#_BIID_validateDDesigZone_button-content"
-      }
+  "locators_EX202A_TGADZ": {
+    "EX202TGADZ_container_id": "__tile7-__container49-__xmlview14--panelScrollcontainer-3-3-content",
+    "EX202TGADZ_title_id": "__title62-__container49-__xmlview14--panelScrollcontainer-3-3-inner",
+    "EX202TGADZ_description_id": "__text405-__container49-__xmlview14--panelScrollcontainer-3-3",
+    "EX202TGADZ_import_id": "_BIID_A_DECL_TYPE_radiobutton1-Button",
+    "EX202TGADZ_Description": "Transfer Goods to Another Designated Zone",
+    "EX_zone_id": "#_BIID_A_ODZ_NO_input-inner",
+    "EX202TGAZ_zone_number": "D100151001",
+    "Validate_button": "#_BIID_validateODesigZone_button-content",
+    "date_field_xpath": "#_BIID_A_DATE_TRANSFER_date-inner",
+    "date": "13/01/2025",
+    "next_step_id": "#__xmlview19--idFormNestStep-content",
+    "EX202TGADZ_url": "https://eservices.tax.gov.ae/sap/bc/ui5_ui5/sap/zmcf_fmca/index.html?saml2=disabled&sap-client=100&sap-language=EN#/Form/202T",
+    "EX_upload_id": "#_EGCC_uploadTemplate_fUploader-fu",
+    "EX202ATGADZ_filePath": "cypress/downloads/ExciseGoods.xlsx",
+    "EX_dest_zone_id": "#_BIID_A_DZ_NO_input-inner",
+    "Destination_validation_btnId": "#_BIID_validateDDesigZone_button-content"
+  }
 }

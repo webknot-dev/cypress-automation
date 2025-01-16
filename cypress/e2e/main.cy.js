@@ -10,11 +10,11 @@
 // copyofex202importtodesignatedzoneswherethereisnocustomscheck-
 // ex202aproductionwithindesignatedzone-
 // ex202bproducerdeclaration-
-// ex203excisetaxdeductibledeclaration//
-// ex203alocalpurchaseform
+// ex203excisetaxdeductibledeclaration-
+// ex203alocalpurchaseform-
 // ex203ctransferofownershipwithindesignatedzones
 
-const value = "ex203alocalpurchaseform";
+const value = "ex203excisetaxdeductibledeclaration";
 
 switch (value) {
     case "excise201releasefromdesignatedzone":
@@ -50,7 +50,7 @@ switch (value) {
     case "ex203alocalpurchaseform":
         require('./ex203alpf.cy.js');
         break;
-    case "test12":
+    case "ex203excisetaxdeductibledeclaration":
         require('./ex203detf.cy.js');
         break;
     case "test13":

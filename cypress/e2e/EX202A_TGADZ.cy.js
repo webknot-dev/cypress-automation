@@ -24,7 +24,7 @@ describe("Automating EX202A - Transfer Goods to Another Designated Zone", functi
             data.LocatorsPath.captchaInputField_id,
             data.LocatorsPath.captcha_element_id,
             data.LocatorsPath.loginButton_id,
-            "ex202adz.cy.js"
+            "EX202A_TGADZ.cy.js"
         );
 
         cy.validateEmail();
