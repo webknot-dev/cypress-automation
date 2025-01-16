@@ -4,17 +4,17 @@
 // excise202areleasegoodsfromdzintofreecirculation
 // excise202aconsumptionofgoodswithindz
 // excise202aentergoodsintoadesignatedzone
-// ex202atransfergoodstoanotherdz
-// ex202atransfergoodsforexportfromadesignatedzone
-// ex202aimporttodesignatedzoneswherethereisnocustomscheck
-// copyofex202importtodesignatedzoneswherethereisnocustomscheck
-// ex202aproductionwithindesignatedzone
-// ex202bproducerdeclaration
-// ex203excisetaxdeductibledeclaration
+// ex202atransfergoodstoanotherdz-
+// ex202atransfergoodsforexportfromadesignatedzone-
+// ex202aimporttodesignatedzoneswherethereisnocustomscheck-
+// copyofex202importtodesignatedzoneswherethereisnocustomscheck-
+// ex202aproductionwithindesignatedzone-
+// ex202bproducerdeclaration-
+// ex203excisetaxdeductibledeclaration//
 // ex203alocalpurchaseform
 // ex203ctransferofownershipwithindesignatedzones
 
-const value = "excise202areleasegoodsfromdzintofreecirculation";
+const value = "ex203alocalpurchaseform";
 
 switch (value) {
     case "excise201releasefromdesignatedzone":
@@ -26,28 +26,28 @@ switch (value) {
     case "excise201importtoreexport":
         require('./ex201reim.cy.js');
         break;
-    case "test4":
+    case "excise202aconsumptionofgoodswithindz":
         require('./ex202adz.cy.js');
         break;
-    case "test5":
+    case "ex202aimporttodesignatedzoneswherethereisnocustomscheck":
         require('./ex202aidzncc.cy.js');
         break;
-    case "test6":
+    case "copyofex202importtodesignatedzoneswherethereisnocustomscheck":
         require('./ex202aidznccre.cy.js');
         break;
-    case "test7":
+    case "ex202aproductionwithindesignatedzone":
         require('./ex202apwdz.cy.js');
         break;
     case "excise202areleasegoodsfromdzintofreecirculation":
         require('./ex202argdzncc.cy.js');
         break;
-    case "test9":
+    case "ex202atransfergoodsforexportfromadesignatedzone":
         require('./ex202atgedz.cy.js');
         break;
-    case "test10":
+    case "ex202bproducerdeclaration":
         require('./ex202bpd.cy.js');
         break;
-    case "test11":
+    case "ex203alocalpurchaseform":
         require('./ex203alpf.cy.js');
         break;
     case "test12":
@@ -55,6 +55,12 @@ switch (value) {
         break;
     case "test13":
         require('./ex203dsd.cy.js');
+        break;
+    case "excise202aentergoodsintoadesignatedzone":
+        require('./EX202A_EGDZ.cy.js');
+        break;
+    case "ex202atransfergoodstoanotherdz":
+        require('./EX202A_TGADZ.cy.js');
         break;
     default:
         describe("NO MATCHING TEST CASE", () => {

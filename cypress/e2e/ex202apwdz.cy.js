@@ -11,7 +11,7 @@ describe("Automating EX202A Production Within a Designated Zone", () => {
         // Visit the URL specified in the fixture data
         cy.visitUrl(data.Values.url)
         cy.log("Navigated to FTA - Federal Tax Authority Successfully");
-        cy.downloadFile(data.EntryValues.file_url, 'cypress/downloads', '574e7711-ba7b-4899-a881-5b6cd97067ce.xlsx')
+        // cy.downloadFile(data.EntryValues.file_url, 'cypress/downloads', '574e7711-ba7b-4899-a881-5b6cd97067ce.xlsx')
 
         // Perform login using the credentials and locators from the fixture data
         cy.login(data.LocatorsPath.emailInputField_id,
@@ -60,11 +60,12 @@ describe("Automating EX202A Production Within a Designated Zone", () => {
         cy.clickXpathElement(data.locators_ex.Ex_validate_xpath)
         //enter the Release date
         cy.inputField(data.locators_ex.EX_export_date_id, data.EntryValues.EX202APWDZ_production_date)
+        cy.wait(5000)
         //clicking on next button
         cy.clickXpathElement(data.locators_ex.EX_next_xpath)
         // // download the excel template
         // cy.clickElement(data.locators_ex.EX_download_id)
-        // // upload the file
-        // cy.uploadingFile(data.locators_ex.EX_upload_id, data.EntryValues.EX202APWDZ_filePath)
+        // upload the file
+        cy.uploadingFile(data.locators_ex.EX_upload_id, data.EntryValues.EX202APWDZ_filePath)
     })
 });

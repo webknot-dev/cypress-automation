@@ -2,7 +2,7 @@
   "EntryValues": {
     "EX202BPD_Description": "Producer Declaration",
     "EX202BPD_period": "January 2025",
-    "EX202BPD_filePath": "cypress/downloads/ExciseGoodsProducerDeclaration.xlsx",
+    "EX202BPD_filePath": "cypress/downloads/file.xlsx",
     "file_url": "https://taxlabs-excise-dev.in-maa-1.linodeobjects.com/fta_exports/6767fdbda03ae05800a0a2fc/574e7711-ba7b-4899-a881-5b6cd97067ce.xlsx",
     "EX202BPD_url": "https://eservices.tax.gov.ae/sap/bc/ui5_ui5/sap/zmcf_fmca/index.html?saml2=disabled&sap-client=100&sap-language=EN#/Form/202B"
   },

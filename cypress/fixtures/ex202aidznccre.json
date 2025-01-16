@@ -7,7 +7,7 @@
     "EX202AIDZNCC_RE_Port": "Airport Free Zone Customs Center - Dubai",
     "EX202AIDZNCC_RE_zone_number": "D100151001",
     "EX202AIDZNCC_RE_import_date": "01/01/2025",
-    "EX202AIDZNCC_RE_filePath": "cypress/downloads/ExciseGoods.xlsx"
+    "EX202AIDZNCC_RE_filePath": "cypress/downloads/file.xlsx"
   },
   "locators_ex202aidzncc": {
     "EX202AIDZNCC_container_id": "__tile7-__container49-__xmlview15--panelScrollcontainer-3-5-content",
