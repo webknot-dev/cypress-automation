@@ -208,7 +208,7 @@ Cypress.Commands.add('selectingDate', (selector, date) => {
 
 // Input text into a field
 Cypress.Commands.add('inputField', (selector, inputValue) => {
-    cy.get(selector).type(inputValue, { force: true });
+    cy.get(selector).type(inputValue, { force: true }).type('{enter}');
 });
 
 // Quit the browser (Cypress automatically handles this)

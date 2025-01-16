@@ -68,6 +68,10 @@ describe("Automating EX201 - Release from Designated Zone (Requiring Customs Cle
         cy.clickXpathElement(data.locators_ex.Ex_validate_xpath)
         //clicking on next button
         cy.clickXpathElement(data.locators_ex.EX_next_xpath)
+        cy.clickXpathElement(data.locators_ex.EX_next_xpath)
+        // cy.clickXpathElement("//bdi[text()='Next Step']")
+        // upload the file
+        cy.uploadingFile(data.locators_ex.EX_upload_id, data.EntryValues.EX201IM_filePath)
 
     });
 })

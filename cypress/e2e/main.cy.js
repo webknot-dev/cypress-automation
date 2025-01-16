@@ -1,13 +1,29 @@
-const value = "test";
+// excise201import
+// excise201releasefromdesignatedzone
+// excise201importtoreexport
+// excise202areleasegoodsfromdzintofreecirculation
+// excise202aconsumptionofgoodswithindz
+// excise202aentergoodsintoadesignatedzone
+// ex202atransfergoodstoanotherdz
+// ex202atransfergoodsforexportfromadesignatedzone
+// ex202aimporttodesignatedzoneswherethereisnocustomscheck
+// copyofex202importtodesignatedzoneswherethereisnocustomscheck
+// ex202aproductionwithindesignatedzone
+// ex202bproducerdeclaration
+// ex203excisetaxdeductibledeclaration
+// ex203alocalpurchaseform
+// ex203ctransferofownershipwithindesignatedzones
+
+const value = "excise202areleasegoodsfromdzintofreecirculation";
 
 switch (value) {
-    case "test1":
+    case "excise201releasefromdesignatedzone":
         require('./ex201dz.cy.js');
         break;
-    case "test2":
+    case "excise201import":
         require('./ex201im.cy.js');
         break;
-    case "test3":
+    case "excise201importtoreexport":
         require('./ex201reim.cy.js');
         break;
     case "test4":
@@ -22,7 +38,7 @@ switch (value) {
     case "test7":
         require('./ex202apwdz.cy.js');
         break;
-    case "test8":
+    case "excise202areleasegoodsfromdzintofreecirculation":
         require('./ex202argdzncc.cy.js');
         break;
     case "test9":

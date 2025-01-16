@@ -11,7 +11,7 @@ describe("Automating EX201 - Import for Re-export ", () => {
         // Visit the URL specified in the fixture data
         cy.visitUrl(data.Values.url)
         cy.log("Navigated to FTA - Federal Tax Authority Successfully");
-        cy.downloadFile(data.EntryValues.file_url, 'cypress/downloads', '574e7711-ba7b-4899-a881-5b6cd97067ce.xlsx')
+        // cy.downloadFile(data.EntryValues.file_url, 'cypress/downloads', '574e7711-ba7b-4899-a881-5b6cd97067ce.xlsx')
 
         // Perform login using the credentials and locators from the fixture data
         cy.login(data.LocatorsPath.emailInputField_id,
@@ -67,7 +67,7 @@ describe("Automating EX201 - Import for Re-export ", () => {
         cy.selectFromDropdown(data.locators_ex.EX_port_list_id, data.EntryValues.EX201REIM_port)
         //clicking on next button
         cy.clickXpathElement(data.locators_ex.EX_next_xpath)
-        cy.clickElement(data.locators_ex.EX_download_id)
+        // cy.clickElement(data.locators_ex.EX_download_id)
         // upload the file
         cy.uploadingFile(data.locators_ex.EX_upload_id, data.EntryValues.EX201REIM_filePath)
 
