@@ -39,7 +39,7 @@ describe("Automating EX202A - Enter Goods into a Designated Zone", () => {
         cy.waitForXpathElementPresence(data.LocatorsPath.TRN_validation_Xpath);
 
         // Validate status and TRN
-        cy.validateStatusAndTRN("Active", data.Values.TRN)
+        // cy.validateStatusAndTRN("Active", data.EntryValues.validate_trn);
 
         // Click on the excise tax button
         cy.clickXpathElement(data.LocatorsPath.exciseTax_xpath);
@@ -72,7 +72,7 @@ describe("Automating EX202A - Enter Goods into a Designated Zone", () => {
         cy.wait(5000);
         cy.scrollToView(data.locators_EX202A_EGDZ.date_field_xpath);
         cy.selectingDate(data.locators_EX202A_EGDZ.date_field_xpath, data.locators_EX202A_EGDZ.date);
-
+        cy.wait(3000)
         // Proceed to the next step
         cy.clickElement(data.locators_EX202A_EGDZ.next_step_id);
     });

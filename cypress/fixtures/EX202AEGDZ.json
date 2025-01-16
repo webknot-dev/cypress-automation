@@ -7,8 +7,11 @@
         "EX_zone_id": "#_BIID_A_ODZ_NO_input-inner",
         "Validate_button":"#_BIID_validateDDesigZone_button-content",
         "date_field_xpath": "#_BIID_A_DATE_TRANSFER_date-inner",
-        "date":"13/01/2025",
+        "date":"01/01/2025",
+        
         "next_step_id":"#__xmlview19--idFormNestStep-content",
+
+
         "EX202AEGDZ_url":"https://eservices.tax.gov.ae/sap/bc/ui5_ui5/sap/zmcf_fmca/index.html?saml2=disabled&sap-client=100&sap-language=EN#/Form/202T"
       }
 }

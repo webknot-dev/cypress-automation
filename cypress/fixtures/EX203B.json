@@ -6,7 +6,7 @@
     
     "Validate_button":"#_BIID_validateODesigZone_button-BDI-content",
     "date_field_xpath": "#_BIID_A_DATE_TRANSFER_date-inner",
-    "date":"25/12/2024",
+    "date":"15/01/2025",
     "EX203BLD_zone_number":"D100151001",
     "EX203BLD_filePath": "cypress/downloads/ExciseTaxLost&Damaged.xlsx",
 
