@@ -260,9 +260,13 @@ Cypress.Commands.add('validateTRNandName', (trn, name) => {
 Cypress.Commands.add('uploadFile', (addButtonSelector, fileName, okButtonSelector1, okButtonSelector2) => {
     // Click the "Add" button
     cy.get(addButtonSelector).click();
+    cy.wait(3000);
+
 
     // Simulate file upload
     cy.get('input[type="file"]').attachFile(fileName);
+    cy.wait(3000);
+
 
     // Click the "Upload" button
     //   cy.get(uploadButtonSelector).click();
