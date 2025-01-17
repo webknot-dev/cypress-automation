@@ -20,7 +20,7 @@
 
     "placeOfDestruction_xpath":"#_EGCC_A_ITEM_PLACEGOODSDESTROY_combobox-arrow",
     "placeOfDestruction_dropdown_xpath":"#_EGCC_A_ITEM_PLACEGOODSDESTROY_combobox-popup-list-listUl",
-    "placeOfDestruction_dropdown_value":"Internal – Inside Designated Zone",
+    "placeOfDestruction_dropdown_value":"External",
 
 
     "external_facility_xpath":"#_EGCC_A_FACILITY_combobox-arrow",
@@ -33,7 +33,10 @@
 
     "upload_image_id":"#EVLD",
     "fileName_path":"image.png",
-    "okButtonSelector1_xpath":"#__button168-inner",
-    "okButtonSelector2_xpath":"#onCancel-inner"
+    "okButtonSelector1_xpath":"//bdi[contains(@id, '__button') and text()='OK']",
+    "okButtonSelector2_xpath":"#onCancel-inner",
+    "Drag_n_drop_selector":"#EVLD_1-drag-drop-area",
+
+    "next_step_id":"//bdi[starts-with(@id, '__xmlview') and text()='Next Step']"
   }
 }

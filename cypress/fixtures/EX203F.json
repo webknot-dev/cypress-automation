@@ -11,10 +11,11 @@
         "EX203F_dz_number": "D100151001",
         "upload_image_id": "#DOPR",
         "fileName_path": "image.png",
-        "okButtonSelector1_xpath": "#__button164-inner",
+        "okButtonSelector1_xpath": "//bdi[contains(@id, '__button') and text()='OK']",
         "okButtonSelector2_xpath": "#onCancel-inner",
-        "next_step_id_dz": "#__xmlview19--idFormNestStep-inner",
+        "next_step_id_dz": "#__xmlview20--idFormNestStep-inner",
         "EX203F_filePath": "cypress/downloads/ExciseGoods.xlsx",
+        "next_step_id":"//bdi[starts-with(@id, '__xmlview') and text()='Next Step']",
         "EX203F_url":"https://eservices.tax.gov.ae/sap/bc/ui5_ui5/sap/zmcf_fmca/index.html?saml2=disabled&sap-client=100&sap-language=EN#/Form/203F"
     }
 }

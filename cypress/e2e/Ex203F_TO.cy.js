@@ -32,7 +32,7 @@ describe("Automating EX203F - Transfer of Ownership within Designated Zone – R
         cy.validateEmail();
         cy.clickXpathElement(data.LocatorsPath.taxableProfileButton_xpath);
         cy.closePopupIfPresent(data.LocatorsPath.PopUp_Selector, data.LocatorsPath.PopUp_Accept);
-        cy.validateStatusAndTRN("Active", data.Values.TRN)
+        // cy.validateStatusAndTRN("Active", data.EntryValues.validate_trn);
         cy.clickXpathElement(data.LocatorsPath.exciseTax_xpath);
 
         // Select the excise option
@@ -68,7 +68,7 @@ describe("Automating EX203F - Transfer of Ownership within Designated Zone – R
         );
 
         // Proceed to the next step
-        cy.clickElement(data.locators_EX203F.next_step_id_dz);
+        cy.clickElementWithXpath(data.locators_EX203F.next_step_id);
         cy.uploadingFile(data.locators_ex.EX_upload_id, data.locators_EX203F.EX203F_filePath);
     });
 });

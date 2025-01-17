@@ -230,6 +230,7 @@ Cypress.Commands.add('selectExcise', (excontainerid, extitleid, exdescriptionid,
     });
 });
 
+
 //validations methods
 // url validation
 Cypress.Commands.add('validateUrl', (url) => {
@@ -272,4 +273,7 @@ Cypress.Commands.add('uploadFile', (addButtonSelector, fileName, okButtonSelecto
 
     // Optional: Validate the upload (you can remove this if not needed)
     //   cy.get('.upload-status').should('contain', 'Upload successful');
+});
+Cypress.Commands.add('clickElementWithXpath', (selector) => {
+    cy.xpath(selector).click({ force: true });
 });
