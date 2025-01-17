@@ -91,6 +91,8 @@ describe("Automating EX203C Transfer of Ownership within Designated Zones", () =
         cy.clickElement(data.locators_EX203C_TDZ.next_step_id_dz);
 
         cy.uploadingFile(data.locators_ex.EX_upload_id, data.locators_EX203C_TDZ.EX203C_filePath)
+        cy.clickElementWithXpath(data.locators_EX203C_TDZ.next_step_id);
+
 
 
 

@@ -60,7 +60,7 @@ describe("Automating EX203B - Lost & Damaged Declaration", () => {
         // Click next and upload mandatory files
         cy.clickXpathElement(data.locators_ex.EX_next_xpath);
         // cy.clickElement(data.locators_ex.EX_download_id);
-        // cy.uploadingFile(data.locators_ex.EX_upload_id, data.locators_EX203B_LostnDeclare.EX203BLD_filePath);
+        cy.uploadingFile(data.locators_ex.EX_upload_id, data.locators_EX203B_LostnDeclare.EX203BLD_filePath);
 
         // Select dropdown options for Lost & Damaged Declaration
         cy.scrollToView(data.locators_EX203B_LostnDeclare.loss_damaged_xpath);
@@ -71,9 +71,11 @@ describe("Automating EX203B - Lost & Damaged Declaration", () => {
         cy.uploadFile(
             data.locators_EX203B_LostnDeclare.upload_image_id,
             data.locators_EX203B_LostnDeclare.fileName_path,
+            // data.locators_EX203B_LostnDeclare.Drag_n_drop_selector,
             data.locators_EX203B_LostnDeclare.okButtonSelector1_xpath,
             data.locators_EX203B_LostnDeclare.okButtonSelector2_xpath
-        );
+          );
+        // cy.get("EVLD_1-drag-drop-area").selectFile(data.locators_EX203B_LostnDeclare.fileName_path, { action: 'drag-drop' })
 
         // Select reason of damage
         cy.scrollToView(data.locators_EX203B_LostnDeclare.reason_damaged_xpath);
@@ -96,6 +98,8 @@ describe("Automating EX203B - Lost & Damaged Declaration", () => {
         cy.selectFromDropdown(data.locators_EX203B_LostnDeclare.emirate_dropdown_xpath, data.locators_EX203B_LostnDeclare.emirate_dropdown_value);
 
         // Proceed to the next step
-        cy.clickElement(data.locators_EX203B_LostnDeclare.next_step_id);
+        cy.wait(5000);
+
+        cy.clickElementWithXpath(data.locators_EX203B_LostnDeclare.next_step_id);
     });
 });

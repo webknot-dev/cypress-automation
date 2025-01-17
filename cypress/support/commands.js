@@ -208,26 +208,47 @@ Cypress.Commands.add('selectExcise', (excontainerid, extitleid, exdescriptionid,
 
 
 
+
 // Custom command for file upload for images
+// Cypress.Commands.add('uploadFile', (addButtonSelector, fileName, okButtonSelector1, okButtonSelector2) => {
+//   // Click the "Add" button
+//   cy.get(addButtonSelector).click();
+
+//   // Simulate file upload
+//   cy.get('input[type="file"]').attachFile(fileName);
+
+//   cy.wait(3000);
+//   // Click the "Upload" button
+// //   cy.get(uploadButtonSelector).click();
+
+//   // Handle the final "OK" buttons
+//   cy.get(okButtonSelector1).click(); 
+//   cy.get(okButtonSelector2).click(); 
+
+//   // Optional: Validate the upload (you can remove this if not needed)
+// //   cy.get('.upload-status').should('contain', 'Upload successful');
+// });
 Cypress.Commands.add('uploadFile', (addButtonSelector, fileName, okButtonSelector1, okButtonSelector2) => {
-  // Click the "Add" button
-  cy.get(addButtonSelector).click();
+    // Click the "Add" button
+    cy.get(addButtonSelector).click();
+    cy.wait(3000);
 
-  // Simulate file upload
-  cy.get('input[type="file"]').attachFile(fileName);
-
-  cy.wait(3000);
-  // Click the "Upload" button
-//   cy.get(uploadButtonSelector).click();
-
-  // Handle the final "OK" buttons
-  cy.get(okButtonSelector1).click(); 
-  cy.get(okButtonSelector2).click(); 
-
-  // Optional: Validate the upload (you can remove this if not needed)
-//   cy.get('.upload-status').should('contain', 'Upload successful');
-});
-
+  
+    // Simulate file upload
+    cy.get('input[type="file"]').attachFile(fileName);
+  
+    cy.wait(3000);
+    // Click the "Upload" button
+  //   cy.get(uploadButtonSelector).click();
+  
+    // Handle the final "OK" buttons
+    cy.xpath(okButtonSelector1).click(); 
+    cy.get(okButtonSelector2).click(); 
+  
+    // Optional: Validate the upload (you can remove this if not needed)
+  //   cy.get('.upload-status').should('contain', 'Upload successful');
+  });
+  
 //Validations
 // url validation
 Cypress.Commands.add('validateUrl', (url) => {
@@ -253,3 +274,7 @@ Cypress.Commands.add('validateTRNandName', (trn, name) => {
     cy.contains(name).should('exist').should('be.visible');
 });
 
+
+Cypress.Commands.add('clickElementWithXpath', (selector) => {
+    cy.xpath(selector).click({ force: true });
+});

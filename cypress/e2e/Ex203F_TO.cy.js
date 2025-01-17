@@ -68,7 +68,7 @@ describe("Automating EX203F - Transfer of Ownership within Designated Zone – R
         );
 
         // Proceed to the next step
-        cy.clickElement(data.locators_EX203F.next_step_id_dz);
+        cy.clickElementWithXpath(data.locators_EX203F.next_step_id);
         cy.uploadingFile(data.locators_ex.EX_upload_id, data.locators_EX203F.EX203F_filePath);
     });
 });
