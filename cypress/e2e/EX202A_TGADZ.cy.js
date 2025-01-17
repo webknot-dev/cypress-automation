@@ -63,13 +63,13 @@ describe("Automating EX202A - Transfer Goods to Another Designated Zone", functi
         // Add dates
         cy.wait(5000);
         cy.scrollToView(data.locators_EX202A_TGADZ.EX_dest_zone_id);
-        
+
         cy.inputField(data.locators_EX202A_TGADZ.EX_dest_zone_id, data.locators_EX202A_TGADZ.EX202TGAZ_zone_number);
         cy.clickElement(data.locators_EX202A_TGADZ.Destination_validation_btnId);
-        cy.clickElement(data.locators_EX202A_TGADZ.next_step_id);
+        cy.clickXpathElement(data.locators_ex.EX_next_xpath)
 
-        
-        
+
+
         // cy.uploadingFile(data.locators_EX202A_TGADZ.EX_upload_id, data.locators_EX202A_TGADZ.EX202ATGADZ_filePath);
 
     });

@@ -25,14 +25,14 @@ describe("Automating EX203B - Lost & Damaged Declaration", () => {
             data.LocatorsPath.captchaInputField_id,
             data.LocatorsPath.captcha_element_id,
             data.LocatorsPath.loginButton_id,
-            "ex203b.cy.js"
+            "EX203B_LD.cy.js"
         );
         cy.validateEmail();
 
         // Click on the taxable profile button
         cy.clickXpathElement(data.LocatorsPath.taxableProfileButton_xpath);
         cy.closePopupIfPresent(data.LocatorsPath.PopUp_Selector, data.LocatorsPath.PopUp_Accept);
-        // cy.validateStatusAndTRN("Active", data.EntryValues.validate_trn);
+        cy.validateStatusAndTRN("Active", data.Values.TRN);
 
         // Click on the excise tax button
         cy.clickXpathElement(data.LocatorsPath.exciseTax_xpath);
@@ -44,13 +44,13 @@ describe("Automating EX203B - Lost & Damaged Declaration", () => {
             data.locators_EX203B_LostnDeclare.EX203BLD_description_id,
             data.locators_ex.EX_createNew_id,
             "EX203B",
-            data.EntryValues.EX203BLD_Description
+            data.locators_EX203B_LostnDeclare.EX203BLD_Description
         );
 
         // Validate and proceed with the form
         cy.clickElement(data.locators_ex.EX_checkbox_id);
         cy.clickXpathElement(data.locators_ex.EX_Start_xpath);
-        cy.inputField(data.locators_ex.EX_zone_id, data.EntryValues.EX202ADZ_zone_number);
+        cy.inputField(data.locators_ex.EX_zone_id, data.locators_EX203B_LostnDeclare.EX203BLD_zone_number);
         cy.clickElement(data.locators_EX203B_LostnDeclare.Validate_button);
 
         // Input date

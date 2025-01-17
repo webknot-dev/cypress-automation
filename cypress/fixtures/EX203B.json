@@ -1,42 +1,42 @@
 {
-    "locators_EX203B_LostnDeclare": {
+  "locators_EX203B_LostnDeclare": {
     "EX203BLD_container_id": "__tile7-__container49-__xmlview14--panelScrollcontainer-3-7-content",
     "EX203BLD_title_id": "__title62-__container49-__xmlview14--panelScrollcontainer-3-7-inner",
     "EX203BLD_description_id": "__text405-__container49-__xmlview14--panelScrollcontainer-3-7",
-    
-    "Validate_button":"#_BIID_validateODesigZone_button-BDI-content",
+
+    "Validate_button": "#_BIID_validateODesigZone_button-BDI-content",
     "date_field_xpath": "#_BIID_A_DATE_TRANSFER_date-inner",
-    "date":"15/01/2025",
-    "EX203BLD_zone_number":"D100151001",
-    "EX203BLD_filePath": "cypress/downloads/ExciseTaxLost&Damaged.xlsx",
+    "date": "15/01/2025",
+    "EX203BLD_zone_number": "D100151001",
+    "EX203BLD_Description": "Lost & Damaged Declaration",
+    "EX203BLD_filePath": "cypress/data/file.xlsx",
 
     "loss_damaged_xpath": "#_EGCC_A_PHYSICAL_combobox-arrow",
     "LossDamaged_dropDown_xpath": "#_EGCC_A_PHYSICAL_combobox-popup-list-listUl",
     "LossDamaged_dropDown_Value": "Physical",
 
-    "reason_damaged_xpath":"#_EGCC_A_ITEM_REASON_combobox-arrow",
+    "reason_damaged_xpath": "#_EGCC_A_ITEM_REASON_combobox-arrow",
     "ReasonForLoss_dropDown_xpath": "#_EGCC_A_ITEM_REASON_combobox-popup-list-listUl",
-    "ReasonForLoss_dropDown_value" : "Lost/Shortage in Goods",
+    "ReasonForLoss_dropDown_value": "Lost/Shortage in Goods",
 
-    "placeOfDestruction_xpath":"#_EGCC_A_ITEM_PLACEGOODSDESTROY_combobox-arrow",
-    "placeOfDestruction_dropdown_xpath":"#_EGCC_A_ITEM_PLACEGOODSDESTROY_combobox-popup-list-listUl",
-    "placeOfDestruction_dropdown_value":"External",
+    "placeOfDestruction_xpath": "#_EGCC_A_ITEM_PLACEGOODSDESTROY_combobox-arrow",
+    "placeOfDestruction_dropdown_xpath": "#_EGCC_A_ITEM_PLACEGOODSDESTROY_combobox-popup-list-listUl",
+    "placeOfDestruction_dropdown_value": "External",
 
+    "external_facility_xpath": "#_EGCC_A_FACILITY_combobox-arrow",
+    "external_facility_dropdown_xpath": "#_EGCC_A_FACILITY_combobox-popup-list-listUl",
+    "external_facility_dropdown_value": "Municipal Approved Facility",
 
-    "external_facility_xpath":"#_EGCC_A_FACILITY_combobox-arrow",
-    "external_facility_dropdown_xpath":"#_EGCC_A_FACILITY_combobox-popup-list-listUl",
-    "external_facility_dropdown_value":"Municipal Approved Facility",
+    "emirate_xpath": "#_EGCC_A_EMIRATE_combobox-arrow",
+    "emirate_dropdown_xpath": "#_EGCC_A_EMIRATE_combobox-popup-list-listUl",
+    "emirate_dropdown_value": "Umm Al Quwain",
 
-    "emirate_xpath":"#_EGCC_A_EMIRATE_combobox-arrow",
-    "emirate_dropdown_xpath":"#_EGCC_A_EMIRATE_combobox-popup-list-listUl",
-    "emirate_dropdown_value":"Umm Al Quwain",
+    "upload_image_id": "#EVLD",
+    "fileName_path": "image.png",
+    "okButtonSelector1_xpath": "//bdi[contains(@id, '__button') and text()='OK']",
+    "okButtonSelector2_xpath": "#onCancel-inner",
+    "Drag_n_drop_selector": "#EVLD_1-drag-drop-area",
 
-    "upload_image_id":"#EVLD",
-    "fileName_path":"image.png",
-    "okButtonSelector1_xpath":"//bdi[contains(@id, '__button') and text()='OK']",
-    "okButtonSelector2_xpath":"#onCancel-inner",
-    "Drag_n_drop_selector":"#EVLD_1-drag-drop-area",
-
-    "next_step_id":"//bdi[starts-with(@id, '__xmlview') and text()='Next Step']"
+    "next_step_id": "//bdi[starts-with(@id, '__xmlview') and text()='Next Step']"
   }
 }
