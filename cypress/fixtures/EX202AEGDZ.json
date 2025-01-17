@@ -10,7 +10,7 @@
     "date": "01/01/2025",
     "EX202AEGDZ_Description": "Enter Goods into a Designated Zone",
     "EX202ADZ_zone_number": "D100151001",
-    "file_path": "cypress/downloads/file.xlsx",
+    "file_path": "cypress/data/file.xlsx",
     "next_step_id": "#__xmlview19--idFormNestStep-content",
     "EX202AEGDZ_url": "https://eservices.tax.gov.ae/sap/bc/ui5_ui5/sap/zmcf_fmca/index.html?saml2=disabled&sap-client=100&sap-language=EN#/Form/202T"
   }

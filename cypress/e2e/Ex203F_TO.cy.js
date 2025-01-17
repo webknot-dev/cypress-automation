@@ -25,7 +25,7 @@ describe("Automating EX203F - Transfer of Ownership within Designated Zone – R
             data.LocatorsPath.captchaInputField_id,
             data.LocatorsPath.captcha_element_id,
             data.LocatorsPath.loginButton_id,
-            "ex203f.cy.js"
+            "Ex203F_TO.cy.js"
         );
 
         // Validate the email and navigate to the taxable profile

@@ -31,7 +31,7 @@ describe("Automating EX203C Transfer of Ownership within Designated Zones", () =
             data.LocatorsPath.captchaInputField_id,
             data.LocatorsPath.captcha_element_id,
             data.LocatorsPath.loginButton_id,
-            "ex202adz.cy.js"
+            "EX203C_TransferOf_DZ.cy.js"
         );
 
         cy.validateEmail();

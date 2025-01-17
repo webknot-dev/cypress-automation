@@ -3,7 +3,7 @@
     "EX202ATGEDZ_Description": "Transfer Goods for Export From a Designated Zone",
     "EX202ATGEDZ_zone_number": "D100151001",
     "EX202ATGEDZ_export_date": "01/01/2025",
-    "EX202ATGEDZ_filePath": "cypress/downloads/file.xlsx",
+    "EX202ATGEDZ_filePath": "cypress/data/file.xlsx",
     "EX202ATGEDZ_url": "https://eservices.tax.gov.ae/sap/bc/ui5_ui5/sap/zmcf_fmca/index.html?saml2=disabled&sap-client=100&sap-language=EN#/Form/202V",
     "file_url": "https://eservices.tax.gov.ae/sap/bc/ui5_ui5/sap/zmcf_fmca/index.html?saml2=disabled&sap-client=100&sap-language=EN#/Form/202V"
   },
