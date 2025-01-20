@@ -1,21 +1,21 @@
 {
-    "locators_EX203F": {
-        "EX203F_container_id": "__tile7-__container49-__xmlview14--panelScrollcontainer-3-9-content",
-        "EX203F_title_id": "__title62-__container49-__xmlview14--panelScrollcontainer-3-9-inner",
-        "EX203F_description_id": "__text405-__container49-__xmlview14--panelScrollcontainer-3-9",
-        "Validate_button": "#_BIID_validateDDesigZone_button-content",
-        "date_field_xpath": "#_BIID_A_DATE_TRANSFER_date-inner",
-        "date": "31/12/2024",
-        "EX203F_Description": "Transfer of Ownership within Designated Zone – Registered Seller to Non-Registered Purchaser",
-        "Ex203F_Dz_zone": "#_BIID_A_DZ_NO_input-inner",
-        "EX203F_dz_number": "D100151001",
-        "upload_image_id": "#DOPR",
-        "fileName_path": "image.png",
-        "okButtonSelector1_xpath": "//bdi[contains(@id, '__button') and text()='OK']",
-        "okButtonSelector2_xpath": "#onCancel-inner",
-        "next_step_id_dz": "#__xmlview20--idFormNestStep-inner",
-        "EX203F_filePath": "cypress/downloads/ExciseGoods.xlsx",
-        "next_step_id":"//bdi[starts-with(@id, '__xmlview') and text()='Next Step']",
-        "EX203F_url":"https://eservices.tax.gov.ae/sap/bc/ui5_ui5/sap/zmcf_fmca/index.html?saml2=disabled&sap-client=100&sap-language=EN#/Form/203F"
-    }
+  "locators_EX203F": {
+    "EX203F_container_id": "__tile7-__container49-__xmlview14--panelScrollcontainer-3-9-content",
+    "EX203F_title_id": "__title62-__container49-__xmlview14--panelScrollcontainer-3-9-inner",
+    "EX203F_description_id": "__text405-__container49-__xmlview14--panelScrollcontainer-3-9",
+    "Validate_button": "#_BIID_validateDDesigZone_button-content",
+    "date_field_xpath": "#_BIID_A_DATE_TRANSFER_date-inner",
+    "date": "31/12/2024",
+    "EX203F_Description": "Transfer of Ownership within Designated Zone – Registered Seller to Non-Registered Purchaser",
+    "Ex203F_Dz_zone": "#_BIID_A_DZ_NO_input-inner",
+    "EX203F_dz_number": "D100151001",
+    "upload_image_id": "#DOPR",
+    "fileName_path": "image.png",
+    "okButtonSelector1_xpath": "//bdi[contains(@id, '__button') and text()='OK']",
+    "okButtonSelector2_xpath": "#onCancel-inner",
+    "next_step_id_dz": "#__xmlview20--idFormNestStep-inner",
+    "EX203F_filePath": "cypress/data/file.xlsx",
+    "next_step_id": "//bdi[starts-with(@id, '__xmlview') and text()='Next Step']",
+    "EX203F_url": "https://eservices.tax.gov.ae/sap/bc/ui5_ui5/sap/zmcf_fmca/index.html?saml2=disabled&sap-client=100&sap-language=EN#/Form/203F"
+  }
 }
