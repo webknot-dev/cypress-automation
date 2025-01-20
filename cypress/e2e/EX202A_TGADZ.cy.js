@@ -57,20 +57,75 @@ describe("Automating EX202A - Transfer Goods to Another Designated Zone", functi
         // Input the designated zone number
         cy.inputField(data.locators_EX202A_TGADZ.EX_zone_id, data.locators_EX202A_TGADZ.EX202TGAZ_zone_number);
 
-        // CLICK ON VALIDATE
+        // Click on validate
         cy.clickElement(data.locators_EX202A_TGADZ.Validate_button);
 
         // Add dates
         cy.wait(5000);
         cy.scrollToView(data.locators_EX202A_TGADZ.EX_dest_zone_id);
 
-        cy.inputField(data.locators_EX202A_TGADZ.EX_dest_zone_id, data.locators_EX202A_TGADZ.EX202TGAZ_zone_number);
+        //Enter destination designated zone
+        cy.inputField(data.locators_EX202A_TGADZ.EX_dest_zone_id, data.locators_EX202A_TGADZ.EX202TGAZ_destZone_number);
         cy.clickElement(data.locators_EX202A_TGADZ.Destination_validation_btnId);
-        cy.clickXpathElement(data.locators_ex.EX_next_xpath)
 
+        //Select ownership transfer - Yes
+        // const radioButton = "Yes"
+        // cy.clickElement(data.locators_EX202A_TGADZ.Radio_button_YES);
 
+        // cy.scrollToView(data.locators_EX202A_TGADZ.Purchaser_trn_id);
+
+        // //Enter purchaser trn
+        // cy.inputField(data.locators_EX202A_TGADZ.Purchaser_trn_id, data.locators_EX202A_TGADZ.Purchaser_trn);
+
+        // //Click validate trn
+        // cy.clickElement(data.locators_EX202A_TGADZ.Validate_trn_button);
+
+        // cy.scrollToView(data.locators_EX202A_TGADZ.date_field_xpath);
+        // cy.selectingDate(data.locators_EX202A_TGADZ.date_field_xpath, data.locators_EX202A_TGADZ.date);
+
+        // cy.wait(3000)
+
+        // cy.clickElementWithXpath(data.locators_EX202A_TGADZ.next_step_id);
 
         // cy.uploadingFile(data.locators_EX202A_TGADZ.EX_upload_id, data.locators_EX202A_TGADZ.EX202ATGADZ_filePath);
+        const radioButton = "No";
+
+        if (radioButton === "Yes") {
+            // Execute the required actions if the radio button is Yes
+            cy.clickElement(data.locators_EX202A_TGADZ.Radio_button_YES);
+
+            cy.scrollToView(data.locators_EX202A_TGADZ.Purchaser_trn_id);
+
+            // Enter purchaser TRN
+            cy.inputField(data.locators_EX202A_TGADZ.Purchaser_trn_id, data.locators_EX202A_TGADZ.Purchaser_trn);
+
+            // Click validate TRN
+            cy.clickElement(data.locators_EX202A_TGADZ.Validate_trn_button);
+
+            cy.scrollToView(data.locators_EX202A_TGADZ.date_field_xpath);
+            cy.selectingDate(data.locators_EX202A_TGADZ.date_field_xpath, data.locators_EX202A_TGADZ.date);
+
+            cy.wait(3000);
+
+            cy.clickElementWithXpath(data.locators_EX202A_TGADZ.next_step_id);
+
+            cy.uploadingFile(data.locators_EX202A_TGADZ.EX_upload_id, data.locators_EX202A_TGADZ.EX202ATGADZ_filePath);
+        } else {
+            // Message for when the radio button is not "Yes"
+            cy.log("Radio button is not selected as 'No'");
+            cy.clickElement(data.locators_EX202A_TGADZ.Radio_button_NO);
+
+    
+            cy.scrollToView(data.locators_EX202A_TGADZ.date_field_xpath);
+            cy.selectingDate(data.locators_EX202A_TGADZ.date_field_xpath, data.locators_EX202A_TGADZ.date);
+
+            cy.wait(3000);
+
+            cy.clickElementWithXpath(data.locators_EX202A_TGADZ.next_step_id);
+
+            cy.uploadingFile(data.locators_EX202A_TGADZ.EX_upload_id, data.locators_EX202A_TGADZ.EX202ATGADZ_filePath);
+        }
+
 
     });
 });

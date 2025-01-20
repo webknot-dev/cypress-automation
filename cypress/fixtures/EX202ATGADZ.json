@@ -9,12 +9,27 @@
     "EX202TGAZ_zone_number": "D100151001",
     "Validate_button": "#_BIID_validateODesigZone_button-content",
     "date_field_xpath": "#_BIID_A_DATE_TRANSFER_date-inner",
-    "date": "13/01/2025",
-    "next_step_id": "#__xmlview19--idFormNestStep-content",
+    "date": "20/01/2025",
+    
     "EX202TGADZ_url": "https://eservices.tax.gov.ae/sap/bc/ui5_ui5/sap/zmcf_fmca/index.html?saml2=disabled&sap-client=100&sap-language=EN#/Form/202T",
     "EX_upload_id": "#_EGCC_uploadTemplate_fUploader-fu",
-    "EX202ATGADZ_filePath": "cypress/downloads/ExciseGoods.xlsx",
+    "EX202ATGADZ_filePath": "cypress/data/file.xlsx",
     "EX_dest_zone_id": "#_BIID_A_DZ_NO_input-inner",
-    "Destination_validation_btnId": "#_BIID_validateDDesigZone_button-content"
+    "Destination_validation_btnId": "#_BIID_validateDDesigZone_button-content",
+    "EX202TGAZ_destZone_number":"D100072802",
+
+    "Radio_button_YES":"#_BIID_A_OWNERSHIP_radiobutton1-Button",
+   
+
+    "Purchaser_trn_id":"#_BIID_A_PUR_TRN_input-inner",
+    "Purchaser_trn":"100437653700007",
+    "Validate_trn_button":"#_BIID_validatePurchaseTRN_button-content",
+
+    "next_step_id": "//bdi[starts-with(@id, '__xmlview') and text()='Next Step']",
+
+    "Radio_button_NO":"#_BIID_A_OWNERSHIP_radiobutton2-Button"
+
+    
+
   }
 }

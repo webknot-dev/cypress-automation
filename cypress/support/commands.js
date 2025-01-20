@@ -272,7 +272,7 @@ Cypress.Commands.add('uploadFile', (addButtonSelector, fileName, okButtonSelecto
     //   cy.get(uploadButtonSelector).click();
 
     // Handle the final "OK" buttons
-    cy.get(okButtonSelector1).click();
+    cy.xpath(okButtonSelector1).click();
     cy.get(okButtonSelector2).click();
 
     // Optional: Validate the upload (you can remove this if not needed)
