@@ -23,7 +23,7 @@
     "dz_number": "D100151001",
     "Dz_validate_xpath": "#_BIID_validateDesigZone_button-content",
     "next_step_id_dz": "#__xmlview20--idFormNestStep-inner",
-    "EX203C_filePath": "cypress/downloads/ExciseGoods.xlsx",
+    "EX203C_filePath": "cypress/data/file.xlsx",
     "file_xpath": "#_EGCC_uploadTemplate_fUploader-fu",
     "next_step_id": "//bdi[starts-with(@id, '__xmlview') and text()='Next Step']"
   }
