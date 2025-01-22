@@ -2,7 +2,7 @@
   "EntryValues": {
     "EX201IM_Description": "Excise Goods that Require Customs Clearance (Import Declaration)",
     "EX201IM_zone_number": "D100151001",
-    "EX201IM_emirates": "Abu Dhabi",
+    "EX201IM_emirates": "abu Dhabi",
     "EX201IM_port": "Guwaifat",
     "EX201IM_date": "01/01/2025",
     "EX201IM_filePath": "cypress/data/file.xlsx",
