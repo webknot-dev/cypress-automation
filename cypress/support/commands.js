@@ -256,7 +256,9 @@ Cypress.Commands.add('validateTRNandName', (trn, name) => {
     cy.contains(name).should('exist').should('be.visible');
 });
 
-// Custom command for file upload for images
+
+
+
 // Custom command for file upload for images
 Cypress.Commands.add('uploadFile', (addButtonSelector, fileName, okButtonSelector1, okButtonSelector2) => {
     // Click the "Add" button
@@ -282,3 +284,51 @@ Cypress.Commands.add('uploadFile', (addButtonSelector, fileName, okButtonSelecto
 Cypress.Commands.add('clickElementWithXpath', (selector) => {
     cy.xpath(selector).click({ force: true });
 });
+
+//Validation of Designated zone number For EX202A - Release Goods from Designated Zone into Free Circulation (No Customs Check)
+Cypress.Commands.add('validateDZDetails_ex202Argdz', () => {
+    cy.fixture('common.json').then((data) => {
+        cy.get('#__input31-inner').first().should('have.value', data.locators_ex.nameOfthe_dz_value);
+        cy.get('#__input32-inner').first().should('have.value', data.locators_ex.nameOfthe_dz_arbic_value);
+        cy.get('#__input33-inner').first().should('have.value', data.locators_ex.warehouse_regist_number);
+        cy.get('#__input34-inner').first().should('have.value', data.locators_ex.nameof_warehouse_keeper_value);
+        cy.get('#__input35-inner').first().should('have.value', data.locators_ex.nameof_warehouse_keeper_arbic_value);
+
+    });
+})
+
+//Validation of Designated zone number For all forms
+Cypress.Commands.add('validateDZDetails', () => {
+    cy.fixture('common.json').then((data) => {
+        cy.get('#_BIID_C_DZ_NAME_EN_input-inner').first().should('have.value', data.locators_ex.nameOfthe_dz_value);
+        cy.get('#_BIID_C_DZ_NAME_AR_input-inner').first().should('have.value', data.locators_ex.nameOfthe_dz_arbic_value);
+        cy.get('#_BIID_C_WHK_NO_input-inner').first().should('have.value', data.locators_ex.warehouse_regist_number);
+        cy.get('#_BIID_C_WHK_NAME_EN_input-inner').first().should('have.value', data.locators_ex.nameof_warehouse_keeper_value);
+        cy.get('#_BIID_C_WHK_NAME_AR_input-inner').first().should('have.value', data.locators_ex.nameof_warehouse_keeper_arbic_value);
+
+    });
+})
+
+//Validation of Origin Designated zone number for EX202A - TGADZ
+Cypress.Commands.add('validateOriginDZDetails', () => {
+    cy.fixture('common.json').then((data) => {
+        cy.get('#_BIID_C_ODZ_NAME_EN_input-inner').first().should('have.value', data.locators_ex.nameOfthe_dz_value);
+        cy.get('#_BIID_C_ODZ_NAME_AR_input-inner').first().should('have.value', data.locators_ex.nameOfthe_dz_arbic_value);
+        cy.get('#_BIID_C_OWHK_NO_input-inner').first().should('have.value', data.locators_ex.warehouse_regist_number);
+        cy.get('#_BIID_C_OWHK_NAME_EN_input-inner').first().should('have.value', data.locators_ex.nameof_warehouse_keeper_value);
+        cy.get('#_BIID_C_OWHK_NAME_AR_input-inner').first().should('have.value', data.locators_ex.nameof_warehouse_keeper_arbic_value);
+
+    });
+})
+
+//Validation of Destination Designated zone number for EX202A - TGADZ
+Cypress.Commands.add('validateDestinationDZDetails', () => {
+    cy.fixture('common.json').then((data) => {
+        cy.get('#_BIID_C_DZ_NAME_EN_input-inner').first().should('have.value', data.locators_ex.nameOfthe_dest_dz_value);
+        cy.get('#_BIID_C_DZ_NAME_AR_input-inner').first().should('have.value', data.locators_ex.nameOfthe_dest_dz_arbic_value);
+        cy.get('#_BIID_C_WHK_NO_input-inner').first().should('have.value', data.locators_ex.warehouse_dest_regist_number);
+        cy.get('#_BIID_C_WHK_NAME_EN_input-inner').first().should('have.value', data.locators_ex.nameof_dest_warehouse_keeper_value);
+        cy.get('#_BIID_C_WHK_NAME_AR_input-inner').first().should('have.value', data.locators_ex.nameof_dest_warehouse_keeper_arbic_value);
+
+    });
+})

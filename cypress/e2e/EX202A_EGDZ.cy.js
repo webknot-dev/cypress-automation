@@ -68,6 +68,9 @@ describe("Automating EX202A - Enter Goods into a Designated Zone", () => {
         // Click on Validate
         cy.clickElement(data.locators_EX202A_EGDZ.Validate_button);
 
+
+        //Validate dezignated zone details
+        cy.validateDZDetails();
         // Add dates
         cy.wait(5000);
         cy.scrollToView(data.locators_EX202A_EGDZ.date_field_xpath);

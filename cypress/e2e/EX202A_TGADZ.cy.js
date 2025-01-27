@@ -59,7 +59,8 @@ describe("Automating EX202A - Transfer Goods to Another Designated Zone", functi
 
         // Click on validate
         cy.clickElement(data.locators_EX202A_TGADZ.Validate_button);
-
+        //Validate dezignated zone details
+        cy.validateOriginDZDetails();
         // Add dates
         cy.wait(5000);
         cy.scrollToView(data.locators_EX202A_TGADZ.EX_dest_zone_id);
@@ -67,6 +68,7 @@ describe("Automating EX202A - Transfer Goods to Another Designated Zone", functi
         //Enter destination designated zone
         cy.inputField(data.locators_EX202A_TGADZ.EX_dest_zone_id, data.locators_EX202A_TGADZ.EX202TGAZ_destZone_number);
         cy.clickElement(data.locators_EX202A_TGADZ.Destination_validation_btnId);
+        cy.validateDestinationDZDetails();
 
         //Select ownership transfer - Yes
         // const radioButton = "Yes"

@@ -58,6 +58,8 @@ describe("Automating EX202A consumption of goods with designated zone", () => {
         cy.inputField(data.locators_ex.EX_zone_id, data.EntryValues.EX202ADZ_zone_number)
         // click validate button
         cy.clickElement(data.locators_ex.EX_validate_id)
+        //Validate designated zone details
+        cy.validateOriginDZDetails();
         //enter the consumption date
         cy.inputField(data.locators_ex.Ex_cons_date_id, data.EntryValues.EX202ADZ_cons_date)
         //clicking on next button

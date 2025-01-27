@@ -82,9 +82,11 @@ describe("Automating EX203C Transfer of Ownership within Designated Zones", () =
 
         cy.scrollToView(data.locators_EX203C_TDZ.dezignated_zone_xpath);
         cy.inputField(data.locators_EX203C_TDZ.dezignated_zone_xpath, data.locators_EX203C_TDZ.dz_number);
-        cy.wait(3000)
+        cy.wait(3000);
+
 
         cy.clickElement(data.locators_EX203C_TDZ.Dz_validate_xpath);
+        cy.validateDZDetails();
 
         //Click on next step
         cy.wait(3000)

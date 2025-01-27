@@ -58,6 +58,8 @@ describe("Automating EX202A Production Within a Designated Zone", () => {
         cy.inputField(data.locators_ex.EX_zone_id, data.EntryValues.EX202APWDZ_zone_number)
         // click validate button
         cy.clickXpathElement(data.locators_ex.Ex_validate_xpath)
+        //Validate designated zone details
+        cy.validateDZDetails();
         //enter the Release date
         cy.inputField(data.locators_ex.EX_export_date_id, data.EntryValues.EX202APWDZ_production_date)
         cy.wait(5000)

@@ -62,7 +62,8 @@ describe("Automating EX202A Import to Designated Zone (No Customs Check)", () =>
 
         // click validate button
         cy.clickXpathElement(data.locators_ex.Ex_validate_xpath)
-
+        //Validate designated zone details
+        cy.validateDZDetails();
         // selecting Port of Entry
         cy.clickElement(data.locators_ex.EX_Port_DropDown_id)
         cy.selectFromDropdown(data.locators_ex.EX_port_list_id, data.EntryValues.EX202AIDZNCC_RE_Port)

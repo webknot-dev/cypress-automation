@@ -59,6 +59,8 @@ describe("Automating EX202A Release Goods from Designated Zone into Free Circula
         cy.inputField(data.locators_ex.EX_zone_id2, data.EntryValues.EX202ARGDZNCC_zone_number)
         // click validate button
         cy.clickXpathElement(data.locators_ex.Ex_validate_xpath)
+        // Validate designated zone details 
+        cy.validateDZDetails_ex202Argdz();
         //enter the Release date
         cy.inputField(data.locators_ex.EX_export_date_id, data.EntryValues.EX202ARGDZNCC_release_date)
         //clicking on next button

@@ -67,6 +67,7 @@ describe("Automating EX201 - Release from Designated Zone (Requiring Customs Cle
         // click validate button
         cy.clickXpathElement(data.locators_ex.Ex_validate_xpath)
         cy.wait(5000)
+        cy.validateDZDetails();
         //clicking on next button
         cy.clickXpathElement(data.locators_ex.EX_next_xpath)
         // upload the file

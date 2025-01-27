@@ -54,6 +54,8 @@ describe("Automating EX203F - Transfer of Ownership within Designated Zone – R
         cy.clickElement(data.locators_EX203F.Ex203F_Dz_zone);
         cy.inputField(data.locators_EX203F.Ex203F_Dz_zone, data.locators_EX203F.EX203F_dz_number);
         cy.clickElement(data.locators_EX203F.Validate_button);
+        //Validate details of Designated zone number
+        cy.validateDZDetails();
 
         // Input the date
         cy.scrollToView(data.locators_EX203F.date_field_xpath);

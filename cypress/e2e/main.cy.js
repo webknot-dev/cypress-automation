@@ -14,7 +14,7 @@
 // ex203alocalpurchaseform-
 // ex203ctransferofownershipwithindesignatedzones
 
-const value = "ex203excisetaxdeductibledeclaration";
+const value = "ex203ctransferofOwnershipwithinDesignatedZones";
 
 switch (value) {
     case "excise201releasefromdesignatedzone":
@@ -62,6 +62,16 @@ switch (value) {
     case "ex202atransfergoodstoanotherdz":
         require('./EX202A_TGADZ.cy.js');
         break;
+    case "ex203blostndeclaration":
+        require('./EX203B_LD.cy.js');
+        break;
+    case "ex203ctransferofOwnershipwithinDesignatedZones":
+        require('./EX203C_TransferOf_DZ.cy.js');
+        break;
+    case "ex203fregisteredSellertoNonRegisteredPurchaser":
+        require('./Ex203F_TO.cy.js');
+        break;
+
     default:
         describe("NO MATCHING TEST CASE", () => {
             it("NO MATCHING TEST CASE", () => {

@@ -52,6 +52,8 @@ describe("Automating EX203B - Lost & Damaged Declaration", () => {
         cy.clickXpathElement(data.locators_ex.EX_Start_xpath);
         cy.inputField(data.locators_ex.EX_zone_id, data.locators_EX203B_LostnDeclare.EX203BLD_zone_number);
         cy.clickElement(data.locators_EX203B_LostnDeclare.Validate_button);
+        //Validate dezignated zone details
+        cy.validateOriginDZDetails();
 
         // Input date
         cy.wait(5000);
