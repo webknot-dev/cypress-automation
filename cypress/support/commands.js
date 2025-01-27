@@ -118,7 +118,7 @@ Cypress.Commands.add('selectListItem', (listSelector, targetValue) => {
 
 //select from drop down
 Cypress.Commands.add('selectFromDropdown', (dropdownSelector, value) => {
-    cy.get(dropdownSelector).contains(value).click({ force: true });
+    cy.get(dropdownSelector).contains(value, { matchCase: false }).click({ force: true });
 });
 
 // To element in view
@@ -252,8 +252,8 @@ Cypress.Commands.add('validateStatusAndTRN', (status, trn) => {
 
 //validate trn
 Cypress.Commands.add('validateTRNandName', (trn, name) => {
-    cy.contains(trn).should('exist').should('be.visible');
-    cy.contains(name).should('exist').should('be.visible');
+    cy.contains(trn, { matchCase: false }).should('exist').should('be.visible');
+    cy.contains(name, { matchCase: false }).should('exist').should('be.visible');
 });
 
 
@@ -265,21 +265,21 @@ Cypress.Commands.add('uploadFile', (addButtonSelector, fileName, okButtonSelecto
     cy.get(addButtonSelector).click();
     cy.wait(3000);
 
-  
+
     // Simulate file upload
     cy.get('input[type="file"]').attachFile(fileName);
-  
+
     cy.wait(3000);
     // Click the "Upload" button
-  //   cy.get(uploadButtonSelector).click();
-  
+    //   cy.get(uploadButtonSelector).click();
+
     // Handle the final "OK" buttons
-    cy.xpath(okButtonSelector1).click(); 
-    cy.get(okButtonSelector2).click(); 
-  
+    cy.xpath(okButtonSelector1).click();
+    cy.get(okButtonSelector2).click();
+
     // Optional: Validate the upload (you can remove this if not needed)
-  //   cy.get('.upload-status').should('contain', 'Upload successful');
-  });
+    //   cy.get('.upload-status').should('contain', 'Upload successful');
+});
 
 Cypress.Commands.add('clickElementWithXpath', (selector) => {
     cy.xpath(selector).click({ force: true });

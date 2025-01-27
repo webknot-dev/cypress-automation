@@ -31,12 +31,15 @@ You may need additional plugins depending on your project requirements. Here are
 - **cypress-file-upload**: For file upload testing
 - **cypress-if**: For conditional testing
 - **cypress-xpath**: For XPath support
+- **cypress-downloadfile**: For downloading file from url
 
 Install these plugins using npm:
 
 ```bash
 npm install cypress-if --save-dev
 npm install cypress-xpath --save-dev
+npm install --save-dev cypress-file-upload
+npm install cypress-downloadfile
 ```
 
 ## Running Tests
@@ -84,12 +87,14 @@ You have now set up Cypress and learned how to run tests in both open and run mo
 Here are the dependencies and plugins used in this project:
 
 ```json
-"devDependencies": {
+  "devDependencies": {
     "cypress": "^13.17.0",
+    "cypress-downloadfile": "^1.2.4",
+    "cypress-file-upload": "^5.0.8",
     "cypress-if": "^1.13.2",
     "cypress-xpath": "^2.0.1"
-},
-"dependencies": {
+  },
+  "dependencies": {
     "tesseract.js": "^5.1.1"
-}
+  }
 ```
