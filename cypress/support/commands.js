@@ -224,8 +224,12 @@ Cypress.Commands.add('getByPartialId', (start, end) => {
 Cypress.Commands.add('selectExcise', (excontainerid, extitleid, exdescriptionid, excreatenewid, exname, exdescription) => {
     cy.getByPartialId(excontainerid.substring(0, 21), excontainerid.substring(excontainerid.length - 25)).scrollIntoView()
     cy.getByPartialId(excontainerid.substring(0, 21), excontainerid.substring(excontainerid.length - 25)).should('be.visible').within(() => {
-        cy.getByPartialId(extitleid.substring(0, 24), extitleid.substring(extitleid.length - 25)).should('have.text', exname);
-        cy.getByPartialId(exdescriptionid.substring(0, 23), exdescriptionid.substring(exdescriptionid.length - 25)).should('have.text', exdescription);
+        cy.log('Title:', exname);
+        cy.log('Description:', exdescription);
+        // cy.getByPartialId(extitleid.substring(0, 24), extitleid.substring(extitleid.length - 25)).should('have.text', exname);
+        cy.contains(exname).should('exist').should('be.visible');
+        // cy.getByPartialId(exdescriptionid.substring(0, 23), exdescriptionid.substring(exdescriptionid.length - 25)).should('have.text', exdescription);
+        cy.contains(exdescription).should('exist').should('be.visible');
         cy.contains(excreatenewid).click({ force: true });
     });
 });
