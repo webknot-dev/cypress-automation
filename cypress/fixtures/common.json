@@ -17,7 +17,7 @@
     "loginButton_id": "#__xmlview0--loginBtn-inner",
     "taxableProfileButton_xpath": "(//bdi[text()='View'])[1]",
     "exciseTax_xpath": "(//span[text()='Excise Tax'])[1]",
-    "PopUp_Selector": "[id^=__dialog-]",
+    "PopUp_Selector": "[id^=__dialog]",
     "PopUp_Accept": "#oCloseButton-BDI-content",
 
     "refresh_captcha_id": "#__icon1",

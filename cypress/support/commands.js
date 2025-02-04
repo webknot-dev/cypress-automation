@@ -86,14 +86,14 @@ Cypress.Commands.add('waitAndClick', (selector) => {
 
 // Close popup if present
 Cypress.Commands.add('closePopupIfPresent', (popupSelector, buttonSelector) => {
-    cy.wait(5000).get('body').then(() => {
+    cy.wait(10000).get('body').then(() => {
         cy.get(popupSelector).if('visible').and('exist')
             .then(() =>
-                cy.get(popupSelector).within(() => {
-                    cy.clickElement(buttonSelector)
-                }))
-            .else()
-            .log('No popup found');
+                // cy.get(popupSelector).within(() => {
+                cy.clickElement(buttonSelector)
+                    // }))
+                    .else()
+                    .log('No popup found'));
     })
 });
 
@@ -267,18 +267,18 @@ Cypress.Commands.add('validateTRNandName', (trn, name) => {
 
 
 // Cypress.Commands.add('uploadFile', (addButtonSelector, fileNames, okButtonSelector1, okButtonSelector2) => {
-    
+
 //     fileNames.forEach((fileName) => {
-      
+
 //       cy.get(addButtonSelector).click();
 //       cy.wait(3000); 
-  
+
 //       cy.get('input[type="file"]').attachFile(fileName);
 //       cy.wait(3000); 
-  
+
 //       cy.xpath(okButtonSelector1).click();
 //       cy.get(okButtonSelector2).click();
-      
+
 //       // Optionally, add a wait or verify that the upload was successful before proceeding
 //       // For example:
 //       // cy.get('.upload-status').should('contain', 'Upload successful');
@@ -287,43 +287,43 @@ Cypress.Commands.add('validateTRNandName', (trn, name) => {
 Cypress.Commands.add('uploadFile', (addButtonSelector, fileNames, okButtonSelector1, okButtonSelector2) => {
     // Define allowed file extensions
     const allowedExtensions = ['pdf', 'jpg', 'jpeg', 'png'];
-  
+
     // Check if file count exceeds the allowed limit
     if (fileNames.length > 10) {
-      cy.log('Not allowed to upload more than 10 files');
-      return; // Stop execution of the command if more than 10 files are provided.
+        cy.log('Not allowed to upload more than 10 files');
+        return; // Stop execution of the command if more than 10 files are provided.
     }
-  
+
     // Iterate over each file name and perform the upload sequence
     fileNames.forEach((fileName) => {
-      // Extract file extension and convert to lowercase
-      const extension = fileName.split('.').pop().toLowerCase();
-  
-      // Check if the file extension is allowed
-      if (!allowedExtensions.includes(extension)) {
-        cy.log(`File format not allowed for file: ${fileName}`);
-        return; // Skip uploading this file.
-      }
-  
-      // Proceed with upload if the file is valid
-      cy.get(addButtonSelector).click();
-      cy.wait(3000); // Adjust timing as needed
-  
-      // Attach the file (one at a time)
-      cy.get('input[type="file"]').attachFile(fileName);
-      cy.wait(3000); // Adjust timing as needed
-  
-      // Click the "OK" buttons after each file upload
-      cy.xpath(okButtonSelector1).click();
-      cy.get(okButtonSelector2).click();
-  
-      // Optionally, add a wait or verify that the upload was successful before proceeding
-      // For example:
-      // cy.get('.upload-status').should('contain', 'Upload successful');
+        // Extract file extension and convert to lowercase
+        const extension = fileName.split('.').pop().toLowerCase();
+
+        // Check if the file extension is allowed
+        if (!allowedExtensions.includes(extension)) {
+            cy.log(`File format not allowed for file: ${fileName}`);
+            return; // Skip uploading this file.
+        }
+
+        // Proceed with upload if the file is valid
+        cy.get(addButtonSelector).click();
+        cy.wait(3000); // Adjust timing as needed
+
+        // Attach the file (one at a time)
+        cy.get('input[type="file"]').attachFile(fileName);
+        cy.wait(3000); // Adjust timing as needed
+
+        // Click the "OK" buttons after each file upload
+        cy.xpath(okButtonSelector1).click();
+        cy.get(okButtonSelector2).click();
+
+        // Optionally, add a wait or verify that the upload was successful before proceeding
+        // For example:
+        // cy.get('.upload-status').should('contain', 'Upload successful');
     });
-  });
-  
-  
+});
+
+
 
 Cypress.Commands.add('clickElementWithXpath', (selector) => {
     cy.xpath(selector).click({ force: true });
