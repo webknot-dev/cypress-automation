@@ -264,26 +264,66 @@ Cypress.Commands.add('validateTRNandName', (trn, name) => {
 
 
 // Custom command for file upload for images
-Cypress.Commands.add('uploadFile', (addButtonSelector, fileName, okButtonSelector1, okButtonSelector2) => {
-    // Click the "Add" button
-    cy.get(addButtonSelector).click();
-    cy.wait(3000);
 
 
-    // Simulate file upload
-    cy.get('input[type="file"]').attachFile(fileName);
-
-    cy.wait(3000);
-    // Click the "Upload" button
-    //   cy.get(uploadButtonSelector).click();
-
-    // Handle the final "OK" buttons
-    cy.xpath(okButtonSelector1).click();
-    cy.get(okButtonSelector2).click();
-
-    // Optional: Validate the upload (you can remove this if not needed)
-    //   cy.get('.upload-status').should('contain', 'Upload successful');
-});
+// Cypress.Commands.add('uploadFile', (addButtonSelector, fileNames, okButtonSelector1, okButtonSelector2) => {
+    
+//     fileNames.forEach((fileName) => {
+      
+//       cy.get(addButtonSelector).click();
+//       cy.wait(3000); 
+  
+//       cy.get('input[type="file"]').attachFile(fileName);
+//       cy.wait(3000); 
+  
+//       cy.xpath(okButtonSelector1).click();
+//       cy.get(okButtonSelector2).click();
+      
+//       // Optionally, add a wait or verify that the upload was successful before proceeding
+//       // For example:
+//       // cy.get('.upload-status').should('contain', 'Upload successful');
+//     });
+//   });
+Cypress.Commands.add('uploadFile', (addButtonSelector, fileNames, okButtonSelector1, okButtonSelector2) => {
+    // Define allowed file extensions
+    const allowedExtensions = ['pdf', 'jpg', 'jpeg', 'png'];
+  
+    // Check if file count exceeds the allowed limit
+    if (fileNames.length > 10) {
+      cy.log('Not allowed to upload more than 10 files');
+      return; // Stop execution of the command if more than 10 files are provided.
+    }
+  
+    // Iterate over each file name and perform the upload sequence
+    fileNames.forEach((fileName) => {
+      // Extract file extension and convert to lowercase
+      const extension = fileName.split('.').pop().toLowerCase();
+  
+      // Check if the file extension is allowed
+      if (!allowedExtensions.includes(extension)) {
+        cy.log(`File format not allowed for file: ${fileName}`);
+        return; // Skip uploading this file.
+      }
+  
+      // Proceed with upload if the file is valid
+      cy.get(addButtonSelector).click();
+      cy.wait(3000); // Adjust timing as needed
+  
+      // Attach the file (one at a time)
+      cy.get('input[type="file"]').attachFile(fileName);
+      cy.wait(3000); // Adjust timing as needed
+  
+      // Click the "OK" buttons after each file upload
+      cy.xpath(okButtonSelector1).click();
+      cy.get(okButtonSelector2).click();
+  
+      // Optionally, add a wait or verify that the upload was successful before proceeding
+      // For example:
+      // cy.get('.upload-status').should('contain', 'Upload successful');
+    });
+  });
+  
+  
 
 Cypress.Commands.add('clickElementWithXpath', (selector) => {
     cy.xpath(selector).click({ force: true });

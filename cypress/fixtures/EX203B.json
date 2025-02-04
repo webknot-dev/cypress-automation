@@ -15,24 +15,58 @@
     "LossDamaged_dropDown_xpath": "#_EGCC_A_PHYSICAL_combobox-popup-list-listUl",
     "LossDamaged_dropDown_Value": "Physical",
 
+    "LossDamaged_dropDown_Value_P": "Physical",
+    "LossDamaged_dropDown_Value_NP":"Non-Physical",
+    "LossDamaged_dropDown_Value_AOA":"All the Above",
+
     "reason_damaged_xpath": "#_EGCC_A_ITEM_REASON_combobox-arrow",
     "ReasonForLoss_dropDown_xpath": "#_EGCC_A_ITEM_REASON_combobox-popup-list-listUl",
-    "ReasonForLoss_dropDown_value": "Lost/Shortage in Goods",
+    "ReasonForLoss_dropDown_value":"Other",
+    "ReasonForLoss_dropDown_value_LSG": "Lost/Shortage in Goods",
+    "ReasonForLoss_dropDown_value_DDG":"Defective/Damaged Goods",
+    "ReasonForLoss_dropDown_value_PD":"Production Dust",
+    "ReasonForLoss_dropDown_value_LM":"Loss of Moisture",
+    "ReasonForLoss_dropDown_value_PW":"Production Waste",
+    "ReasonForLoss_dropDown_value_OTHR":"Other",
+    "ReasonForLoss_dropDown_value_OTHR_TXT":"#_EGCC_OTHERREASON_LOSS_DEFIC-inner",
+    "ReasonForLoss_dropDown_value_OTHR_TXT_input":"Sample input -  Recycling Center, Jebel Ali Free Zone",
 
     "placeOfDestruction_xpath": "#_EGCC_A_ITEM_PLACEGOODSDESTROY_combobox-arrow",
     "placeOfDestruction_dropdown_xpath": "#_EGCC_A_ITEM_PLACEGOODSDESTROY_combobox-popup-list-listUl",
     "placeOfDestruction_dropdown_value": "External",
 
+    "placeOfDestruction_dropdown_value_EXT": "External",
+    "placeOfDestruction_dropdown_value_IIDZ":"Internal – Inside Designated Zone",
+
+
     "external_facility_xpath": "#_EGCC_A_FACILITY_combobox-arrow",
     "external_facility_dropdown_xpath": "#_EGCC_A_FACILITY_combobox-popup-list-listUl",
-    "external_facility_dropdown_value": "Municipal Approved Facility",
+    "external_facility_dropdown_value":"Other",
+    "external_facility_dropdown_value_MAF": "Municipal Approved Facility",
+    "external_facility_dropdown_value_OTHR":"Other",
+    "external_facility_dropdown_value_OTHR_input":"Sample input -  Recycling Center, Jebel Ali Free Zone",
+
+    "external_facility_dropdown_value_OTHR_TXT":"#_EGCC_OTHERPLACEGOODSDESTROY_TextareaT-inner",
+
 
     "emirate_xpath": "#_EGCC_A_EMIRATE_combobox-arrow",
     "emirate_dropdown_xpath": "#_EGCC_A_EMIRATE_combobox-popup-list-listUl",
     "emirate_dropdown_value": "Umm Al Quwain",
+    "emirate_dropdown_value_DB":"Dubai",
+    "emirate_dropdown_value_AD":"Abu Dhabi",
+    "emirate_dropdown_value_AJ":"Ajman",
+    "emirate_dropdown_value_FU":"Fujairah",
+    "emirate_dropdown_value_RA":"Ras Al Khaimah",
+    "emirate_dropdown_value_SH":"Sharjah",
+    "emirate_dropdown_value_UM":"Umm Al Quwain",
+    "emirate_dropdown_value_OTHR_TXT_input":"Sample input -  Recycling Center, Jebel Ali Free Zone",
+
+
 
     "upload_image_id": "#EVLD",
     "fileName_path": "image.png",
+    "fileName_path_1": "ss/Amdocs.pdf",
+
     "okButtonSelector1_xpath": "//bdi[contains(@id, '__button') and text()='OK']",
     "okButtonSelector2_xpath": "#onCancel-inner",
     "Drag_n_drop_selector": "#EVLD_1-drag-drop-area",
