@@ -36,6 +36,8 @@ describe("Automating EX203A - Local Purchase Form", () => {
         cy.validateStatusAndTRN("Active", data.Values.TRN)
         // Click on the excise tax button
         cy.clickXpathElement(data.LocatorsPath.exciseTax_xpath);
+        // Close any popup if present
+        cy.closePopupIfPresent(data.LocatorsPath.PopUp_Selector, data.LocatorsPath.PopUp_Accept)
 
         // Select the excise option using the locators and values from the fixture data
         cy.selectExcise(data.locators_ex203alpf.EX203ALPF_container_id,

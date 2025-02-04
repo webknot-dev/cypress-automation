@@ -39,6 +39,8 @@ describe("Automating EX202A - Transfer Goods to Another Designated Zone", functi
 
         // Click on the excise tax button
         cy.clickXpathElement(data.LocatorsPath.exciseTax_xpath);
+        // Close any popup if present
+        cy.closePopupIfPresent(data.LocatorsPath.PopUp_Selector, data.LocatorsPath.PopUp_Accept)
 
         // Select the excise option using the locators and values from the fixture data
         cy.selectExcise(
@@ -117,7 +119,7 @@ describe("Automating EX202A - Transfer Goods to Another Designated Zone", functi
             cy.log("Radio button is not selected as 'No'");
             cy.clickElement(data.locators_EX202A_TGADZ.Radio_button_NO);
 
-    
+
             cy.scrollToView(data.locators_EX202A_TGADZ.date_field_xpath);
             cy.selectingDate(data.locators_EX202A_TGADZ.date_field_xpath, data.locators_EX202A_TGADZ.date);
 

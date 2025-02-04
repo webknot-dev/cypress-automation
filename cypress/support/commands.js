@@ -86,7 +86,7 @@ Cypress.Commands.add('waitAndClick', (selector) => {
 
 // Close popup if present
 Cypress.Commands.add('closePopupIfPresent', (popupSelector, buttonSelector) => {
-    cy.wait(10000).get('body').then(() => {
+    cy.wait(5000).get('body').then(() => {
         cy.get(popupSelector).if('visible').and('exist')
             .then(() =>
                 cy.get(popupSelector).within(() => {
@@ -203,12 +203,12 @@ Cypress.Commands.add('uploadingFile', (inputSelector, filePath) => {
 
 // Select a date
 Cypress.Commands.add('selectingDate', (selector, date) => {
-    cy.get(selector).type(date, { force: true }).type('{enter}');
+    cy.get(selector).type(date, { force: true }).type('{enter}', { force: true });
 });
 
 // Input text into a field
 Cypress.Commands.add('inputField', (selector, inputValue) => {
-    cy.get(selector).type(inputValue, { force: true }).type('{enter}');
+    cy.get(selector).type(inputValue, { force: true }).type('{enter}', { force: true });
 });
 
 // Quit the browser (Cypress automatically handles this)

@@ -34,6 +34,8 @@ describe("Automating EX203F - Transfer of Ownership within Designated Zone – R
         cy.closePopupIfPresent(data.LocatorsPath.PopUp_Selector, data.LocatorsPath.PopUp_Accept);
         // cy.validateStatusAndTRN("Active", data.EntryValues.validate_trn);
         cy.clickXpathElement(data.LocatorsPath.exciseTax_xpath);
+        // Close any popup if present
+        cy.closePopupIfPresent(data.LocatorsPath.PopUp_Selector, data.LocatorsPath.PopUp_Accept)
 
         // Select the excise option
         cy.selectExcise(

@@ -17,7 +17,7 @@
     "loginButton_id": "#__xmlview0--loginBtn-inner",
     "taxableProfileButton_xpath": "(//bdi[text()='View'])[1]",
     "exciseTax_xpath": "(//span[text()='Excise Tax'])[1]",
-    "PopUp_Selector": "#__dialog8",
+    "PopUp_Selector": "[id^=__dialog-]",
     "PopUp_Accept": "#oCloseButton-BDI-content",
 
     "refresh_captcha_id": "#__icon1",
@@ -52,19 +52,18 @@
     "Ex_period_Dropdown_id": "#_BIID_A_PEROID_combobox-arrow",
     "EX_period_list_id": "#_BIID_A_PEROID_combobox-popup-list-listUl",
 
-    "_comment":"Below are the Designated zone validation xpaths",
-    "nameOfthe_dz_value":"SHAMLAN FZE",
-    "nameOfthe_dz_arbic_value":"شملان م م ح",
-    "warehouse_regist_number":"1001510",
-    "nameof_warehouse_keeper_value":"Shamlan FZE",
-    "nameof_warehouse_keeper_arbic_value":"شملان م م ح",
+    "_comment": "Below are the Designated zone validation xpaths",
+    "nameOfthe_dz_value": "SHAMLAN FZE",
+    "nameOfthe_dz_arbic_value": "شملان م م ح",
+    "warehouse_regist_number": "1001510",
+    "nameof_warehouse_keeper_value": "Shamlan FZE",
+    "nameof_warehouse_keeper_arbic_value": "شملان م م ح",
 
-    "_comment2":"Below are the destination Designated zone validation xpaths",
-    "nameOfthe_dest_dz_value":"Orchid Tobacco Industries Ltd. - 2",
-    "nameOfthe_dest_dz_arbic_value":"اورشید توباكو اندستریز لمتد - ٢",
-    "warehouse_dest_regist_number":"1000728",
-    "nameof_dest_warehouse_keeper_value":"Orchid Tobacco Industries Ltd.",
-    "nameof_dest_warehouse_keeper_arbic_value":"اورشید توباكو اندستریز لمتد"
-
+    "_comment2": "Below are the destination Designated zone validation xpaths",
+    "nameOfthe_dest_dz_value": "Orchid Tobacco Industries Ltd. - 2",
+    "nameOfthe_dest_dz_arbic_value": "اورشید توباكو اندستریز لمتد - ٢",
+    "warehouse_dest_regist_number": "1000728",
+    "nameof_dest_warehouse_keeper_value": "Orchid Tobacco Industries Ltd.",
+    "nameof_dest_warehouse_keeper_arbic_value": "اورشید توباكو اندستریز لمتد"
   }
 }
