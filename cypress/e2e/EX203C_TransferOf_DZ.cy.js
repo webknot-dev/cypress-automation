@@ -72,7 +72,7 @@ describe("Automating EX203C Transfer of Ownership within Designated Zones", () =
         //upload_image
         cy.uploadFile(
             data.locators_EX203C_TDZ.upload_image_id,
-            data.locators_EX203C_TDZ.fileName_path,
+            [data.locators_EX203C_TDZ.fileName_path],
             // data.locators_EX203C_TDZ.upload_button_xpath, 
             data.locators_EX203C_TDZ.okButtonSelector1_xpath,
             data.locators_EX203C_TDZ.okButtonSelector2_xpath,

@@ -64,7 +64,7 @@ describe("Automating EX203F - Transfer of Ownership within Designated Zone – R
         // Upload the image
         cy.uploadFile(
             data.locators_EX203F.upload_image_id,
-            data.locators_EX203F.fileName_path,
+            [data.locators_EX203F.fileName_path],
             data.locators_EX203F.okButtonSelector1_xpath,
             data.locators_EX203F.okButtonSelector2_xpath
         );
