@@ -15,9 +15,9 @@ describe("Automating EX202B - Producer Declaration", () => {
 
         // Perform login using the credentials and locators from the fixture data
         cy.login(data.LocatorsPath.emailInputField_id,
-            data.AuthDetails.email,
+            Cypress.env('email'),
             data.LocatorsPath.passwordInputField_id,
-            data.AuthDetails.password,
+            Cypress.env('password'),
             data.LocatorsPath.captchaInputField_id,
             data.LocatorsPath.captcha_element_id,
             data.LocatorsPath.loginButton_id,

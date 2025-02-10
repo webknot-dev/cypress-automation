@@ -19,9 +19,9 @@ describe("Automating EX203B - Lost & Damaged Declaration", () => {
         // Perform login using the credentials and locators from the fixture data
         cy.login(
             data.LocatorsPath.emailInputField_id,
-            data.AuthDetails.email,
+            Cypress.env('email'),
             data.LocatorsPath.passwordInputField_id,
-            data.AuthDetails.password,
+            Cypress.env('password'),
             data.LocatorsPath.captchaInputField_id,
             data.LocatorsPath.captcha_element_id,
             data.LocatorsPath.loginButton_id,
@@ -108,31 +108,31 @@ describe("Automating EX203B - Lost & Damaged Declaration", () => {
 
 
         //====Handling dropdowns 
-        if (data.locators_EX203B_LostnDeclare.LossDamaged_dropDown_Value === "Physical" || 
+        if (data.locators_EX203B_LostnDeclare.LossDamaged_dropDown_Value === "Physical" ||
             data.locators_EX203B_LostnDeclare.LossDamaged_dropDown_Value === "All the Above") {
-        
+
             // Select dropdown options for Lost & Damaged Declaration
             cy.scrollToView(data.locators_EX203B_LostnDeclare.loss_damaged_xpath);
             cy.clickElement(data.locators_EX203B_LostnDeclare.loss_damaged_xpath);
             cy.selectFromDropdown(
-                data.locators_EX203B_LostnDeclare.LossDamaged_dropDown_xpath, 
+                data.locators_EX203B_LostnDeclare.LossDamaged_dropDown_xpath,
                 data.locators_EX203B_LostnDeclare.LossDamaged_dropDown_Value
             );
-        
+
             // Upload image
             cy.uploadFile(
                 data.locators_EX203B_LostnDeclare.upload_image_id,
-                [data.locators_EX203B_LostnDeclare.fileName_path,data.locators_EX203B_LostnDeclare.fileName_path_1
+                [data.locators_EX203B_LostnDeclare.fileName_path, data.locators_EX203B_LostnDeclare.fileName_path_1
                 ],
                 data.locators_EX203B_LostnDeclare.okButtonSelector1_xpath,
                 data.locators_EX203B_LostnDeclare.okButtonSelector2_xpath
             );
-        
+
             // Select reason of damage
             cy.scrollToView(data.locators_EX203B_LostnDeclare.reason_damaged_xpath);
             cy.clickElement(data.locators_EX203B_LostnDeclare.reason_damaged_xpath);
             cy.selectFromDropdown(
-                data.locators_EX203B_LostnDeclare.ReasonForLoss_dropDown_xpath, 
+                data.locators_EX203B_LostnDeclare.ReasonForLoss_dropDown_xpath,
                 data.locators_EX203B_LostnDeclare.ReasonForLoss_dropDown_value
             );
             if (data.locators_EX203B_LostnDeclare.ReasonForLoss_dropDown_value === "Other") {
@@ -142,26 +142,26 @@ describe("Automating EX203B - Lost & Damaged Declaration", () => {
                     data.locators_EX203B_LostnDeclare.ReasonForLoss_dropDown_value_OTHR_TXT,
                     data.locators_EX203B_LostnDeclare.ReasonForLoss_dropDown_value_OTHR_TXT_input
                 );
-            }else{
+            } else {
                 console.log("You have selected other than 'Other' option");
-                
+
             }
-        
+
             if (data.locators_EX203B_LostnDeclare.placeOfDestruction_dropdown_value === "External") {
 
                 // Select place of destruction
                 cy.scrollToView(data.locators_EX203B_LostnDeclare.placeOfDestruction_xpath);
                 cy.clickElement(data.locators_EX203B_LostnDeclare.placeOfDestruction_xpath);
                 cy.selectFromDropdown(
-                    data.locators_EX203B_LostnDeclare.placeOfDestruction_dropdown_xpath, 
+                    data.locators_EX203B_LostnDeclare.placeOfDestruction_dropdown_xpath,
                     data.locators_EX203B_LostnDeclare.placeOfDestruction_dropdown_value
                 );
-            
+
                 // Select external facility
                 cy.scrollToView(data.locators_EX203B_LostnDeclare.external_facility_xpath);
                 cy.clickElement(data.locators_EX203B_LostnDeclare.external_facility_xpath);
                 cy.selectFromDropdown(
-                    data.locators_EX203B_LostnDeclare.external_facility_dropdown_xpath, 
+                    data.locators_EX203B_LostnDeclare.external_facility_dropdown_xpath,
                     data.locators_EX203B_LostnDeclare.external_facility_dropdown_value
                 );
                 if (data.locators_EX203B_LostnDeclare.external_facility_dropdown_value === "Other") {
@@ -171,47 +171,47 @@ describe("Automating EX203B - Lost & Damaged Declaration", () => {
                         data.locators_EX203B_LostnDeclare.external_facility_dropdown_value_OTHR_TXT,
                         data.locators_EX203B_LostnDeclare.external_facility_dropdown_value_OTHR_input
                     );
-                }else{
+                } else {
                     console.log("You have selected other than 'Other' option");
-                    
+
                 }
-            
+
                 // Select Emirates
                 cy.scrollToView(data.locators_EX203B_LostnDeclare.emirate_xpath);
                 cy.clickElement(data.locators_EX203B_LostnDeclare.emirate_xpath);
                 cy.selectFromDropdown(
-                    data.locators_EX203B_LostnDeclare.emirate_dropdown_xpath, 
+                    data.locators_EX203B_LostnDeclare.emirate_dropdown_xpath,
                     data.locators_EX203B_LostnDeclare.emirate_dropdown_value
                 );
-            
+
             } else {
                 console.log("Selected Internal – Inside Designated Zone");
             }
-            
-        
+
+
             // Proceed to the next step
             cy.wait(5000);
-        
+
         } else if (data.locators_EX203B_LostnDeclare.LossDamaged_dropDown_Value === "Non-Physical") {
-        
-             // Select dropdown options for Lost & Damaged Declaration
-             cy.scrollToView(data.locators_EX203B_LostnDeclare.loss_damaged_xpath);
-             cy.clickElement(data.locators_EX203B_LostnDeclare.loss_damaged_xpath);
-             cy.selectFromDropdown(
-                 data.locators_EX203B_LostnDeclare.LossDamaged_dropDown_xpath, 
-                 data.locators_EX203B_LostnDeclare.LossDamaged_dropDown_Value
-             );
+
+            // Select dropdown options for Lost & Damaged Declaration
+            cy.scrollToView(data.locators_EX203B_LostnDeclare.loss_damaged_xpath);
+            cy.clickElement(data.locators_EX203B_LostnDeclare.loss_damaged_xpath);
+            cy.selectFromDropdown(
+                data.locators_EX203B_LostnDeclare.LossDamaged_dropDown_xpath,
+                data.locators_EX203B_LostnDeclare.LossDamaged_dropDown_Value
+            );
             // Select reason of damage (only for Non-Physical)
-            
+
             cy.scrollToView(data.locators_EX203B_LostnDeclare.reason_damaged_xpath);
             cy.clickElement(data.locators_EX203B_LostnDeclare.reason_damaged_xpath);
             cy.selectFromDropdown(
-                data.locators_EX203B_LostnDeclare.ReasonForLoss_dropDown_xpath, 
+                data.locators_EX203B_LostnDeclare.ReasonForLoss_dropDown_xpath,
                 data.locators_EX203B_LostnDeclare.ReasonForLoss_dropDown_value
             );
-        
-             // Upload image
-             cy.uploadFile(
+
+            // Upload image
+            cy.uploadFile(
                 data.locators_EX203B_LostnDeclare.upload_image_id,
                 data.locators_EX203B_LostnDeclare.fileName_path,
                 data.locators_EX203B_LostnDeclare.okButtonSelector1_xpath,
@@ -219,7 +219,7 @@ describe("Automating EX203B - Lost & Damaged Declaration", () => {
             );
             cy.wait(5000);
         }
-        
+
 
         cy.clickElementWithXpath(data.locators_EX203B_LostnDeclare.next_step_id);
     });

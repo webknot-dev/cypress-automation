@@ -1,18 +1,3 @@
-// excise201import
-// excise201releasefromdesignatedzone
-// excise201importtoreexport
-// excise202areleasegoodsfromdzintofreecirculation
-// excise202aconsumptionofgoodswithindz
-// excise202aentergoodsintoadesignatedzone
-// ex202atransfergoodstoanotherdz-
-// ex202atransfergoodsforexportfromadesignatedzone-
-// ex202aimporttodesignatedzoneswherethereisnocustomscheck-
-// copyofex202importtodesignatedzoneswherethereisnocustomscheck-
-// ex202aproductionwithindesignatedzone-
-// ex202bproducerdeclaration-
-// ex203excisetaxdeductibledeclaration-
-// ex203alocalpurchaseform-
-// ex203ctransferofownershipwithindesignatedzones
 
 const value = "none";
 
