@@ -28,10 +28,7 @@ require('cypress-if');
 require('cypress-downloadfile/lib/downloadFileCommand')
 import 'cypress-file-upload';
 
-
 // cy.downloadFile('link to file', 'path', 'file name with extension')
-
-
 Cypress.on('uncaught:exception', (err, runnable) => {
     return false;
 });
@@ -58,13 +55,13 @@ Cypress.Commands.add('login', (emailSelector, emailValue, passwordSelector, pass
 
     cy.wait(5000).get('#__data48').click({ force: true });
 
-    cy.get(emailSelector).click({ force: true }).type(emailValue, { force: true });
-    cy.get(passwordSelector).click({ force: true }).type(passwordValue, { force: true });
+    cy.get(emailSelector).clear({ force: true }).click({ force: true }).type(emailValue, { force: true })
+    cy.get(passwordSelector).clear({ force: true }).click({ force: true }).type(passwordValue, { force: true })
 
     cy.get(captchaImageSelector).screenshot('captcha-screenshot');
     cy.task('readCaptcha', `./cypress/screenshots/${specName}/captcha-screenshot.png`).then((captchaText) => {
         console.log('Recognized Captcha Text:', captchaText);
-        cy.get(captchaSelector).type(captchaText, { force: true });
+        cy.get(captchaSelector).clear({ force: true }).type(captchaText, { force: true });
     });
 
     cy.get(loginButtonSelector).click({ force: true });
@@ -243,9 +240,7 @@ Cypress.Commands.add('validateUrl', (url) => {
 
 // Email validation
 Cypress.Commands.add('validateEmail', () => {
-    cy.fixture('common.json').then((data) => {
-        cy.get('[id$=emailId]').first().should('have.text', data.AuthDetails.email);
-    });
+    cy.get('[id$=emailId]').first().should('have.text', Cypress.env('email'));
 })
 
 //status and trn validation
@@ -259,9 +254,6 @@ Cypress.Commands.add('validateTRNandName', (trn, name) => {
     cy.contains(trn, { matchCase: false }).should('exist').should('be.visible');
     cy.contains(name, { matchCase: false }).should('exist').should('be.visible');
 });
-
-
-
 
 // Custom command for file upload for images
 
@@ -322,8 +314,6 @@ Cypress.Commands.add('uploadFile', (addButtonSelector, fileNames, okButtonSelect
         // cy.get('.upload-status').should('contain', 'Upload successful');
     });
 });
-
-
 
 Cypress.Commands.add('clickElementWithXpath', (selector) => {
     cy.xpath(selector).click({ force: true });
